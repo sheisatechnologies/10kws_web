@@ -1527,8 +1527,13 @@ color: #fff;
     }
     .swiper-slide {
         padding: 20px;
-        background:#EFEDDF;
+       
         
+    }
+
+    .swiper-slide-contact{
+
+        background:#EFEDDF;
     }
     
     
