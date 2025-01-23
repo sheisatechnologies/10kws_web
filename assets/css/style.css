@@ -44,20 +44,6 @@
 }
 
 
-body.menu-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-}
-
-
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-
 
 body {
     margin: 0 auto;
@@ -1394,12 +1380,6 @@ background-image: url(../img/header-bg-3.png);
     text-transform: uppercase;
 }
 
-
-
-
-
-
-
 /* summary section start */
 .summary_section{
     padding: 166px 0;
@@ -1424,7 +1404,7 @@ background-image: url(../img/header-bg-3.png);
 }
 .tbl_wrapper .table th, .tbl_wrapper .table td {
     color: #001D47;
-    padding: 4px 7px;
+    padding: 3.6px 7px;
     background-color: transparent;
 }
 .tbl_wrapper .table tr.green_bg td{
@@ -1492,68 +1472,50 @@ color: #fff;
 /* faq section end */
 
 
-/* Floorplans page css end */
 
-/* download page css */
-
-.hero_section_download {
-    background-image: url(../img/download/header-bg-download.jpg);
-    min-height: 900px;
-    background-size: cover;
-    background-repeat: no-repeat;
+.summary_section .image-container {
+    position: relative;
+    margin-top: 85px;
+}
+.summary_section .image-container img {
+    width: 100%;
+    display: block;
+    max-height: 316px;
+    position: relative;
+    z-index: 2;
+}
+.summary_section  .highlight {
+    position: absolute;
+    background-color: #42AD56; /* Semi-transparent green */
+    display: none; /* Initially hidden */
+    z-index: 1;
+}
+.summary_section  table {
+    margin-top: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+.summary_section  table th, .summary_section  table td {
+    border: 1px solid #ccc;
+}
+.summary_section th, .summary_section td {
+    padding: 8px;
+    text-align: left;
+}
+.summary_section tr:hover {
+    background-color: #42AD56;
+    cursor: pointer;
 }
 
-/* contact image wrapper page css start */
-.building_page_wrapper.contact_page_wrapper .hero_section{
-    background-image: url(../img/contact/header-bg-contact.jpg);
-    }
-    .building_page_wrapper.contact_page_wrapper .workspace_section .theem_btn_outline img {
-        width: 100%;
-        min-width: 200px;
-    }
-    .building_page_wrapper.contact_page_wrapper .workspace_section .theem_btn_outline {
-        max-width: 200px;
-        text-transform: uppercase;
-    }
+
+/* Floorplans page css end */
 
 
-    .custom-slider-container {
-        margin: 20px auto;
-        
-        
-    }
-    .custom-slider {
-        padding: 0;
-    }
-    .swiper-slide {
-        padding: 20px;
-        background:#EFEDDF;
-        
-    }
-    
-    
-    .slide-top {
-        font-size: 17px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #000;
-        font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
-    }
-    .divider1 {
-        border: none;
-        border-top: 2px solid #000;
-        margin: 40px 0;
-    }
-    .swiper-button-prev, .swiper-button-next {
-        color: #000;
-    }
-
-
-    .para-con{
-        color: #001D47;
-        font-size: 20px;
-    }
-
-
-
-
+/* 23-01-2025 css start */
+.details_section  .content_wrapper p{
+    font-size: 16px;
+}
+.building_page_wrapper.floorplans_page_wrapper .workspace_section .content_wrapper p.pink_text {
+    font-size: 20px;
+}
+/* 23-01-2025 css end */

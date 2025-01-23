@@ -507,7 +507,7 @@ padding-top: 30px;
     min-height: 852px;
 }
   .hero_section .hero_heading h1 {
-    font-size: 49px;
+    font-size: 59px;
     display: block;
     text-align: center;
 }
@@ -620,6 +620,42 @@ padding-top: 30px;
 }
 
 @media (max-width: 575.98px) {
+  div#floor7 {
+    height: 17.44px !important;
+    top: 28px !important;
+    left: 49px !important;
+    width: calc(100% - 127px) !important;
+  }
+  div#floor6{
+    height: 17.44px !important;
+    top: 51px !important;
+    left: 44px !important;
+    width: calc(100% - 72px) !important;
+  }
+  div#floor5{
+    height: 17.44px !important;
+        top: 81px !important;
+        left: 33px !important;
+        width: calc(100% - 59px) !important;
+  }
+  div#floor4 {
+    height: 17.44px !important;
+    top: 103px !important;
+    left: 33px !important;
+    width: calc(100% - 59px) !important;
+}
+div#floor3 {
+  height: 17.44px !important;
+  top: 126px !important;
+  left: 33px !important;
+  width: calc(100% - 59px) !important;
+}
+div#floor2 {
+  height: 17.44px !important;
+  top: 148px !important;
+  left: 33px !important;
+  width: calc(100% - 59px) !important;
+}
   #header .navbar-brand img {
     max-height: 45px;
   }
@@ -672,16 +708,6 @@ padding-top: 30px;
     line-height: 22px;
     font-size: 13px;
   }
-
-
-  .hero_section_download {
-    background-image: url(../img/download/header-bg-download-mob.jpg);
-    min-height: 852px;
-}
-
-.building_page_wrapper.contact_page_wrapper .hero_section{
-  background-image: url(../img/contact/header-bg-contact-mob.jpg);
-}
   
   
 }
