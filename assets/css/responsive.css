@@ -462,6 +462,7 @@ padding-bottom: 0;
 }
 .services_section .swiper-wrapper {
   padding: 0 0;
+  padding-bottom: 70px;
 }
 .img_box img{
   filter: brightness(0) saturate(100%) invert(10%) sepia(80%) saturate(1758%) hue-rotate(198deg) brightness(88%) contrast(107%);
