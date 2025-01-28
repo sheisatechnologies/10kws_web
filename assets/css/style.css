@@ -1163,7 +1163,7 @@ width: 100%;
 
 /* highlight section start*/
 .highlight_section{
-    background-image: url(../img/view-bg.png);
+    background-image: url(../img/home-btm-img.jpg);
     min-height: 900px;
     padding: 15px;
     background-repeat: no-repeat;
@@ -1519,3 +1519,16 @@ color: #fff;
     font-size: 20px;
 }
 /* 23-01-2025 css end */
+
+
+
+
+
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+    padding-bottom: 22px;
+}
