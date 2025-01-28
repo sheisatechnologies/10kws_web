@@ -468,7 +468,8 @@ padding-bottom: 0;
 }
 .services_section .swiper-button-next,
 .services_section .swiper-button-prev {
-  filter: brightness(0) saturate(100%) invert(10%) sepia(80%) saturate(1758%) hue-rotate(198deg) brightness(88%) contrast(107%);
+  /* filter: brightness(0) saturate(100%) invert(10%) sepia(80%) saturate(1758%) hue-rotate(198deg)
+   brightness(88%) contrast(107%); */
 }
 
 .highlight_section .btn-primary{
@@ -497,7 +498,7 @@ padding-top: 30px;
   max-width: 70%;
 }
 .tittle_slide h3 {
-  color: #001d47 ;
+  color: #EFEDDF ;
   text-align: center;
 }
   .workspace_section {

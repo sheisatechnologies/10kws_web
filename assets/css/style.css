@@ -1197,6 +1197,7 @@ width: 100%;
 }
 .services_slider{
     position: relative;
+    background-color: #001D47;
 }
 .services_slider .swiper{
     max-width: 1235px;
