@@ -1580,8 +1580,13 @@ video {
     }
     .swiper-slide {
         padding: 20px;
-        background:#EFEDDF;
+       
         
+    }
+
+    .bg-contact{
+
+        background:#EFEDDF;
     }
     
     
@@ -1607,3 +1612,23 @@ video {
         font-size: 20px;
     }
 
+    .services_section_ameni {
+        background-color: #771212;
+        padding: 63.5px 0;
+    }
+    
+    
+    .varied_ssection_ameni{
+       
+        background-color: #004514;
+    }
+    
+    
+    .b-text{
+        color: #001D47;
+    }
+    
+    
+    .swiper-container {
+        position: relative; /* Ensures arrows are positioned within this container */
+      }
