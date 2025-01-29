@@ -285,3 +285,21 @@ var swiper = new Swiper(".mySwiper3", {
     },
   },
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const swiper = new Swiper('.custom-slider', {
+    slidesPerView: 1, // 1 slide visible on desktop
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1, // Keep 1 slide visible for smaller screens (e.g., mobile)
+      },
+    },
+      effect: 'slide',  // Ensures the default sliding effect is used
+  });
+})

@@ -1548,3 +1548,62 @@ video {
     height: 100%;
 }
 
+
+.hero_section_download {
+    background-image: url(../img/download/header-bg-download.jpg);
+    min-height: 900px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* contact image wrapper page css start */
+.building_page_wrapper.contact_page_wrapper .hero_section{
+    background-image: url(../img/contact/header-bg-contact.jpg);
+    }
+    .building_page_wrapper.contact_page_wrapper .workspace_section .theem_btn_outline img {
+        width: 100%;
+        min-width: 200px;
+    }
+    .building_page_wrapper.contact_page_wrapper .workspace_section .theem_btn_outline {
+        max-width: 200px;
+        text-transform: uppercase;
+    }
+
+
+    .custom-slider-container {
+        margin: 20px auto;
+        
+        
+    }
+    .custom-slider {
+        padding: 0;
+    }
+    .swiper-slide {
+        padding: 20px;
+        background:#EFEDDF;
+        
+    }
+    
+    
+    .slide-top {
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000;
+        font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+    }
+    .divider1 {
+        border: none;
+        border-top: 2px solid #000;
+        margin: 40px 0;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        color: #000;
+    }
+
+
+    .para-con{
+        color: #001D47;
+        font-size: 20px;
+    }
+
