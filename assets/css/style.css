@@ -1632,3 +1632,29 @@ video {
     .swiper-container {
         position: relative; /* Ensures arrows are positioned within this container */
       }
+
+
+
+/* 
+      ---------location css---------- */
+
+      /* location page css start */
+
+.location_page_wrapper .hero_section {
+    background-image: url(../img/location/location-header-bg.jpg);
+    background-color: #003D12;
+}
+
+
+.eco_sec_loc{
+    padding: 157px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eco_sec_loc-1{
+    padding: 157px 0;
+    background-repeat: no-repeat;
+    background-color: #EFEDDF;
+    background-size: cover;
+}

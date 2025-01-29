@@ -303,3 +303,39 @@ document.addEventListener("DOMContentLoaded", function() {
       effect: 'slide',  // Ensures the default sliding effect is used
   });
 })
+
+
+
+var swiper = new Swiper(".mySwiper4", {
+  autoplay: {
+    delay: 2000,
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // centeredSlides: true, 
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    640: {
+      slidesPerView: 5,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+  },
+});
