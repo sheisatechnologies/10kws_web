@@ -1114,7 +1114,7 @@ width: 100%;
 
 /* services_section start */
 .services_section{
-    background-color: #001D47;
+    /* background-color: #001D47; */
     padding: 63.5px 0;
 }
 .slider_items {
@@ -1197,7 +1197,7 @@ width: 100%;
 }
 .services_slider{
     position: relative;
-    background-color: #001D47;
+    /* background-color: #001D47; */
 }
 .services_slider .swiper{
     max-width: 1235px;
@@ -1613,7 +1613,7 @@ video {
     }
 
     .services_section_ameni {
-        background-color: #771212;
+        /* background-color: #771212; */
         padding: 63.5px 0;
     }
     
@@ -1657,4 +1657,14 @@ video {
     background-repeat: no-repeat;
     background-color: #EFEDDF;
     background-size: cover;
+}
+
+
+
+.bg-blue{
+    background-color: #001D47 !important;
+}
+
+.bg-red{
+    background-color: #771212 !important;
 }
