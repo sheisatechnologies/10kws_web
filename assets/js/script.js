@@ -179,8 +179,10 @@ $(document).ready(function () {
 
 var swiper = new Swiper(".mySwiper", {
   autoplay: {
-    delay: 2000,
+    delay: 4000, // Increased delay to slow down autoplay (milliseconds)
+    disableOnInteraction: false, // Ensures autoplay continues after interaction
   },
+  speed: 1000, // Slows down the transition effect (milliseconds)
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -194,6 +196,7 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
+
 
 var swiper = new Swiper(".mySwiper5", {
   autoplay: {
@@ -220,8 +223,10 @@ var swiper = new Swiper(".mySwiper5", {
 
 var swiper = new Swiper(".mySwiper2", {
   autoplay: {
-    delay: 2000,
+    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
+    disableOnInteraction: false, // Ensures autoplay continues after interaction
   },
+  speed: 1000, // Slows down transition speed (1 second)
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -251,6 +256,7 @@ var swiper = new Swiper(".mySwiper2", {
     },
   },
 });
+
 
 var swiper = new Swiper(".mySwiper3", {
   autoplay: {

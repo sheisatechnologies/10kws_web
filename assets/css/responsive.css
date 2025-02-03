@@ -623,8 +623,26 @@ padding-top: 30px;
     margin: 0;
     text-transform: uppercase;
 }
+
+
+
  
 }
+
+/* @media (min-width: 991px) {
+
+  .pt-md{
+    padding-top: -10px !important;
+  }
+} */
+
+
+/* @media (min-width: 992px) {
+  .pt-md{
+    padding-top: -10px !important;
+  }
+} */
+
 
 @media (min-width: 576px) and (max-width: 767.98px) {
 
