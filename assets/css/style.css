@@ -1042,7 +1042,7 @@ select.form-control{
     color: #001D47;
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -1386,7 +1386,7 @@ background-size: cover;
 
 /* Floorplans page css start */
 .building_page_wrapper.floorplans_page_wrapper .hero_section{
-background-image: url(../img/header-bg-3.png);
+background-image: url(../img/header-bg-3.jpg);
 }
 .building_page_wrapper.floorplans_page_wrapper .workspace_section .theem_btn_outline img {
     width: 100%;
