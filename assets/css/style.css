@@ -1003,7 +1003,7 @@ select.form-control{
     max-width: 1365px;
 }
 .hero_section .hero_heading h1 {
-    font-size: 132px;
+    font-size: 128px;
     color: #fff;
     margin: 0;
     display: flex;
@@ -1040,9 +1040,11 @@ select.form-control{
 .content_wrapper img{
     margin-bottom: 29px;
 }
+
+
 .content_wrapper p{
     color: #001D47;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     margin-bottom: 50px;
     padding-left: 4px;
@@ -1165,6 +1167,7 @@ width: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 5px;
+    font-family: 'MADE Mirage';
 }
 .heading_tittle span{
     display: block;
@@ -1716,41 +1719,96 @@ video {
 
 
 .button_buil {
-    color: #001D47; /* Text color */
-    border: 3px solid #001D47; /* Border */
-    padding: 10px 20px;
+    color: #001D47;
+    border: 3px solid #001D47;
+    padding: 12px 24px;
     background: transparent;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    font-family: 'MADE Mirage';
+    font-family: 'Arial', sans-serif;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+    position: relative;
+    overflow: visible;
+
   }
-  
-  .button_buil:hover {
-    background: #001D47;
-    color: #fff; /* Text color changes on hover */
-  }
-  
 
   .button_builf {
-    color: white; /* Text color */
-    border: 3px solid white; /* Border */
-    padding: 10px 20px;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 12px 24px;
     background: transparent;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    font-family: 'MADE Mirage';
+    font-family: 'Arial', sans-serif;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+    position: relative;
+    overflow: visible;
+
   }
+  .cornerfl {
+    position: absolute;
+    width: 8px; /* Size of the white circles */
+    height: 8px;
+    background:  #567BD7;
+    border-radius: 30%;
+    z-index: 2;
+}
+  .cornerf {
+    position: absolute;
+    width: 8px; /* Size of the white circles */
+    height: 8px;
+    background:  #001D47;
+    border-radius: 30%;
+    z-index: 2;
+}
+
+
   
-  .button_builf:hover {
-    background: #fff;
-    color: #001D47; /* Text color changes on hover */
-    
+  /* White circles at all four corners */
+  .corner {
+    position: absolute;
+    width: 8px; /* Size of the white circles */
+    height: 8px;
+    background: white; 
+    border-radius: 30%;
+    z-index: 2;
+}
+
+/* Positioning the corners */
+.corner.top-left { top: -7px; left: -7px; }
+.corner.top-right { top: -7px; right: -7px; }
+.corner.bottom-left { bottom: -7px; left: -7px; }
+.corner.bottom-right { bottom: -7px; right: -7px; }
+
+.cornerfl.top-left { top: -7px; left: -7px; }
+.cornerf.top-right { top: -7px; right: -7px; }
+.cornerf.bottom-left { bottom: -7px; left: -7px; }
+.cornerf.bottom-right { bottom: -7px; right: -7px; }
+
+
+/* Blur effect on hover */
+/* .button_buil:hover {
+    background: #001D47;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 29, 71, 0.5);
+} */
+
+
+  .accordion-header {
+    font-size: 20px;
+  }
+
+  .text_white{
+
+    color: #fff !important;
+  }
+
+  .cw_title{
+font-size: 20px !important;
   }
