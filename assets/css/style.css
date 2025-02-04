@@ -1010,6 +1010,8 @@ select.form-control{
     align-items: center;
     gap: 40px;
     font-weight: 500;
+    justify-content: center;
+    font-family: 'MADE Mirage';
 }   
 .hero_heading {
     position: absolute;
@@ -1228,6 +1230,8 @@ width: 100%;
     background-image: url(../img/header-bg-buil.jpg);
     background-color: #003D12;
 }
+
+
 .building_page_wrapper .hero_section .hero_heading h1 {
     display: block;
   text-align: center;
@@ -1326,9 +1330,22 @@ background-size: cover;
 .faq_wrapper{
     margin-top: 120px;
 }
+
+.floorplans_page_wrapper .faq_wrapper .accordion-button {
+    padding: 18px 0;
+    /* color: #FF00E5; */
+    color:white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: 1px solid #001D47;
+    border-radius: 0;
+}
+
 .faq_wrapper .accordion-button {
     padding: 18px 0;
-    color: #FF00E5;
+    /* color: #FF00E5; */
+    color:#001D47;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 20px;
@@ -1336,7 +1353,7 @@ background-size: cover;
     border-radius: 0;
 }
 .accordion-button:not(.collapsed){
-    color: #FF00E5;
+    color: #001D47;
     background-color: transparent;
     box-shadow: none;
 }
@@ -1346,11 +1363,21 @@ background-size: cover;
 .faq_wrapper .accordion-item{
     border: 0;
 }
+
+.floorplans_page_wrapper .faq_wrapper .accordion-body {
+    border: 0;
+    padding: 0;
+    padding-top: 30px;
+    /* color: #FF00E5; */
+    color:white;
+}
+
 .faq_wrapper .accordion-body {
     border: 0;
     padding: 0;
     padding-top: 30px;
-    color: #FF00E5;
+    /* color: #FF00E5; */
+    color:#001D47;
 }
 .faq_wrapper .accordion-item:last-of-type .accordion-button.collapsed{
     border-radius: 0;
@@ -1686,3 +1713,44 @@ video {
 .navbar {
     align-items: flex-start !important; /* Aligns logo and menu to the top */
 }
+
+
+.button_buil {
+    color: #001D47; /* Text color */
+    border: 3px solid #001D47; /* Border */
+    padding: 10px 20px;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'MADE Mirage';
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .button_buil:hover {
+    background: #001D47;
+    color: #fff; /* Text color changes on hover */
+  }
+  
+
+  .button_builf {
+    color: white; /* Text color */
+    border: 3px solid white; /* Border */
+    padding: 10px 20px;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'MADE Mirage';
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .button_builf:hover {
+    background: #fff;
+    color: #001D47; /* Text color changes on hover */
+    
+  }
