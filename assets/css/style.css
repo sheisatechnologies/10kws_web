@@ -1833,7 +1833,7 @@ video {
 
   .cw_title{
 font-size: 20px !important;
-line-height: 27px;
+line-height: 27px !important;
   }
 
 
