@@ -1016,9 +1016,20 @@ select.form-control{
     align-items: center;
     gap: 40px;
     font-weight: 500;
+    line-height: 115px;
+    letter-spacing: 8px;
     justify-content: center;
-    font-family: 'MADE Mirage';
+    font-family: 'DM Sans', sans-serif;
+    /* font-family: 'MADE Mirage'; */
 }   
+
+.hero_section .hero_heading h1 span{
+   
+    justify-content: center;
+    
+    font-family: 'MADE Mirage';
+} 
+
 .hero_heading {
     position: absolute;
     top: 50%;
@@ -1056,6 +1067,7 @@ select.form-control{
     padding-left: 4px;
     padding-right: 4px;
     font-family: 'DM Sans';
+    line-height: 21.6px;
 }
 
 .para2{
@@ -1734,7 +1746,7 @@ video {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    font-family: 'Arial', sans-serif;
+    font-family: 'DM Sans';
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
@@ -1751,7 +1763,7 @@ video {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    font-family: 'Arial', sans-serif;
+    font-family: 'DM Sans';
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
@@ -1819,6 +1831,7 @@ video {
 
   .cw_title{
 font-size: 20px !important;
+line-height: 27px;
   }
 
 
