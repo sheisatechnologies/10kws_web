@@ -1803,7 +1803,12 @@ video {
     box-shadow: 0 0 15px rgba(0, 29, 71, 0.5);
 } */
 
-
+ /* Hover effect */
+ .button:hover {
+    color: white;
+    background: #001D47;
+    padding: 12px 24px;
+}
   .accordion-header {
     font-size: 20px;
   }
