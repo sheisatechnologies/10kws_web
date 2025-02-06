@@ -719,6 +719,7 @@ body.scroll-off {
     color: #fff;
     font-size: 16px;
     margin-top: 60px;
+    font-family: 'DM Sans', sans-serif;
 }
 .right_part {
     display: flex;
@@ -833,6 +834,7 @@ footer h6 {
     color: #fff;
     font-weight: 400;
     margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
 }
 .footer-block {
     display: flex;
@@ -851,6 +853,7 @@ footer h6 {
 .contact_details{
     display: flex;
     flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
 }
 .contact_details span{
     font-size: 16px;
@@ -1141,6 +1144,7 @@ width: 100%;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    font-family: 'DM Sans', sans-serif;
 }
 /* details section start */
 
@@ -1375,6 +1379,8 @@ background-size: cover;
     font-size: 20px;
     border-bottom: 1px solid #001D47;
     border-radius: 0;
+    letter-spacing: 1px;
+    font-family: 'DM Sans', sans-serif;
 }
 .accordion-button:not(.collapsed){
     color: #001D47;
@@ -1402,6 +1408,7 @@ background-size: cover;
     padding-top: 30px;
     /* color: #FF00E5; */
     color:#001D47;
+    font-family: 'DM Sans', sans-serif;
 }
 .faq_wrapper .accordion-item:last-of-type .accordion-button.collapsed{
     border-radius: 0;
@@ -1531,6 +1538,7 @@ letter-spacing: 2px;
     background-color: transparent;
     border-bottom: 1px solid #ffffff;
     letter-spacing: 1px;
+    font-family: 'DM Sans', sans-serif;
 }
 .building_page_wrapper.floorplans_page_wrapper .faq_wrapper .accordion-item{
     background-color: transparent;
@@ -1568,7 +1576,8 @@ letter-spacing: 2px;
     width: 100%;
 }
 .summary_section  table th, .summary_section  table td {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    border-bottom: 1px solid black; /* Bottom border only */
 }
 .summary_section th, .summary_section td {
     padding: 8px;
@@ -1660,10 +1669,11 @@ video {
     
     .slide-top {
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: uppercase;
         color: #000;
-        font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+        line-height: 22px;
+        font-family: 'DM Sans', sans-serif;
     }
     .divider1 {
         border: none;
@@ -1678,6 +1688,8 @@ video {
     .para-con{
         color: #001D47;
         font-size: 20px;
+        line-height: 22px;
+        font-family: 'DM Sans', sans-serif;
     }
 
     .services_section_ameni {
@@ -1895,4 +1907,20 @@ line-height: 27px !important;
     font-size: 16px;
     line-height: 22.4px;
     font-weight: 400;
+    font-family: 'Altform', sans-serif;
+    color: #001D47;
+}
+.con_para a{
+
+    color: #001D47;
+}
+
+.contact-title{
+
+    font-size: 30px;
+    
+    line-height: 33px;
+    font-family: 'DM Sans', sans-serif;
+    color: #001D47;
+
 }
