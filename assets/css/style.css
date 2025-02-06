@@ -1183,10 +1183,10 @@ width: 100%;
 .heading_tittle{
     color: #001D47;
     font-size: 38px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     word-spacing: 5px;
     font-family: 'DM Sans', sans-serif;
 }
@@ -1428,7 +1428,8 @@ background-size: cover;
     font-weight: 500;
     text-transform: uppercase;
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-family: 'DM Sans', sans-serif;
 }
 /* view section end */
 
@@ -1524,10 +1525,12 @@ background-image: url(../img/floorplans/floorplans_header_bg.jpg);
 }
 .building_page_wrapper.floorplans_page_wrapper .faq_section .heading_tittle {
 color: #fff;
+letter-spacing: 2px;
 }
 .building_page_wrapper.floorplans_page_wrapper .faq_wrapper .accordion-button{
     background-color: transparent;
     border-bottom: 1px solid #ffffff;
+    letter-spacing: 1px;
 }
 .building_page_wrapper.floorplans_page_wrapper .faq_wrapper .accordion-item{
     background-color: transparent;
@@ -1656,7 +1659,7 @@ video {
     
     
     .slide-top {
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
         color: #000;
@@ -1880,4 +1883,16 @@ line-height: 27px !important;
     font-weight: 600;
     font-size: 28px;
     line-height: 28px;
+}
+
+.slide-para{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.con_para{
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: 400;
 }

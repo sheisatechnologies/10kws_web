@@ -23,6 +23,194 @@
     <!-- Custom Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <style>
+
+
+
+        .scrollable-list {
+        max-height: 500px; /* Adjust height as needed */
+        overflow-y: auto;
+        position: relative;
+        padding-right: 10px; /* Space for scrollbar */
+        
+    }
+    
+    /* Blur effect at the bottom */
+    .scrollable-list::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 30px; /* Height of the blur */
+       
+        pointer-events: none; /* Allow scrolling through the blur */
+    }
+    
+    
+    .scrollable-list {
+        max-height: 576px; /* Set the maximum height for the scrollable container */
+        overflow-y: auto; /* Enable vertical scrolling */
+        position: relative; /* Ensure the ::after pseudo-element is positioned relative to this container */
+        overflow-x: hidden;
+    }
+    
+    /* Fixed blur effect at the bottom */
+    .scrollable-list::after {
+        content: ''; /* Required to display the pseudo-element */
+        position: absolute; /* Position it relative to the container */
+        bottom: 0; /* Stick to the bottom of the container */
+        left: 0; /* Stretch to the left edge */
+        right: 0; /* Stretch to the right edge */
+        height: 30px; /* Height of the blur area */
+        
+        pointer-events: none; /* Allow scrolling through the blur */
+        z-index: 1; /* Ensure the blur stays above the content */
+    }
+    
+    /* Content inside the scrollable list */
+    .scrollable-list table {
+        position: relative; /* Ensure content scrolls under the blur */
+        z-index: 0; /* Keep content below the blur effect */
+    }
+    
+    @media (max-width: 768px) { /* Target screens smaller than 768px */
+        .scrollable-list {
+            all: unset; /* Remove all applied styles */
+        }
+    
+        .scrollable-list::after {
+            display: none; /* Ensure pseudo-element is also hidden */
+        }
+    }
+    
+    @media (min-width: 1400px) and (max-width: 1499px) {
+        .scrollable-list {
+            max-height: 526px; /* Adjust the height as needed */
+        }
+    }
+    
+    @media (min-width: 1200px) and (max-width: 1399px) {
+        .scrollable-list {
+            max-height: 456px; /* Adjust the height as needed */
+        }
+    }
+    
+    
+    
+    
+    @media (max-width: 1200px) {
+        .scrollable-list {
+            max-height: 350px; /* Adjust height for medium screens */
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .scrollable-list {
+            max-height: 209px; /* Adjust height for small screens */
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .scrollable-list {
+            max-height: 300px; /* Adjust height for tablets */
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .scrollable-list {
+            max-height: 250px; /* Adjust height for mobile devices */
+        }
+    }
+    
+    /* Hide all slides by default */
+    #content-slides .slide,
+    #image-slides .slide {
+        display: none;
+    }
+    
+    /* Show only the active slide */
+    #content-slides .slide.active,
+    #image-slides .slide.active {
+        display: block;
+    }
+    
+    .scrollable-list::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+    
+    .scrollable-list::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, .5);
+      box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    }
+    
+    
+    
+    .content-slider-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .map-category-title {
+    font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1.2px;
+    padding-bottom: 81px;
+    padding-right: 42px;
+}
+
+.map-key td {
+    vertical-align: top;
+}
+
+.text-mustard {
+    color: #FF9222;;
+}
+.map-key-square {
+    font-size: 27px;
+    line-height: 18px;
+    width: 34px;
+}
+
+.prev-arrow {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    right: 133px;
+}
+
+.next-arrow {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    right: 100px;
+}
+
+.dot {
+    width: 30px;
+    height: 5px;
+    background-color: #D9D9D9;
+    /* border-radius: 50%; */
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+#dotsContainer{
+
+    margin-top: 60px;
+    position: absolute;
+}
+    </style>
 </head>
 
 <body class="building_page_wrapper location_page_wrapper">
@@ -90,8 +278,8 @@
             <div class="hero_heading">
                 <div class="section_tittle">
                     <div class="section_tittle">
-                        <h1 class="heading_tittle">YOUR NEW HQ <br>PERFECTLY
-                            <span>POSITIONED</span>
+                        <h1 class="heading_tittle">YOUR NEW HQ <br> <span class="heading_tittle_span">PERFECTLY</span>
+                            <span class="heading_tittle_span">POSITIONED</span>
                         </h1>
                     </div>
                 </div>
@@ -119,108 +307,396 @@
     </section>
 
 
-    <!--  services_section  -->
-  <!-- <section class="services_section services_section_ameni">
-    <div class="container">
-        <div class="services_slider">
-            <div class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="slider_items">
-                        <div class="img_box">
-                            <img src="assets/img/slider-items-1.png" alt="">
-                        </div>
-                        <div class="tittle_slide">
-                            <h3>
-                                CASUAL
-                                <span>WORKING ZONES</span>
-                            </h3>
-                        </div>
-                    </div>
-                  </div>
+    <div class="container p-0 my-5 position-relative">
+        <div class="row align-items-start">
+          <!-- Content Section -->
+          <div class="col-md-3 order-2 order-md-1  position-relative" id="content-section">
+            <!-- Controls (Arrows + Dots) -->
+            <div class="controls-container">
+                 <!-- Dots -->
+              <div id="dotsContainer" class="d-flex gap-2"></div>
+              <!-- Arrows -->
+               <span>
+                <img src="assets/img/location/btn-arrow-left.svg" id="prevIcon" alt="Previous" class="prev-arrow">
+                <img src="assets/img/location/btn-arrow-right.svg" id="nextIcon" alt="Next" class="next-arrow">
+    
+               </span>
+             
+              
+             
+            </div>
+    
+            <!-- Content -->
+            <div id="content-slides">
+              <div class="slide active">
+                <table class="map-key mtm-7">
+                    <tr>
+                     <td class="map-key-square text-mustard">&#9632;</td>
+                     <td class="map-category-title">food & drink</td>
+                    </tr>
+                </table>
 
-                  <div class="swiper-slide">
-                    <div class="slider_items">
-                        <div class="img_box">
-                            <img src="assets/img/slider-items-2.png" alt="">
-                        </div>
-                        <div class="tittle_slide">
-                            <h3>
-                                CITY
-                                <span>VIEWS</span>
-                            </h3>
-                        </div>
-                    </div>
-                  </div>
+            <div class="scrollable-list">
+                <table class="map-key">
+                    
+                     <tr>
+                         <td class="map-category-number">1</td>
+                         <td class="map-category-text">La Goccia</td>
+                     </tr>
+                     <tr>
+                         <td class="map-category-number">2</td>
+                         <td class="map-category-text">Cafe Murano</td>
+                     </tr>
+                     <tr>
+                         <td class="map-category-number">3</td>
+                         <td class="map-category-text">Ikoyi</td>
+                     </tr>
+                     <tr>
+                         <td class="map-category-number">4</td>
+                         <td class="map-category-text">Balthazar</td>
+                     </tr>
+                     <tr>
+                         <td class="map-category-number">5</td>
+                         <td class="map-category-text">180 House</td>
+                     </tr>
+                     <tr>
+                         <td class="map-category-number">6</td>
+                         <td class="map-category-text">Bancone</td>
+                     </tr>
+                     <tr>
+                         <td class="map-category-number">7</td>
+                         <td class="map-category-text">Blacklock</td>
+                     </tr>
+                     <tr>
+                         <td class="map-category-number">8</td>
+                         <td class="map-category-text">Barrafina</td>
+                     </tr>
+                     <tr>
+                        <td class="map-category-number">9</td>
+                        <td class="map-category-text">Pret A Manger</td>
+                    </tr> <tr>
+                        <td class="map-category-number">10</td>
+                        <td class="map-category-text">Itsu</td>
+                    </tr> <tr>
+                        <td class="map-category-number">11</td>
+                        <td class="map-category-text">Leon</td>
+                    </tr> <tr>
+                        <td class="map-category-number">12</td>
+                        <td class="map-category-text">Honest Burger</td>
+                    </tr> <tr>
+                        <td class="map-category-number">13</td>
+                        <td class="map-category-text">Caravan</td>
+                    </tr> <tr>
+                        <td class="map-category-number">14</td>
+                        <td class="map-category-text">Cote Covent Garden</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">15</td>
+                        <td class="map-category-text">Wasabi</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">16</td>
+                        <td class="map-category-text">Starbucks</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">17</td>
+                        <td class="map-category-text">Coco di Mama</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">18</td>
+                        <td class="map-category-text">Franco Manca</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">19</td>
+                        <td class="map-category-text">Ole & Steen</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">20</td>
+                        <td class="map-category-text">Smith & Wollensky</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">21</td>
+                        <td class="map-category-text">The River Restaurant by Gordon Ramsey</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">22</td>
+                        <td class="map-category-text">Christophers on Wellington Street</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">23</td>
+                        <td class="map-category-text">Hawksmoor Seven Dials</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">24</td>
+                        <td class="map-category-text">Frog by Adam Handling</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">25</td>
+                        <td class="map-category-text">The Delaunay</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">26</td>
+                        <td class="map-category-text">Clos Maggiore</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">27</td>
+                        <td class="map-category-text">Roka</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">28</td>
+                        <td class="map-category-text">Tolkas</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">29</td>
+                        <td class="map-category-text">Margot</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">30</td>
+                        <td class="map-category-text">Brasserie Blanc</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">31</td>
+                        <td class="map-category-text">Spring (Somerset House)</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">32</td>
+                        <td class="map-category-text">The Port House</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">33</td>
+                        <td class="map-category-text">Watchhouse Coffee</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">34</td>
+                        <td class="map-category-text">STK Steakhouse</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">35</td>
+                        <td class="map-category-text">The Savoy Tap</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">36</td>
+                        <td class="map-category-text">The Savoy Gril</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">37</td>
+                        <td class="map-category-text">Mr Fogg's Society of Exploration</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">38</td>
+                        <td class="map-category-text">Skylon</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">39</td>
+                        <td class="map-category-text">BFI Riverfront</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">40</td>
+                        <td class="map-category-text">Ping Pong</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">41</td>
+                        <td class="map-category-text">Truffle Burger Southbank</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="map-category-number">42</td>
+                        <td class="map-category-text">Cellar Door</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">43</td>
+                        <td class="map-category-text">Radio Rooftop</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">44</td>
+                        <td class="map-category-text">Plumbe Wine</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">45</td>
+                        <td class="map-category-text">Dovetail Bar</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">46</td>
+                        <td class="map-category-text">Beaufort Bar</td>
+                    </tr>
+                    <tr>
+                        <td class="map-category-number">47</td>
+                        <td class="map-category-text">Terrace Bar at Somerset House</td>
+                    </tr>
+                 </table>
+            </div>
+                
+              </div>
 
-                  <div class="swiper-slide">
-                    <div class="slider_items">
-                        <div class="img_box">
-                            <img src="assets/img/slider-items-3.png" alt="">
-                        </div>
-                        <div class="tittle_slide">
-                            <h3>
-                                TERRACE
-                                <span>SPACE</span>
-                            </h3>
-                        </div>
-                    </div>
-                  </div>
+              <div class="slide">
 
-                  <div class="swiper-slide">
-                    <div class="slider_items">
-                        <div class="img_box">
-                            <img src="assets/img/slider-items-4.png" alt="">
-                        </div>
-                        <div class="tittle_slide">
-                            <h3>
-                                WELLNESS
-                                <span>LOUNGE</span>
-                            </h3>
-                        </div>
-                    </div>
-                  </div>
+                <table class="map-key mtm-7">
+                    <tr>
+                        <td class="map-key-square text-orange">&#9632;</td>
+                        <td class="map-category-title">Local occupiers</td>
+                    </tr>
+                </table>
 
-                  <div class="swiper-slide">
-                    <div class="slider_items">
-                        <div class="img_box">
-                            <img src="assets/img/slider-items-5.png" alt="">
-                        </div>
-                        <div class="tittle_slide">
-                            <h3>
-                                OUTSIDE
-                                <span>SEATING</span>
-                            </h3>
-                        </div>
-                    </div>
-                  </div>
+                <div class="scrollable-list">
+                    <table class="map-key">
+                       
+                        <tr>
+                            <td class="map-category-number">48</td>
+                            <td class="map-category-text">Google</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">49</td>
+                            <td class="map-category-text">Condé Nast</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">50</td>
+                            <td class="map-category-text">Goldman Sachs</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">51</td>
+                            <td class="map-category-text">McKinsey &amp; Company</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">52</td>
+                            <td class="map-category-text">Coutts</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">53</td>
+                            <td class="map-category-text">Mishcon De Reya</td>
+                        </tr>
 
-                  <div class="swiper-slide">
-                    <div class="slider_items">
-                        <div class="img_box">
-                            <img src="assets/img/slider-items-1.png" alt="">
-                        </div>
-                        <div class="tittle_slide">
-                            <h3>
-                                CASUAL
-                                <span>WORKING ZONES</span>
-                            </h3>
-                        </div>
-                    </div>
-                  </div>
-                 
+                        <tr>
+                            <td class="map-category-number">54</td>
+                            <td class="map-category-text">JP Morgan</td>
+                        </tr>
+                       
+                       
+                    </table>
                 </div>
                 
+              </div>
+
+            
+              <div class="slide">
+
+                <table class="map-key mtm-7">
+                    <tr>
+                        <td class="map-key-square text-teal">&#9632;</td>
+                        <td class="map-category-title">Green spaces and wellness</td>
+                    </tr>
+                </table>
+
+                <div class="scrollable-list">
+                    <table class="map-key">
+                       
+                        <tr>
+                            <td class="map-category-number">55</td>
+                            <td class="map-category-text">The River (running path)</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">56</td>
+                            <td class="map-category-text">Lincoln’s Inn Fields</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">57</td>
+                            <td class="map-category-text">The Southbank</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">58</td>
+                            <td class="map-category-text">Victoria Embankment Gardens</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">59</td>
+                            <td class="map-category-text">St James’s Park</td>
+                        </tr>
+                        <tr>
+                            <td class="map-category-number">60</td>
+                            <td class="map-category-text">Soho Square Gardens</td>
+                        </tr>
+                        
+                       
+                    </table>
+
+                </div>
+              
+              </div>
+              
+
+              <div class="slide">
+
+                <table class="map-key mtm-7">
+                    <tr>
+                        <td class="map-key-square text-blue">&#9632;</td>
+                        <td class="map-category-title">Hotels</td>
+                    </tr>
+                    
+                </table>
+
+                    <div class="scrollable-list">
+
+                        <table class="map-key">
+                   
+                            <tr>
+                                <td class="map-category-number">61</td>
+                                <td class="map-category-text">The Savoy</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">62</td>
+                                <td class="map-category-text">ME London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">63</td>
+                                <td class="map-category-text">One Aldwych</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">64</td>
+                                <td class="map-category-text">The Walforf</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">65</td>
+                                <td class="map-category-text">Nomad London</td>
+                            </tr>
+                            <tr>
+                                <td class="map-category-number">66</td>
+                                <td class="map-category-text">Henrietta Hotel</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+               
+              </div>
             </div>
-            <div class="arrow_icon">
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+          </div>
+    
+          <!-- Image Section -->
+          <div class="col-md-9 p-0  order-1 order-md-2 p-md-3 text-center">
+            <div id="image-slides">
+              <img 
+                class="img-fluid  slide active" 
+                src="assets/img/location/location-map.jpg" 
+                alt="Slide 1"
+              />
+              <img 
+                class="img-fluid  slide" 
+                src="assets/img/location/location-map.jpg" 
+                alt="Slide 2"
+              />
+              <img 
+                class="img-fluid  slide" 
+                src="assets/img/location/location-map.jpg" 
+                alt="Slide 3"
+              />
+
+              <img 
+              class="img-fluid  slide" 
+              src="assets/img/location/location-map.jpg" 
+              alt="Slide 3"
+            />
+
             </div>
+          </div>
         </div>
-    </div>
-  </section> -->
-
-
+      </div>
 
 
 
@@ -970,6 +1446,66 @@
     <script src="assets/js/theia-sticky-sidebar.js"></script>
     <script src="assets/js/script.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+         const contentSlides = document.querySelectorAll('#content-slides .slide');
+         const imageSlides = document.querySelectorAll('#image-slides .slide');
+         const prevIcon = document.getElementById('prevIcon');
+         const nextIcon = document.getElementById('nextIcon');
+         const dotsContainer = document.getElementById('dotsContainer');
+         let currentSlide = 0;
+     
+         // Update Slide Function
+         function updateSlide(index) {
+             // Update content slides
+             contentSlides.forEach((slide, idx) => {
+                 slide.classList.toggle('active', idx === index);
+             });
+     
+             // Update image slides
+             imageSlides.forEach((slide, idx) => {
+                 slide.classList.toggle('active', idx === index);
+             });
+     
+             // Update dots
+             const dots = document.querySelectorAll('.dot');
+             dots.forEach((dot, idx) => {
+                 dot.classList.toggle('active', idx === index);
+             });
+         }
+     
+         // Create Dots for Indicators
+         function createDots() {
+             contentSlides.forEach((_, idx) => {
+                 const dot = document.createElement('span');
+                 dot.className = 'dot';
+                 if (idx === currentSlide) dot.classList.add('active');
+                 dot.addEventListener('click', () => {
+                     currentSlide = idx;
+                     updateSlide(currentSlide);
+                 });
+                 dotsContainer.appendChild(dot);
+             });
+         }
+     
+         // Navigation Button Handlers
+         prevIcon.addEventListener('click', () => {
+             currentSlide = (currentSlide - 1 + contentSlides.length) % contentSlides.length;
+             updateSlide(currentSlide);
+         });
+     
+         nextIcon.addEventListener('click', () => {
+             currentSlide = (currentSlide + 1) % contentSlides.length;
+             updateSlide(currentSlide);
+         });
+     
+         // Initialize
+         createDots();
+         updateSlide(currentSlide);
+     });
+     
+       </script>
+     
 </body>
 
 </html>

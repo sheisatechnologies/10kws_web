@@ -367,9 +367,17 @@
   .footer-block {
     margin-bottom: 20px;
   }
+
+ 
+
+  
 }
 
 @media (max-width: 767.98px) {
+
+
+
+ 
   .summary_section .section_tittle {
     margin-top: 112px;
 }
@@ -387,7 +395,7 @@
     background-image: url(../img/header-mobile-bg3.png);
 }
   .varied_section .section_tittle .heading_tittle {
-    font-size: 39.15px;
+    font-size: 61.18px;
 }
 .details_section.city_view .section_tittle {
   margin-top: 0;
@@ -510,13 +518,18 @@ padding-top: 30px;
     padding: 109px 0;
 }
   .hero_section {
-    background-image: url(../img/header-mobile-bg.png);
+    background-image: url(../img/building/building-hero-phon.jpg);
     min-height: 852px;
 }
   .hero_section .hero_heading h1 {
-    font-size: 59px;
+    font-size: 49px;
     display: block;
     text-align: center;
+    line-height: 49px;
+    letter-spacing: 1px;
+}
+.heading_tittle_span {
+  margin-top: 0px;
 }
 .hero_section .hero_heading h1 img {
   max-height: 50px;
@@ -627,6 +640,11 @@ padding-top: 30px;
     margin: 0;
     text-transform: uppercase;
 }
+
+.cw_title{
+  font-size: 16px !important;
+  line-height: 21.6px !important;
+    }
 
 
 
@@ -744,4 +762,11 @@ div#floor2 {
   }
   
   
+}
+
+@media (min-width: 1448px){
+  
+  .heading_tittle_span {
+    margin-top: 0px !important;
+}
 }
