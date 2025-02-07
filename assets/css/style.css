@@ -1704,6 +1704,7 @@ video {
         font-size: 20px;
         line-height: 22px;
         font-family: 'DM Sans', sans-serif;
+        letter-spacing: 1px;
     }
 
     .services_section_ameni {
@@ -1936,6 +1937,7 @@ line-height: 27px !important;
     line-height: 33px;
     font-family: 'DM Sans', sans-serif;
     color: #001D47;
+    letter-spacing: 2px;
 
 }
 
