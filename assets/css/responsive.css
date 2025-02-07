@@ -369,7 +369,13 @@
   }
 
 
-  
+  .swiper-pagination{
+    padding-bottom: 0px !important;
+  }
+
+ .sub-basement-img{
+  left: 79%;
+ }
 
  
 
@@ -395,7 +401,7 @@
     padding: 86px 0;
 }
   .building_page_wrapper.floorplans_page_wrapper .hero_section {
-    background-image: url(../img/header-mobile-bg3.png);
+    background-image: url(../img/floorplans/floorplans-header-mob.jpg);
 }
   .varied_section .section_tittle .heading_tittle {
     font-size: 61.18px;
@@ -441,7 +447,16 @@ padding-bottom: 0;
 
   }
   .building_page_wrapper .hero_section{
-    background-image: url(../img/header-mobile-bg2.png);
+    background-image: url(../img/building/building-hero-phon.jpg);
+  }
+  .location_page_wrapper .hero_section{
+    background-image: url(../img/location/location-header-bg-mob.jpg);
+  }
+  .download_page_wrapper .hero_section{
+    background-image: url(../img/download/header-bg-download-mob.jpg);
+  }
+  .amenities_page_wrapper .hero_section{
+    background-image: url(../img/amenities/ameni-header-mob.jpg);
   }
   .highlight_section {
     background-image: url(../img/view-m-bg.jpg);

@@ -1936,3 +1936,11 @@ line-height: 27px !important;
     color: #001D47;
 
 }
+
+
+/* download css */
+
+
+.download_page_wrapper .hero_section {
+    background-image: url(../img/download/header-bg-download.jpg);
+}

@@ -38,6 +38,7 @@
     }
 
 }
+
     
 
 
@@ -46,12 +47,17 @@
         display: flex;
         flex-direction: column; /* Stack elements vertically */
     }
-    .left-panel, .right-panel {
-        width: 100%; /* Make all sections full width */
-        flex: none; /* Reset flex properties */
-    }
+
     .right-panel {
-        order: 3; /* Ensure contact section moves below the map */
+        order: 1; /* Map section moves to the top */
+        width: 100%;
+    }
+
+    .left-panel {
+        order: 2; /* Content section moves below */
+        width: 100%;
+        padding: 15px;
+        background: #fff; /* Ensures visibility */
     }
 }
 
@@ -359,7 +365,7 @@
     <div class="container p-0 my-5 position-relative map-container">
         <div class="row align-items-start">
           <!-- Content Section -->
-          <div class="col-md-3 order-2 order-md-1  position-relative bg-map p-md-5 left-panel" id="content-section">
+          <div class="col-md-3 order-2 order-md-1  position-relative bg-map p-md-5 left-panel ps-4" id="content-section">
             <!-- Controls (Arrows + Dots) -->
             <div class="controls-container">
                  <!-- Dots -->
@@ -725,6 +731,7 @@
                 src="assets/img/location/location-map.jpg" 
                 alt="Slide 1"
               />
+              
               <img 
                 class="img-fluid  slide" 
                 src="assets/img/location/location-map.jpg" 
