@@ -129,6 +129,9 @@
 
  
 @media (max-width: 991.98px) {
+  .navbar {
+    align-items: center !important;
+}
   #header .header_filled_btn,   #header .header_border_btn {
     padding: 8px 15px !important;
   }
@@ -385,7 +388,11 @@
 @media (max-width: 767.98px) {
 
 
-
+  .tittle_slide h3 span{
+    display: block;
+    font-family: 'MADE Mirage';
+    font-size: 28px;
+}
  
   .summary_section .section_tittle {
     margin-top: 112px;
@@ -531,6 +538,7 @@ padding-top: 30px;
 .tittle_slide h3 {
   color: #EFEDDF ;
   text-align: center;
+  font-size: 28px !important;
 }
   .workspace_section {
     padding: 109px 0;

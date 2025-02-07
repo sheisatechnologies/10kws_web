@@ -1299,7 +1299,7 @@ width: 100%;
     font-size: 70.15px;
 }
 .content_wrapper p.pink_text{
-    color: #FF00E5;
+    color: #001D47;
     font-size: 16px;
 }
 
@@ -1406,6 +1406,7 @@ background-size: cover;
     border: 0;
     padding: 0;
     padding-top: 30px;
+    padding-bottom: 30px;
     /* color: #FF00E5; */
     color:#001D47;
     font-family: 'DM Sans', sans-serif;
@@ -1681,10 +1682,11 @@ video {
     
     .slide-top {
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         color: #000;
         line-height: 22px;
+        letter-spacing: 1px;
         font-family: 'DM Sans', sans-serif;
     }
     .divider1 {
@@ -1913,6 +1915,7 @@ line-height: 27px !important;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .con_para{
@@ -1930,7 +1933,6 @@ line-height: 27px !important;
 .contact-title{
 
     font-size: 30px;
-    
     line-height: 33px;
     font-family: 'DM Sans', sans-serif;
     color: #001D47;
