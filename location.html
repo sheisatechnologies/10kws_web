@@ -156,13 +156,15 @@
     }
     
     .map-category-title {
-    font-family: 'Altform-Bold', Helvetica, Arial, sans-serif;
+    font-family: 'DM Sans', sans-serif;
     text-transform: uppercase;
     font-size: 15px;
     line-height: 18px;
     letter-spacing: 1.2px;
     padding-bottom: 81px;
     padding-right: 42px;
+    margin-left: 10px; /* Adjust as needed */
+    display: inline-block;
 }
 
 .map-key td {
@@ -178,13 +180,20 @@
 .map-key-square {
     font-size: 27px;
     line-height: 18px;
-    width: 34px;
+    /* width: 34px; */
+    
+    display: inline-block;
+    width: 25px; /* Adjust size as needed */
+    height: 25px;
+    background-color: teal; /* Match your existing text color */
+    border-radius: 50%; /* Makes it a circle */
+    text-indent: -9999px; /* Hide the square character if needed */
 }
 
 .prev-arrow {
     cursor: pointer;
     width: 20px;
-    height: 20px;
+    height: 30px;
     position: absolute;
     top: 49px;
     right: 52px;
@@ -194,7 +203,7 @@
     cursor: pointer;
     position: absolute;
     width: 20px;
-    height: 20px;
+    height: 30px;
     top: 50px;
     right: 30px;
 
@@ -335,7 +344,7 @@
               <div class="slide active">
                 <table class="map-key mtm-7">
                     <tr>
-                     <td class="map-key-square text-mustard">&#9632;</td>
+                     <td class="map-key-square text-mustard">&nbsp;&nbsp;&nbsp;</td>
                      <td class="map-category-title">RESTAURANTS</td>
                     </tr>
                 </table>

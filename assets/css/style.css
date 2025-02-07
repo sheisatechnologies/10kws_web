@@ -1588,6 +1588,11 @@ letter-spacing: 2px;
     cursor: pointer;
 }
 
+.summary_section .tr-sp:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
 
 /* Floorplans page css end */
 
@@ -1907,7 +1912,7 @@ line-height: 27px !important;
     font-size: 16px;
     line-height: 22.4px;
     font-weight: 400;
-    font-family: 'Altform', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     color: #001D47;
 }
 .con_para a{
