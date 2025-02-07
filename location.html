@@ -26,6 +26,42 @@
     <style>
 
 
+@media (min-width: 992px) { /* Only apply on large screens */
+    .map-container {
+        display: flex;
+        align-items: stretch; /* Ensures both sections match height */
+    }
+
+    .left-panel {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+    
+
+
+@media (max-width: 991px) {
+    .map-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+    }
+    .left-panel, .right-panel {
+        width: 100%; /* Make all sections full width */
+        flex: none; /* Reset flex properties */
+    }
+    .right-panel {
+        order: 3; /* Ensure contact section moves below the map */
+    }
+}
+
+
+
+
+
+
+
+
 
         .scrollable-list {
         max-height: 500px; /* Adjust height as needed */
@@ -185,7 +221,7 @@
     display: inline-block;
     width: 25px; /* Adjust size as needed */
     height: 25px;
-    background-color: teal; /* Match your existing text color */
+    
     border-radius: 50%; /* Makes it a circle */
     text-indent: -9999px; /* Hide the square character if needed */
 }
@@ -320,10 +356,10 @@
     </section>
 
 
-    <div class="container p-0 my-5 position-relative">
+    <div class="container p-0 my-5 position-relative map-container">
         <div class="row align-items-start">
           <!-- Content Section -->
-          <div class="col-md-3 order-2 order-md-1  position-relative bg-map p-md-5" id="content-section">
+          <div class="col-md-3 order-2 order-md-1  position-relative bg-map p-md-5 left-panel" id="content-section">
             <!-- Controls (Arrows + Dots) -->
             <div class="controls-container">
                  <!-- Dots -->
@@ -344,7 +380,7 @@
               <div class="slide active">
                 <table class="map-key mtm-7">
                     <tr>
-                     <td class="map-key-square text-mustard">&nbsp;&nbsp;&nbsp;</td>
+                     <td class="map-key-square"></td>
                      <td class="map-category-title">RESTAURANTS</td>
                     </tr>
                 </table>
@@ -545,7 +581,7 @@
 
                 <table class="map-key mtm-7">
                     <tr>
-                        <td class="map-key-square text-orange">&#9632;</td>
+                        <td class="map-key-square"></td>
                         <td class="map-category-title">LOCAL OCCUPIERS</td>
                     </tr>
                 </table>
@@ -594,7 +630,7 @@
 
                 <table class="map-key mtm-7">
                     <tr>
-                        <td class="map-key-square text-teal">&#9632;</td>
+                        <td class="map-key-square"></td>
                         <td class="map-category-title">WELLNESS</td>
                     </tr>
                 </table>
@@ -639,7 +675,7 @@
 
                 <table class="map-key mtm-7">
                     <tr>
-                        <td class="map-key-square text-blue">&#9632;</td>
+                        <td class="map-key-square"></td>
                         <td class="map-category-title">HOTELS</td>
                     </tr>
                     
@@ -682,7 +718,7 @@
           </div>
     
           <!-- Image Section -->
-          <div class="col-md-9 p-0  order-1 order-md-2 p-md-3 text-center">
+          <div class="col-md-9 p-0  order-1 order-md-2 p-md-3 text-center right-panel">
             <div id="image-slides">
               <img 
                 class="img-fluid  slide active" 
@@ -1480,26 +1516,10 @@
                  slide.classList.toggle('active', idx === index);
              });
      
-             // Update dots
-             const dots = document.querySelectorAll('.dot');
-             dots.forEach((dot, idx) => {
-                 dot.classList.toggle('active', idx === index);
-             });
+             
          }
      
-         // Create Dots for Indicators
-         function createDots() {
-             contentSlides.forEach((_, idx) => {
-                 const dot = document.createElement('span');
-                 dot.className = 'dot';
-                 if (idx === currentSlide) dot.classList.add('active');
-                 dot.addEventListener('click', () => {
-                     currentSlide = idx;
-                     updateSlide(currentSlide);
-                 });
-                 dotsContainer.appendChild(dot);
-             });
-         }
+         
      
          // Navigation Button Handlers
          prevIcon.addEventListener('click', () => {
@@ -1516,6 +1536,108 @@
          createDots();
          updateSlide(currentSlide);
      });
+
+
+
+
+     document.addEventListener("DOMContentLoaded", function () {
+    function matchHeight() {
+        let leftPanel = document.querySelector(".left-panel");
+        let rightPanel = document.querySelector(".right-panel");
+
+        if (window.innerWidth >= 992) { // Apply only for desktops
+            let rightHeight = rightPanel.offsetHeight;
+            leftPanel.style.height = rightHeight + "px";
+        } else {
+            leftPanel.style.height = "auto"; // Reset on mobile
+        }
+    }
+
+    // Run on load & resize
+    matchHeight();
+    window.addEventListener("resize", matchHeight);
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const contentSlides = document.querySelectorAll("#content-slides .slide");
+    const imageSlides = document.querySelectorAll("#image-slides .slide");
+    const prevIcon = document.getElementById("prevIcon");
+    const nextIcon = document.getElementById("nextIcon");
+    const dotsContainer = document.getElementById("dotsContainer");
+    let currentSlide = 0;
+
+    // Define colors for each slide
+    const slideColors = ["#42AD56", "#771212", "#E4363F", "#001D47"]; // Adjust colors as needed
+
+    // Define dot colors
+    const defaultDotColor = "#ccc"; // Inactive dot color
+    const activeDotColor = "#001D47"; // Active dot color
+
+    function updateSlide(index) {
+        // Update content slides
+        contentSlides.forEach((slide, idx) => {
+            slide.classList.toggle("active", idx === index);
+
+            // Reset all map-key-square elements
+            const mapKeySquare = slide.querySelector(".map-key-square");
+            if (mapKeySquare) {
+                mapKeySquare.style.backgroundColor = slideColors[idx]; // Assign correct color
+            }
+        });
+
+        // Update image slides
+        imageSlides.forEach((slide, idx) => {
+            slide.classList.toggle("active", idx === index);
+        });
+
+        // Update dots and change their colors
+        const dots = document.querySelectorAll(".dot");
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle("active", idx === index);
+            dot.style.backgroundColor = idx === index ? activeDotColor : defaultDotColor; // Active dot color
+        });
+    }
+
+    // Create Dots for Indicators
+    function createDots() {
+        contentSlides.forEach((_, idx) => {
+            const dot = document.createElement("span");
+            dot.className = "dot";
+            dot.style.backgroundColor = defaultDotColor; // Default dot color
+            if (idx === currentSlide) {
+                dot.classList.add("active");
+                dot.style.backgroundColor = activeDotColor; // Active dot color
+            }
+            dot.addEventListener("click", () => {
+                currentSlide = idx;
+                updateSlide(currentSlide);
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    // Navigation Button Handlers
+    prevIcon.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + contentSlides.length) % contentSlides.length;
+        updateSlide(currentSlide);
+    });
+
+    nextIcon.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % contentSlides.length;
+        updateSlide(currentSlide);
+    });
+
+    // Initialize
+    createDots();
+    updateSlide(currentSlide);
+});
+
+
+
+
+
+
      
        </script>
      

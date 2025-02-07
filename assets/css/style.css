@@ -1457,6 +1457,13 @@ background-image: url(../img/floorplans/floorplans_header_bg.jpg);
     text-transform: uppercase;
 }
 
+.sub-basement-img{
+    width: 20% !important;
+    position: absolute;
+    left: 70%;
+    top: 75%;
+}
+
 /* summary section start */
 .summary_section{
     padding: 166px 0;
