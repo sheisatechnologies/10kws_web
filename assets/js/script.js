@@ -9,7 +9,7 @@ $(document).ready(function () {
             var navbar = $('#header');
             
             // if ($(this).scrollTop() > HeadH) {
-            if ($(this).scrollTop() > 250) {
+            if ($(this).scrollTop() > 150) {
                 if (!navbar.hasClass('is-sticky')) {
                     navbar.addClass('is-sticky');
                      $('body').css('padding-top', HeadH);
