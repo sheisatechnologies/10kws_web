@@ -30,6 +30,10 @@
   .ps-md-1{
     padding-left: 5.5rem !important;
   }
+
+
+.px-lr-10 { padding-left: 150px; padding-right: 150px; }
+
 /* 
   .dropdown:hover ul.dropdown-menu,
   .dropdown:hover ul.dropdown-menu.show {
@@ -473,7 +477,7 @@ padding-bottom: 0;
     display: none;
   }
   .details_section  img{
-    max-height: 279.88px;
+    max-height: 379.88px;
   }
   .footer_wrapper {
     background-image: url(../img/footer-bg-m.png);
