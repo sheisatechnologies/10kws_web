@@ -176,26 +176,24 @@ $(document).ready(function () {
   $('.cms_section').css('min-height', Innheight);
 });
 
+var swiper = new Swiper('.mySwiper', {
 
-var swiper = new Swiper(".mySwiper", {
-  autoplay: {
-    delay: 4000, // Increased delay to slow down autoplay (milliseconds)
-    disableOnInteraction: false, // Ensures autoplay continues after interaction
-  },
-  speed: 1000, // Slows down the transition effect (milliseconds)
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
+  // If we need pagination
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+    el: '.swiper-pagination',
   },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-    clickable: true,
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
+  loop: true,
 });
+
 
 
 var swiper = new Swiper(".mySwiper5", {
@@ -260,10 +258,8 @@ var swiper = new Swiper(".mySwiper2", {
 
 var swiper = new Swiper(".mySwiper3", {
   autoplay: {
-    delay: 4000,
-    disableOnInteraction: false, // Ensures autoplay continues after interaction
+    delay: 2000,
   },
-  speed: 1000, // Slows down transition speed (1 second)
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -394,37 +390,138 @@ mm.add("(min-width: 800px)", () => {
       y: -100
     }, 's'
   )
-  .fromTo('.orange',
-    {
-      clipPath: "polygon(5% 8%, 96% 28%, 74% 61%, 50% 100%, 2% 71%)",
-      x: 500,
-    },
-    {
-      clipPath: "polygon(2% 71%, 5% 8%, 96% 28%, 74% 61%, 50% 100%)",
-      duration: 1,
-      x: -500,
-      ease: "power1.inOut",
-      rotate: -15,
-    },'s'
-  )
-  .fromTo('.purple',
-    {
-      clipPath: "polygon(59% 3%, 100% 65%, 45% 100%, 7% 85%, 6% 20%)",
-      x: 500,
-      y: 100
-    },
-    {
-      clipPath: "polygon(6% 20%, 59% 3%, 100% 65%, 45% 100%, 7% 85%)",
-      duration: 1,
-      x: -500,
-      ease: "power1.inOut",
-      rotate: 15,
-      y: -100
-    },'s'
-  )
+    .fromTo('.orange',
+      {
+        clipPath: "polygon(5% 8%, 96% 28%, 74% 61%, 50% 100%, 2% 71%)",
+        x: 500,
+      },
+      {
+        clipPath: "polygon(2% 71%, 5% 8%, 96% 28%, 74% 61%, 50% 100%)",
+        duration: 1,
+        x: -500,
+        ease: "power1.inOut",
+        rotate: -15,
+      }, 's'
+    )
+    .fromTo('.purple',
+      {
+        clipPath: "polygon(59% 3%, 100% 65%, 45% 100%, 7% 85%, 6% 20%)",
+        x: 500,
+        y: 100
+      },
+      {
+        clipPath: "polygon(6% 20%, 59% 3%, 100% 65%, 45% 100%, 7% 85%)",
+        duration: 1,
+        x: -500,
+        ease: "power1.inOut",
+        rotate: 15,
+        y: -100
+      }, 's'
+    );
 
+
+  // View section animation
+  let viewTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.view_section',
+      start: 'top 80%',
+      end: 'bottom 20%',
+      scrub: false,
+      // markers: true,
+    }
+  });
+
+  viewTl.from('.view_section .col-md-6', {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
+
+  // Slider section animation for desktop
+
+  let slideTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.slider_section',
+      start: 'top 50%',
+      end: 'bottom 10%',
+      scrub: true,
+      // markers: true,
+    }
+  });
+  slideTl.fromTo('.slider_section .slider_wrapper', {
+    clipPath: "polygon(35% 0%, 68% 0%, 100% 15%, 100% 51%, 84% 100%, 0% 100%, 0% 23%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%)",
+  });
+
+
+
+  // Building Page Hero Section Animation
+  let heroTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero_section_bg_img',
+      start: 'top top',
+      end: '100% 0%',
+      scrub: 1,
+      // markers: true,
+    }
+  });
+  heroTl.fromTo('.hero_section_bg_img', {
+    clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+  });
+
+
+  // Building Page Slider Section Above Animation
+  let blSliderTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.gc-animation img',
+      start: 'top 100%',
+      end: '100% 0%',
+      scrub: 1,
+      // markers: true,
+    }
+  });
   
+  blSliderTl.fromTo('.gc-animation img', {
+    clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+  });
+
+
+
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.double_gc_section',
+      start: '50% 50%',
+      end: '100% 100%',
+      scrub: true,
+      // markers: true,
+    }
+  })
+    .fromTo('.double_gc_section img', {
+      clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
+    }, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
+      ease: 'none'
+    });
 });
+
+
+
+
+// Responsive Animation
 
 mm.add("(max-width: 799px)", () => {
   let tl = gsap.timeline({
@@ -452,32 +549,388 @@ mm.add("(max-width: 799px)", () => {
       y: -100
     }, 's'
   )
-  .fromTo('.orange',
-    {
-      clipPath: "polygon(5% 8%, 96% 28%, 74% 61%, 50% 100%, 2% 71%)",
-      x: 200,
-    },
-    {
-      clipPath: "polygon(2% 71%, 5% 8%, 96% 28%, 74% 61%, 50% 100%)",
-      duration: 1,
-      x: -1000,
-      ease: "power1.inOut",
-      rotate: -15,
-    },'s'
-  )
-  .fromTo('.purple',
-    {
-      clipPath: "polygon(59% 3%, 100% 65%, 45% 100%, 7% 85%, 6% 20%)",
-      x: 200,
-      y: 100
-    },
-    {
-      clipPath: "polygon(6% 20%, 59% 3%, 100% 65%, 45% 100%, 7% 85%)",
-      duration: 1,
-      x: -1000,
-      ease: "power1.inOut",
-      rotate: 15,
-      y: -100
-    },'s'
-  )
+    .fromTo('.orange',
+      {
+        clipPath: "polygon(5% 8%, 96% 28%, 74% 61%, 50% 100%, 2% 71%)",
+        x: 200,
+      },
+      {
+        clipPath: "polygon(2% 71%, 5% 8%, 96% 28%, 74% 61%, 50% 100%)",
+        duration: 1,
+        x: -1000,
+        ease: "power1.inOut",
+        rotate: -15,
+      }, 's'
+    )
+    .fromTo('.purple',
+      {
+        clipPath: "polygon(59% 3%, 100% 65%, 45% 100%, 7% 85%, 6% 20%)",
+        x: 200,
+        y: 100
+      },
+      {
+        clipPath: "polygon(6% 20%, 59% 3%, 100% 65%, 45% 100%, 7% 85%)",
+        duration: 1,
+        x: -1000,
+        ease: "power1.inOut",
+        rotate: 15,
+        y: -100
+      }, 's'
+    )
+
+  // View section animation for mobile
+  let viewTlMobile = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.view_section',
+      start: 'top 90%',
+      end: 'bottom 20%',
+      scrub: false,
+      // markers: true,
+    }
+  });
+
+  viewTlMobile.from('.view_section .col-md-6', {
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power2.out"
+  });
+
+  // Slider section animation for mobile
+  let slideTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.slider_section',
+      start: 'top 50%',
+      end: 'bottom 10%',
+      scrub: true,
+      // markers: true,
+    }
+  });
+  slideTl.fromTo('.slider_section .slider_wrapper', {
+    clipPath: "polygon(35% 0%, 68% 0%, 100% 15%, 100% 51%, 84% 100%, 0% 100%, 0% 23%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%)",
+  });
+
+
+  // Building Page Hero Section Animation
+  let heroTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero_section_bg_img',
+      start: 'top top',
+      end: '100% 0%',
+      scrub: 1,
+      // markers: true,
+    }
+  });
+  heroTl.fromTo('.hero_section_bg_img', {
+    clipPath: "polygon(70% 0%, 100% 0%, 100% 60%, 61% 104%, 0% 100%, 0% 68%, 0% 12%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+  });
+
+
+  // Building Page Slider Section Above Animation
+  let blSliderTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.gc-animation img',
+      start: 'top top',
+      end: '100% 0%',
+      scrub: 1,
+      // markers: true,
+    }
+  });
+  blSliderTl.fromTo('.gc-animation img', {
+    clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+  });
+
 });
+
+// Add this after your existing GSAP animations
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+})
+  .to('.highlight_section .parallax-bg', {
+    y: '20%',
+    ease: 'none'
+  });
+
+// Add responsive handling
+mm.add("(max-width: 767px)", () => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.highlight_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  })
+    .to('.highlight_section .parallax-bg', {
+      y: '30%',
+      ease: 'none'
+    });
+});
+
+// Add this with your other GSAP animations
+gsap.registerPlugin(ScrollTrigger);
+
+
+// Set initial states
+gsap.set('.gc_anim_title', {
+  y: 100,
+  opacity: 0
+});
+
+gsap.set('.gc_mob_title', {
+  y: 100,
+  opacity: 0
+});
+
+// Desktop and mobile animations
+const textReveal = () => {
+  // Heading animation
+  gsap.to('.workspace_section .heading_tittle', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.workspace_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  // Paragraph animations with stagger
+  gsap.to('.workspace_section .cw_title', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.workspace_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+};
+
+// Initialize animations
+textReveal();
+
+
+// Desktop and mobile animations
+const textReveal2 = () => {
+  // Heading animation
+  gsap.to('.anything_gc_section .heading_tittle', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.anything_gc_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  // Paragraph animations with stagger
+  gsap.to('.anything_gc_section .cw_title', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.anything_gc_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+};
+
+// Initialize animations
+textReveal2();
+
+
+// Desktop and mobile animations
+const textReveal3 = () => {
+  // Heading animation
+  gsap.to('.perfectly_section .heading_tittle', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.perfectly_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  // Paragraph animations with stagger
+  gsap.to('.perfectly_section .cw_title', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.perfectly_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+};
+
+// Initialize animations
+textReveal3();
+
+
+// Desktop and mobile animations
+const textReveal4 = () => {
+  // Heading animation
+  gsap.to('.city_view .heading_tittle', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.city_view',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  // Paragraph animations with stagger
+  gsap.to('.city_view .cw_title', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.city_view',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+};
+
+// Initialize animations
+textReveal4();
+
+
+// Desktop and mobile animations
+const textReveal5 = () => {
+  // Heading animation
+  gsap.to('.exemplary_section .heading_tittle', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.exemplary_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  // Paragraph animations with stagger
+  gsap.to('.exemplary_section .cw_title', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.exemplary_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+};
+
+// Initialize animations
+textReveal5();
+
+
+// Desktop and mobile animations
+const textReveal6 = () => {
+  // Heading animation
+  gsap.to('.double_gc_section .heading_tittle', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.double_gc_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  // Paragraph animations with stagger
+  gsap.to('.double_gc_section .cw_title', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.double_gc_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+};
+
+// Initialize animations
+textReveal6();
+
+
+
+
+// Accordion reveal animation
+function revealAccordion() {
+  const revealItems = document.querySelectorAll('.reveal-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  revealItems.forEach(item => {
+    observer.observe(item);
+  });
+}
+
+// Call the function when document is ready
+document.addEventListener('DOMContentLoaded', revealAccordion);
+
+
+
