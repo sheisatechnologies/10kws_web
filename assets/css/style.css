@@ -1292,6 +1292,13 @@ select.form-control {
   /* background-color: #003d12; */
 }
 
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+  .hero_section_bg_img {
+      background-image: url(../img/hero-images/10kws-building-hero-mobile.jpg); /* Change this to your mobile-specific image */
+  }
+}
+
+
 .building_page_wrapper .hero_section .hero_heading h1 {
   display: block;
   text-align: center;
@@ -1695,7 +1702,7 @@ video {
 
 /* contact image wrapper page css start */
 .building_page_wrapper.contact_page_wrapper .hero_section {
-  background-image: url(../img/contact/contact_header_bg.jpg);
+  background-image: url(../img/hero-images/10kws-contact-hero-mobile.jpg);
 }
 .building_page_wrapper.contact_page_wrapper
   .workspace_section
