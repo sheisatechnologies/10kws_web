@@ -489,7 +489,7 @@ mm.add("(min-width: 800px)", () => {
       // markers: true,
     }
   });
-  
+
   blSliderTl.fromTo('.gc-animation img', {
     clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
     duration: 1,
@@ -666,7 +666,7 @@ mm.add("(max-width: 799px)", () => {
       clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
     }, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-      ease: 'none', 
+      ease: 'none',
       scale: 1
     });
 
@@ -926,6 +926,42 @@ textReveal6();
 
 
 
+// Desktop and mobile animations
+const textReveal7 = () => {
+  // Heading animation
+  gsap.to('.eco_section .heading_tittle', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.eco_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  // Paragraph animations with stagger
+  gsap.to('.eco_section .cw_title', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.eco_section',
+      start: "30% 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+};
+
+// Initialize animations
+textReveal7();
+
+
+
 
 // Accordion reveal animation
 function revealAccordion() {
@@ -935,10 +971,15 @@ function revealAccordion() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
+      } else {
+        // Remove active class when element is not in viewport
+        entry.target.classList.remove('active');
       }
     });
   }, {
-    threshold: 0.1
+    threshold: 0.1,
+    // Adding rootMargin to trigger animation slightly before element comes into view
+    rootMargin: '0px 0px -50px 0px'
   });
 
   revealItems.forEach(item => {

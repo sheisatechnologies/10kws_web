@@ -2113,11 +2113,6 @@ video {
   font-size: 16px !important;
 }
 
-.reveal-container button:hover {
-  background-color: #001D47;
-  color: white;
-}
-
 .text-reveal-wrapper {
   overflow: visible;
 }
