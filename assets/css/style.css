@@ -1784,6 +1784,7 @@ video {
 .location_page_wrapper .hero_section {
   background-image: url(../img/hero-images/10kws-location-hero.jpg);
   background-color: #003d12;
+  background-position: center;
 }
 
 .eco_sec_loc {
@@ -1926,6 +1927,7 @@ video {
 .amenities_page_wrapper .hero_section {
   background-image: url(../img/hero-images/10kws-amenities-hero.jpg);
   background-color: #003d12;
+  background-position: center;
 }
 
 /* .image-sec{
