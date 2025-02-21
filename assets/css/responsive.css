@@ -428,6 +428,9 @@
   .building_page_wrapper.floorplans_page_wrapper .hero_section {
     background-image: url(../img/floorplans/floorplans-header-mob.jpg);
   }
+  .building_page_wrapper.contact_page_wrapper .hero_section {
+    background-image: url(../img/hero-images/10kws-contact-hero-mobile.jpg);
+  }
   .varied_section .section_tittle .heading_tittle {
     font-size: 61.18px;
   }
