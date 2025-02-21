@@ -426,7 +426,7 @@
     padding: 86px 0;
   }
   .building_page_wrapper.floorplans_page_wrapper .hero_section {
-    background-image: url(../img/floorplans/floorplans-header-mob.jpg);
+    background-image: url(../img/hero-images/10kws-floorplans-hero-mobile.jpg);
   }
   .building_page_wrapper.contact_page_wrapper .hero_section {
     background-image: url(../img/hero-images/10kws-contact-hero-mobile.jpg);
@@ -474,13 +474,13 @@
     display: none;
   }
   .building_page_wrapper .hero_section {
-    background-image: url(../img/building/building-hero-phon.jpg);
+    background-image: url(../img/hero-images/10kws-building-hero-mobile.jpg);
   }
   .location_page_wrapper .hero_section {
     background-image: url(../img/hero-images/10kws-location-hero-mobile.jpg);
   }
   .download_page_wrapper .hero_section {
-    background-image: url(../img/download/header-bg-download-mob.jpg);
+    background-image: url(../img/hero-images/10kws-download-hero-mobile.jpg);
   }
   .amenities_page_wrapper .hero_section {
     background-image: url(../img/hero-images/10kws-amenities-hero-mobile.jpg);

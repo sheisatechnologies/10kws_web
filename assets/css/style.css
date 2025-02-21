@@ -1484,7 +1484,7 @@ select.form-control {
 
 /* Floorplans page css start */
 .building_page_wrapper.floorplans_page_wrapper .hero_section {
-  background-image: url(../img/floorplans/floorplans_header_bg.jpg);
+  background-image: url(../img/hero-images/10kws-floorplans-hero.jpg);
 }
 .building_page_wrapper.floorplans_page_wrapper
   .workspace_section
@@ -1782,7 +1782,7 @@ video {
 /* location page css start */
 
 .location_page_wrapper .hero_section {
-  background-image: url(../img/location/location-header-bg.jpg);
+  background-image: url(../img/hero-images/10kws-location-hero.jpg);
   background-color: #003d12;
 }
 
@@ -1924,7 +1924,7 @@ video {
 /* Amenities css start */
 
 .amenities_page_wrapper .hero_section {
-  background-image: url(../img/amenities/ameni_header_bg.jpg);
+  background-image: url(../img/hero-images/10kws-amenities-hero.jpg);
   background-color: #003d12;
 }
 
@@ -1985,7 +1985,7 @@ video {
 /* download css */
 
 .download_page_wrapper .hero_section {
-  background-image: url(../img/download/header-bg-download.jpg);
+  background-image: url(../img/hero-images/10kws-download-hero.jpg);
 }
 
 .varied_section .inner_container {
