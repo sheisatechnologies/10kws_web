@@ -441,7 +441,7 @@ body.scroll-off {
   border: none;
   /* height: 8px;
   width: 11px; */
-  /* background-image: url(../img/drop_arrow.png); */
+  /* background-image: url(../images/drop_arrow.png); */
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
@@ -820,7 +820,7 @@ ul.footer-links.socialize li a i {
 }
 .footer_wrapper {
   padding: 60px 0 40px;
-  background-image: url(../img/footer-bg.png);
+  background-image: url(../images/main_footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -828,7 +828,7 @@ ul.footer-links.socialize li a i {
 
 .footer_wrapper_buil {
   padding: 60px 0 40px;
-  background-image: url(../img/building_footer.jpg);
+  background-image: url(../images/building_footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -837,7 +837,7 @@ ul.footer-links.socialize li a i {
 
 .footer_wrapper_ameni {
   padding: 60px 0 40px;
-  background-image: url(../img/ammenities_footer.jpg);
+  background-image: url(../images/ammenities_footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -846,7 +846,7 @@ ul.footer-links.socialize li a i {
 
 .footer_wrapper_loca {
   padding: 60px 0 40px;
-  background-image: url(../img/location_footer.jpg);
+  background-image: url(../images/location_footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -1032,7 +1032,7 @@ select.form-control {
 
 /* HOME PAGE CSS START */
 .hero_section {
-  /* background-image: url(../img/header-bg.png); */
+  /* background-image: url(../images/header-bg.png); */
   min-height: 900px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1164,18 +1164,18 @@ select.form-control {
   transition: clip-path 0.5s ease-in-out;
 }
 .swiper-button-next {
-  background-image: url(../img/next.png);
+  background-image: url(../images/next.png);
 }
 .swiper-button-prev {
-  background-image: url(../img/back.png);
+  background-image: url(../images/back.png);
 }
 
 .con-arrow .swiper-button-next{
-  background-image: url(../img/next-arr.svg);
+  background-image: url(../images/next-arr.svg);
 }
 
 .con-arrow .swiper-button-prev{
-  background-image: url(../img/prev-arr.svg);
+  background-image: url(../images/prev-arr.svg);
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -1328,7 +1328,7 @@ select.form-control {
 
 /* highlight section start*/
 .highlight_section {
-  background-image: url(../img/home-btm-img.jpg);
+  background-image: url(../images/home-btm-img.jpg);
   min-height: 900px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1349,7 +1349,20 @@ select.form-control {
   left: 0;
   width: 100%;
   height: 120%;
-  background-image: url(../img/home-btm-img.jpg);
+  background-image: url(../images/home-assets/home-btm-img.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Add this for advanced parallax */
+.highlight_section .parallax-bg1 {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(../images/building-assets/building-full-img-2.jpg);
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -1388,7 +1401,7 @@ select.form-control {
 
 /* bulding page css start */
 .building_page_wrapper .hero_section {
-  /* background-image: url(../img/hero-images/10kws-building-hero.jpg); */
+  /* background-image: url(../images/hero-images/10kws-building-hero.jpg); */
   position: relative;
   background-color: #003d12;
 }
@@ -1398,7 +1411,7 @@ select.form-control {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/hero-images/10kws-building-hero.jpg);
+  background-image: url(../images/hero-images/10kws-building-hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1407,7 +1420,7 @@ select.form-control {
 
 @media (max-width: 768px) { /* Adjust the max-width as needed */
   .hero_section_bg_img {
-      background-image: url(../img/hero-images/10kws-building-hero-mobile.jpg); /* Change this to your mobile-specific image */
+      background-image: url(../images/hero-images/10kws-building-hero-mobile.jpg); /* Change this to your mobile-specific image */
   }
 }
 
@@ -1424,7 +1437,7 @@ select.form-control {
   width: 100%;
 }
 .building_page_wrapper .slider_section {
-  background-color: #771212;
+  background-color: #003d12;
 }
 .building_page_wrapper .slider_section img {
   width: 100%;
@@ -1461,7 +1474,7 @@ select.form-control {
 /* eco section start */
 .eco_section {
   padding: 157px 0;
-  background: url(../img/eco-bg.png);
+  background: url(../images/eco-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1621,7 +1634,7 @@ select.form-control {
 
 /* Floorplans page css start */
 .building_page_wrapper.floorplans_page_wrapper .hero_section {
-  background-image: url(../img/hero-images/10kws-floorplans-hero.jpg);
+  background-image: url(../images/hero-images/10kws-floorplans-hero.jpg);
 }
 .building_page_wrapper.floorplans_page_wrapper
   .workspace_section
@@ -1835,7 +1848,7 @@ video {
 }
 
 .hero_section_download {
-  background-image: url(../img/download/header-bg-download.jpg);
+  background-image: url(../images/download/header-bg-download.jpg);
   min-height: 900px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1843,7 +1856,7 @@ video {
 
 /* contact image wrapper page css start */
 .building_page_wrapper.contact_page_wrapper .hero_section {
-  background-image: url(../img/hero-images/10kws-contact-hero.jpg);
+  background-image: url(../images/hero-images/10kws-contact-hero.jpg);
 }
 .building_page_wrapper.contact_page_wrapper
   .workspace_section
@@ -1927,7 +1940,7 @@ video {
 /* location page css start */
 
 .location_page_wrapper .hero_section {
-  background-image: url(../img/hero-images/10kws-location-hero.jpg);
+  background-image: url(../images/hero-images/10kws-location-hero.jpg);
   background-color: #003d12;
   background-position: center;
 }
@@ -2088,7 +2101,7 @@ video {
 /* Amenities css start */
 
 .amenities_page_wrapper .hero_section {
-  background-image: url(../img/hero-images/10kws-amenities-hero.jpg);
+  background-image: url(../images/hero-images/10kws-amenities-hero.jpg);
   background-color: #003d12;
   background-position: center;
 }
@@ -2150,7 +2163,7 @@ video {
 /* download css */
 
 .download_page_wrapper .hero_section {
-  background-image: url(../img/hero-images/10kws-download-hero.jpg);
+  background-image: url(../images/hero-images/10kws-download-hero.jpg);
 }
 
 .varied_section .inner_container {
@@ -2160,7 +2173,7 @@ video {
 .varied_section .red {
   width: 450px;
   height: 450px;
-  background-image: url(../img/building-assets/building-facade-1.1.jpg);
+  background-image: url(../images/building-assets/building-facade-1.1.jpg);
   background-size: cover;
   transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1.2); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
@@ -2171,7 +2184,7 @@ video {
 .varied_section .orange {
   width: 600px;
   height: 600px;
-  background-image: url(../img/building-assets/building-facade-2.1.jpg);
+  background-image: url(../images/building-assets/building-facade-2.1.jpg);
   background-size: cover;
   transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1.2); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
@@ -2182,7 +2195,7 @@ video {
 .varied_section .purple {
   width: 450px;
   height: 450px;
-  background-image: url(../img/building-assets/building-facade-3.1.jpg);
+  background-image: url(../images/building-assets/building-facade-3.1.jpg);
   background-size: cover;
   transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1.3); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
@@ -2290,11 +2303,14 @@ video {
 
 .reveal-container button {
   font-size: 16px !important;
+  background-color: #001D47;
+  color: white;
 }
 
 .reveal-container button:hover {
-  background-color: #001D47;
-  color: white;
+  background-color: transparent;
+  color: #001D47;
+ 
 }
 
 .reveal-container-buil button:hover{

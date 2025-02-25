@@ -504,6 +504,51 @@ mm.add("(min-width: 800px)", () => {
   });
 
 
+    // Building Page Slider Section Above Animation
+    let blSliderTl1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.gc-animation1 img',
+        start: 'top 100%',
+        end: '100% 0%',
+        scrub: 1,
+        // markers: true,
+      }
+    });
+  
+    blSliderTl1.fromTo('.gc-animation1 img', {
+      clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
+      duration: 1,
+      ease: "power1.inOut"
+    }, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+    });
+  
+
+
+
+
+     // Building Page Slider Section Above Animation
+     let blSliderTl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.gc-animation2 img',
+        start: 'top 100%',
+        end: '100% 0%',
+        scrub: 1,
+        // markers: true,
+      }
+    });
+  
+    blSliderTl2.fromTo('.gc-animation2 img', {
+      clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
+      duration: 1,
+      ease: "power1.inOut"
+    }, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+    });
+  
+
+
+
 
 
   gsap.timeline({
@@ -522,6 +567,9 @@ mm.add("(min-width: 800px)", () => {
       ease: 'none'
     });
 });
+
+
+
 
 
 
