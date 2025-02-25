@@ -1355,6 +1355,22 @@ select.form-control {
   z-index: 0;
 }
 
+
+.highlight_section1 {
+  background-image: url(../images/building-assets/building-full-img-2.jpg);
+  min-height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  margin-bottom: -45px;
+  position: relative;
+  overflow: hidden;
+}
+
 /* Add this for advanced parallax */
 .highlight_section .parallax-bg1 {
   position: absolute;
@@ -2207,12 +2223,19 @@ video {
 /* detailed section animation */
 
 .details_section img {
-  clip-path: polygon(30% 10%, 69% 19%, 87% 45%, 78% 80%, 30% 89%, 10% 50%);
-  animation: clipanim 7s infinite linear;
+  transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  transform: scale(0.8) !important;
+  animation: none !important;
 }
 
 
 .double_gc_section .eximg {
+  transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  transform: scale(0.8) !important;
+  animation: none !important;
+}
+
+.double_gc_section .eximg1 {
   transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) !important;
   transform: scale(0.8) !important;
   animation: none !important;
@@ -2313,8 +2336,14 @@ video {
  
 }
 
-.reveal-container-buil button:hover{
+
+.reveal-container-buil button{
   background-color: #004514;
+  color: white;
+}
+
+.reveal-container-buil button:hover{
+  background-color: transparent;
 }
 
 

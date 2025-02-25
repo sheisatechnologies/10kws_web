@@ -569,6 +569,58 @@ mm.add("(min-width: 800px)", () => {
 });
 
 
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.double_gc_section1',
+    start: '20% 100%',
+    end: '80% 80%',
+    scrub: true,
+    // markers: true,
+  }
+})
+  .fromTo('.double_gc_section1 img', {
+    clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
+    ease: 'none'
+  });
+
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.double_gc_section2',
+      start: '20% 100%',
+      end: '80% 80%',
+      scrub: true,
+      // markers: true,
+    }
+  })
+    .fromTo('.double_gc_section2 img', {
+      clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
+    }, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
+      ease: 'none'
+    });
+
+
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.double_gc_section3',
+        start: '20% 100%',
+        end: '80% 80%',
+        scrub: true,
+        // markers: true,
+      }
+    })
+      .fromTo('.double_gc_section3 img', {
+        clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
+      }, {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
+        ease: 'none'
+      });
+
+
 
 
 
@@ -754,6 +806,38 @@ mm.add("(max-width: 767px)", () => {
       ease: 'none'
     });
 });
+
+
+// Add this after your existing GSAP animations
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+})
+  .to('.highlight_section .parallax-bg', {
+    y: '20%',
+    ease: 'none'
+  });
+
+// Add responsive handling
+mm.add("(max-width: 767px)", () => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.highlight_section1',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  })
+    .to('.highlight_section .parallax-bg1', {
+      y: '30%',
+      ease: 'none'
+    });
+});
+
 
 // Add this with your other GSAP animations
 gsap.registerPlugin(ScrollTrigger);
