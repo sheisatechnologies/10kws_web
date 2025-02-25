@@ -549,6 +549,40 @@ mm.add("(min-width: 800px)", () => {
 
 
 
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.double_gc_section2',
+        start: '20% 100%',
+        end: '80% 80%',
+        scrub: true,
+        // markers: true,
+      }
+    })
+      .fromTo('.double_gc_section2 img', {
+        clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
+      }, {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
+        ease: 'none'
+      });
+  
+  
+  
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '.double_gc_section3',
+          start: '20% 100%',
+          end: '80% 80%',
+          scrub: true,
+          // markers: true,
+        }
+      })
+        .fromTo('.double_gc_section3 img', {
+          clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
+        }, {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
+          ease: 'none'
+        });
+
 
 
   gsap.timeline({
@@ -586,39 +620,7 @@ gsap.timeline({
   });
 
 
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: '.double_gc_section2',
-      start: '20% 100%',
-      end: '80% 80%',
-      scrub: true,
-      // markers: true,
-    }
-  })
-    .fromTo('.double_gc_section2 img', {
-      clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-    }, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-      ease: 'none'
-    });
-
-
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.double_gc_section3',
-        start: '20% 100%',
-        end: '80% 80%',
-        scrub: true,
-        // markers: true,
-      }
-    })
-      .fromTo('.double_gc_section3 img', {
-        clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-      }, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-        ease: 'none'
-      });
+  
 
 
 
