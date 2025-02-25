@@ -299,6 +299,11 @@ document.addEventListener("DOMContentLoaded", function () {
       el: '.swiper-pagination',
       clickable: true,
     },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+      clickable: true,
+    },
     breakpoints: {
       768: {
         slidesPerView: 1, // Keep 1 slide visible for smaller screens (e.g., mobile)
