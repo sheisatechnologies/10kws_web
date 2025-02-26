@@ -895,6 +895,71 @@ gsap.timeline({
     scrub: true,
   }
 })
+  .to('.highlight_section .parallax-bg_buil', {
+    y: '20%',
+    ease: 'none'
+  });
+
+// Add responsive handling
+mm.add("(max-width: 767px)", () => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.highlight_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  })
+    .to('.highlight_section .parallax-bg_buil', {
+      y: '30%',
+      ease: 'none'
+    });
+});
+
+
+
+
+// Add this after your existing GSAP animations
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+})
+  .to('.highlight_section .parallax-bg_ameni2', {
+    y: '20%',
+    ease: 'none'
+  });
+
+// Add responsive handling
+mm.add("(max-width: 767px)", () => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.highlight_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  })
+    .to('.highlight_section .parallax-bg_ameni2', {
+      y: '30%',
+      ease: 'none'
+    });
+});
+
+
+
+// Add this after your existing GSAP animations
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+})
   .to('.highlight_section .parallax-bg_ameni', {
     y: '20%',
     ease: 'none'
@@ -928,7 +993,7 @@ gsap.timeline({
     scrub: true,
   }
 })
-  .to('.highlight_section .parallax-bg_amenia', {
+  .to('.highlight_section .parallax-bg_img1', {
     y: '20%',
     ease: 'none'
   });
@@ -943,7 +1008,7 @@ mm.add("(max-width: 767px)", () => {
       scrub: true,
     }
   })
-    .to('.highlight_section .parallax-bg_amenia', {
+    .to('.highlight_section .parallax-bg_img1', {
       y: '30%',
       ease: 'none'
     });
@@ -961,7 +1026,7 @@ gsap.timeline({
     scrub: true,
   }
 })
-  .to('.highlight_section .parallax-bg_amenib', {
+  .to('.highlight_section .parallax-bg_img2', {
     y: '20%',
     ease: 'none'
   });
@@ -976,7 +1041,7 @@ mm.add("(max-width: 767px)", () => {
       scrub: true,
     }
   })
-    .to('.highlight_section .parallax-bg_amenib', {
+    .to('.highlight_section .parallax-bg_img2', {
       y: '30%',
       ease: 'none'
     });

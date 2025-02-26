@@ -1355,6 +1355,32 @@ select.form-control {
   z-index: 0;
 }
 
+.highlight_section .parallax-bg_buil {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(../images/building-assets/building-full-img-2.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+
+.highlight_section .parallax-bg_ameni2 {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(../images/building-assets/building-full-img-2.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+
 
 .highlight_section .parallax-bg_ameni {
   position: absolute;
@@ -1368,7 +1394,7 @@ select.form-control {
   z-index: 0;
 }
 
-.highlight_section .parallax-bg_amenia {
+.highlight_section .parallax-bg_img1 {
   position: absolute;
   top: -30%;
   left: 0;
@@ -1382,7 +1408,7 @@ select.form-control {
 
 
 
-.highlight_section .parallax-bg_amenib {
+.highlight_section .parallax-bg_img2 {
   position: absolute;
   top: -30%;
   left: 0;
@@ -1394,33 +1420,9 @@ select.form-control {
   z-index: 0;
 }
 
-.highlight_section1 {
-  background-image: url(../images/building-assets/building-full-img-2.jpg);
-  min-height: 900px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: end;
-  margin-bottom: -45px;
-  position: relative;
-  overflow: hidden;
-}
 
-/* Add this for advanced parallax */
-.highlight_section .parallax-bg1 {
-  position: absolute;
-  top: -30%;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background-image: url(../images/building-assets/building-full-img-2.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
-}
+
+
 
 /* highlight section end*/
 
