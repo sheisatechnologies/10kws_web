@@ -895,7 +895,7 @@ gsap.timeline({
     scrub: true,
   }
 })
-  .to('.highlight_section .parallax-bg', {
+  .to('.highlight_section .parallax-bg_ameni', {
     y: '20%',
     ease: 'none'
   });
@@ -904,17 +904,87 @@ gsap.timeline({
 mm.add("(max-width: 767px)", () => {
   gsap.timeline({
     scrollTrigger: {
-      trigger: '.highlight_section1',
+      trigger: '.highlight_section',
       start: 'top bottom',
       end: 'bottom top',
       scrub: true,
     }
   })
-    .to('.highlight_section .parallax-bg1', {
+    .to('.highlight_section .parallax-bg_ameni', {
       y: '30%',
       ease: 'none'
     });
 });
+
+
+
+
+// Add this after your existing GSAP animations
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+})
+  .to('.highlight_section .parallax-bg_amenia', {
+    y: '20%',
+    ease: 'none'
+  });
+
+// Add responsive handling
+mm.add("(max-width: 767px)", () => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.highlight_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  })
+    .to('.highlight_section .parallax-bg_amenia', {
+      y: '30%',
+      ease: 'none'
+    });
+});
+
+
+
+
+// Add this after your existing GSAP animations
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+})
+  .to('.highlight_section .parallax-bg_amenib', {
+    y: '20%',
+    ease: 'none'
+  });
+
+// Add responsive handling
+mm.add("(max-width: 767px)", () => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.highlight_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  })
+    .to('.highlight_section .parallax-bg_amenib', {
+      y: '30%',
+      ease: 'none'
+    });
+});
+
+
+
+
 
 
 // Add this with your other GSAP animations

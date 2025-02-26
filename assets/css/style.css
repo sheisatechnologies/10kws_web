@@ -1356,6 +1356,44 @@ select.form-control {
 }
 
 
+.highlight_section .parallax-bg_ameni {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(../images/amenities/amenities-full-img-1.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.highlight_section .parallax-bg_amenia {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(../images/amenities/amenities-full-img-2.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+
+
+.highlight_section .parallax-bg_amenib {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(../images/amenities/amenities-full-img-3.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
 .highlight_section1 {
   background-image: url(../images/building-assets/building-full-img-2.jpg);
   min-height: 900px;
