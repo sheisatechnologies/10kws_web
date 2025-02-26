@@ -484,6 +484,33 @@ mm.add("(min-width: 800px)", () => {
   });
 
 
+
+
+
+  // Building Page Hero Section Animation (Duplicate)
+let heroTlDuplicate = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.hero_section_bg_img_duplicate',
+    start: 'top top',
+    end: '100% 0%',
+    scrub: 1,
+    // markers: true,
+  }
+});
+
+heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
+  clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
+  duration: 1,
+  ease: "power1.inOut"
+}, {
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+});
+
+
+
+  
+
+
   // Building Page Slider Section Above Animation
   let blSliderTl = gsap.timeline({
     scrollTrigger: {
