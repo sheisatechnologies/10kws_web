@@ -1714,6 +1714,10 @@ select.form-control {
   background-color:#EFEDDF;
 }
 
+.view_section_floor{
+  background-color: #fff;
+}
+
 .img_card {
   background-color: #efeddf;
   height: calc(100% - 52.8px);
