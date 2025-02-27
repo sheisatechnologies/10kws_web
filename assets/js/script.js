@@ -510,6 +510,27 @@ heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
 
   
 
+  // Building Page Hero Section Animation (Duplicate)
+  let heroTlLocation = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero_section_bg_img_location',
+      start: 'top top',
+      end: '100% 0%',
+      scrub: 1,
+      // markers: true,
+    }
+  });
+  
+  heroTlLocation.fromTo('.hero_section_bg_img_location', {
+    clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+  });
+
+
+
 
   // Building Page Slider Section Above Animation
   let blSliderTl = gsap.timeline({
@@ -702,6 +723,65 @@ gsap.timeline({
 
 
 
+// location js animation
+
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.double_gc_section7',
+    start: '20% 100%',
+    end: '80% 80%',
+    scrub: true,
+    // markers: true,
+  }
+})
+  .fromTo('.double_gc_section7 img', {
+    clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
+    ease: 'none'
+  });
+
+
+
+
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.double_gc_section8',
+      start: '20% 100%',
+      end: '80% 80%',
+      scrub: true,
+      // markers: true,
+    }
+  })
+    .fromTo('.double_gc_section8 img', {
+      clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
+    }, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
+      ease: 'none'
+    });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Responsive Animation
@@ -835,6 +915,9 @@ mm.add("(max-width: 799px)", () => {
   }, {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
   });
+
+
+
 
   gsap.timeline({
     scrollTrigger: {
