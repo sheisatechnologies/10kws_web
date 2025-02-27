@@ -1460,7 +1460,7 @@ select.form-control {
 .building_page_wrapper .hero_section {
   /* background-image: url(../images/hero-images/10kws-building-hero.jpg); */
   position: relative;
-  background-color: #003d12;
+  background-color: #001D47;
 }
 
 .hero_section_bg_img {
@@ -1495,6 +1495,30 @@ select.form-control {
   width: 100%;
   height: 100%;
   background-image: url(../images/location/10kws-location-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #003d12; */
+}
+
+.hero_section_bg_img_floorplans{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/hero-images/10kws-floorplans-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #003d12; */
+}
+
+.hero_section_bg_img_contact{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/hero-images/10kws-floorplans-hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1719,7 +1743,7 @@ select.form-control {
 
 /* Floorplans page css start */
 .building_page_wrapper.floorplans_page_wrapper .hero_section {
-  background-image: url(../images/hero-images/10kws-floorplans-hero.jpg);
+  /* background-image: url(../images/hero-images/10kws-floorplans-hero.jpg); */
 }
 .building_page_wrapper.floorplans_page_wrapper
   .workspace_section
@@ -1941,7 +1965,7 @@ video {
 
 /* contact image wrapper page css start */
 .building_page_wrapper.contact_page_wrapper .hero_section {
-  background-image: url(../images/hero-images/10kws-contact-hero.jpg);
+  /* background-image: url(../images/hero-images/10kws-contact-hero.jpg); */
 }
 .building_page_wrapper.contact_page_wrapper
   .workspace_section
