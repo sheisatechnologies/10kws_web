@@ -1460,6 +1460,12 @@ select.form-control {
 .building_page_wrapper .hero_section {
   /* background-image: url(../images/hero-images/10kws-building-hero.jpg); */
   position: relative;
+  background-color: #004514;
+}
+
+.contact_page_wrapper .hero_section {
+  /* background-image: url(../images/hero-images/10kws-building-hero.jpg); */
+  position: relative;
   background-color: #001D47;
 }
 
@@ -1518,7 +1524,7 @@ select.form-control {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../images/hero-images/10kws-floorplans-hero.jpg);
+  background-image: url(../images/contact/10kws-contact-hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2328,7 +2334,7 @@ video {
 
 .double_gc_section .eximg {
   transition: transform 3s cubic-bezier(0.19, 1, 0.22, 1) !important;
-  transform: scale(0.8) !important;
+  /* transform: scale(0.8) !important; */
   animation: none !important;
 }
 
