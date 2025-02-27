@@ -1197,6 +1197,17 @@ select.form-control {
   left: auto;
 }
 
+.building-arrow .swiper-button-prev {
+  left: 0px;
+  right: auto;
+  
+}
+
+.building-arrow .swiper-button-next {
+  right: 0px;
+  left: auto;
+}
+
 
 
 
