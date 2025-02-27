@@ -1188,12 +1188,12 @@ select.form-control {
   background-size: 20px;
 }
 .swiper-button-prev {
-  left: 0px;
+  left: 40px;
   right: auto;
   
 }
 .swiper-button-next {
-  right: 0px;
+  right: 40px;
   left: auto;
 }
 
