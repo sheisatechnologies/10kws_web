@@ -382,12 +382,13 @@ mm.add("(min-width: 800px)", () => {
 
   tl.fromTo('.red',
     {
-      clipPath: "polygon(50% 0%, 100% 26%, 100% 90%, 18% 100%, 0% 17%)",
+      
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
       x: 500,
       y: 100
     },
     {
-      clipPath: "polygon(0% 17%, 50% 0%, 100% 26%, 100% 90%, 18% 100%)",
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
       duration: 1,
       x: -500,
       ease: "power1.inOut",
@@ -397,11 +398,11 @@ mm.add("(min-width: 800px)", () => {
   )
     .fromTo('.orange',
       {
-        clipPath: "polygon(5% 8%, 96% 28%, 74% 61%, 50% 100%, 2% 71%)",
+        clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
         x: 500,
       },
       {
-        clipPath: "polygon(2% 71%, 5% 8%, 96% 28%, 74% 61%, 50% 100%)",
+        clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
         duration: 1,
         x: -500,
         ease: "power1.inOut",
@@ -410,12 +411,12 @@ mm.add("(min-width: 800px)", () => {
     )
     .fromTo('.purple',
       {
-        clipPath: "polygon(59% 3%, 100% 65%, 45% 100%, 7% 85%, 6% 20%)",
+        clippath: "polygon(0% -130%, 100% -48%, -160% 101%, 0% 95%, 226% 131%)",
         x: 500,
         y: 100
       },
       {
-        clipPath: "polygon(6% 20%, 59% 3%, 100% 65%, 45% 100%, 7% 85%)",
+        clippath: "polygon(0% -130%, 100% -48%, -160% 101%, 0% 95%, 226% 131%)",
         duration: 1,
         x: -500,
         ease: "power1.inOut",
@@ -571,6 +572,25 @@ heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
 
   
 
+
+    // Building Page Hero Section Animation (Duplicate)
+    let heroTlamenilast = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.hero_section_bg_img_full2',
+        start: 'top top',
+        end: '100% 0%',
+        scrub: 1,
+        // markers: true,
+      }
+    });
+    
+    heroTlamenilast.fromTo('.hero_section_bg_img_full2', {
+      clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
+      duration: 1,
+      ease: "power1.inOut"
+    }, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+    });
 
 
   
@@ -1041,6 +1061,37 @@ gsap.timeline({
     scrub: true,
   }
 })
+  .to('.highlight_section .parallax-bg_location', {
+    y: '20%',
+    ease: 'none'
+  });
+
+// Add responsive handling
+mm.add("(max-width: 767px)", () => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.highlight_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  })
+    .to('.highlight_section .parallax-bg_location', {
+      y: '30%',
+      ease: 'none'
+    });
+});
+
+
+// Add this after your existing GSAP animations
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+})
   .to('.highlight_section .parallax-bg_buil', {
     y: '20%',
     ease: 'none'
@@ -1124,7 +1175,7 @@ mm.add("(max-width: 767px)", () => {
 
 // Ensure GSAP and ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger);
-
+ 
 // Third Animation for `.parallax-bg_amenib`
 gsap.to('.highlight_section .parallax-bg_amenib', {
   y: '20%',

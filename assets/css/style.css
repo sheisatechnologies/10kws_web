@@ -1367,6 +1367,21 @@ select.form-control {
   z-index: 0;
 }
 
+/* Add this for advanced parallax */
+.highlight_section .parallax-bg_location {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(../images/location/location_full_img1.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+
+
 .highlight_section .parallax-bg_buil {
   position: absolute;
   top: -30%;
@@ -1398,7 +1413,7 @@ select.form-control {
   left: 0;
   width: 100%;
   height: 120%;
-  background-image: url(../images/building-assets/building-full-img-2.jpg);
+  background-image: url(../images/amenities/amenities-full-img-2.jpg);
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -1410,7 +1425,7 @@ select.form-control {
   left: 0;
   width: 100%;
   height: 120%;
-  background-image: url(../images/building-assets/building-full-img-2.jpg);
+  background-image: url(../images/amenities/amenities-full-img-3.jpg);
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -1518,6 +1533,18 @@ select.form-control {
   width: 100%;
   height: 100%;
   background-image: url(../images/contact/10kws-contact-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #003d12; */
+}
+
+.hero_section_bg_img_full2{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/amenities/amenities-full-img-3.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2287,8 +2314,8 @@ video {
   height: 450px;
   background-image: url(../images/building-assets/building-facade-1.1.jpg);
   background-size: cover;
-  transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1.2); /* Increase scale */
-  clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
+ 
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
 
 
 }
