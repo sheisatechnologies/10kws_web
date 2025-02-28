@@ -1058,7 +1058,7 @@ select.form-control {
 .hero_section .hero_heading h1 span {
   justify-content: center;
 
-  font-family: "MADE Mirage";
+  font-family: "DM Sans", sans-serif;
 }
 
 .hero_heading {
@@ -1900,9 +1900,7 @@ select.form-control {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%)
     hue-rotate(249deg) brightness(108%) contrast(101%);
 }
-.building_page_wrapper.floorplans_page_wrapper .view_section {
-  padding: 120px 0;
-}
+
 /* faq section end */
 
 .summary_section .image-container {
@@ -2509,4 +2507,17 @@ video {
 
 .reveal-items .reveal-item:nth-child(6) {
   transition-delay: 0.5s;
+}
+
+
+.bg-table-row{
+  background-color: #001D47;
+  color: #EFEDDF;
+}
+.color-title{
+  color: #EFEDDF !important;
+
+}
+.pb-200{
+padding-bottom: 200px;
 }
