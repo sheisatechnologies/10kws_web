@@ -350,7 +350,7 @@ body.scroll-off {
   height: auto;
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 555;
   box-shadow: none;
   background: 0 0 !important;
   background-color: transparent;
@@ -2520,4 +2520,8 @@ video {
 }
 .pb-200{
 padding-bottom: 200px;
+}
+
+.contact_details span a{
+  color: white;
 }
