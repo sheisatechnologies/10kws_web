@@ -1037,9 +1037,9 @@ select.form-control {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.container {
+/* .container {
   max-width: 1365px;
-}
+} */
 .hero_section .hero_heading h1 {
   font-size: 128px;
   color: #fff;
