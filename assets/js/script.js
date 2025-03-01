@@ -1496,4 +1496,23 @@ function revealAccordion() {
 document.addEventListener('DOMContentLoaded', revealAccordion);
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".navbar-toggler");
+  const body = document.body;
+
+  function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
+
+  menuToggle.addEventListener("click", function () {
+    if (body.classList.contains("menu-open")) {
+      body.classList.remove("menu-open");
+      document.documentElement.style.setProperty("--scrollbar-width", "0px");
+    } else {
+      const scrollbarWidth = getScrollbarWidth() + "px";
+      document.documentElement.style.setProperty("--scrollbar-width", scrollbarWidth);
+      body.classList.add("menu-open");
+    }
+  });
+});
 
