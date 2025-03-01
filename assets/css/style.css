@@ -45,12 +45,40 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
-html,body{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "DM Sans", sans-serif;
+
+
+/* Prevent Jumping When Menu Opens */
+html {
+  overflow-y: scroll; /* Keeps scrollbar space */
 }
+
+body {
+  font-family: "DM Sans", sans-serif !important; /* Keep font consistent */
+}
+
+body.menu-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 0px); /* Keeps layout stable */
+  font-family: "DM Sans", sans-serif !important; /* Prevents font reset */
+}
+
+/* Ensures no extra shift on smaller screens */
+@media (max-width: 991px) {
+  body.menu-open {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+
+
+
+
+
 #header {
   position: relative; /* Start as relative */
   width: 100%;
