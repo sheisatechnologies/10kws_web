@@ -392,21 +392,23 @@ mm.add("(min-width: 800px)", () => {
       duration: 1,
       x: -500,
       ease: "power1.inOut",
-      rotate: 15,
-      y: -100
+      rotate: 0,
+      y: 0
     }, 's'
   )
     .fromTo('.orange',
       {
         clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
         x: 500,
+        y: 100
       },
       {
         clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-        duration: 1,
-        x: -500,
-        ease: "power1.inOut",
-        rotate: -15,
+      duration: 1,
+      x: -500,
+      ease: "power1.inOut",
+      rotate: 0,
+      y: 0
       }, 's'
     )
     .fromTo('.purple',
@@ -414,14 +416,15 @@ mm.add("(min-width: 800px)", () => {
         clippath: "polygon(0% -130%, 100% -48%, -160% 101%, 0% 95%, 226% 131%)",
         x: 500,
         y: 100
+        
       },
       {
-        clippath: "polygon(0% -130%, 100% -48%, -160% 101%, 0% 95%, 226% 131%)",
-        duration: 1,
-        x: -500,
-        ease: "power1.inOut",
-        rotate: 15,
-        y: -100
+        clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      duration: 1,
+      x: -500,
+      ease: "power1.inOut",
+      rotate: 0,
+      y: 0
       }, 's'
     );
 
@@ -905,7 +908,7 @@ mm.add("(max-width: 799px)", () => {
         duration: 1,
         x: -1000,
         ease: "power1.inOut",
-        rotate: -15,
+        rotate: 5,
       }, 's'
     )
     .fromTo('.purple',
@@ -919,7 +922,7 @@ mm.add("(max-width: 799px)", () => {
         duration: 1,
         x: -1000,
         ease: "power1.inOut",
-        rotate: 15,
+        rotate: 5,
         y: -100
       }, 's'
     )
