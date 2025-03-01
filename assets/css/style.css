@@ -2448,7 +2448,7 @@ video {
 .reveal-container button {
   font-size: 16px !important;
   background-color: #001D47;
-  color: white;
+  color: #EFEDDF;
 }
 
 .reveal-container button:hover {
