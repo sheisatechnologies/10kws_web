@@ -1253,7 +1253,7 @@ select.form-control {
 
 /* details section start */
 .details_section {
-  padding: 132px 0 50px 0;
+  padding: 50px 0 50px 0;
   background-color: #EFEDDF;
 }
 
@@ -1812,6 +1812,7 @@ select.form-control {
 /* Floorplans page css start */
 .building_page_wrapper.floorplans_page_wrapper .hero_section {
   /* background-image: url(../images/hero-images/10kws-floorplans-hero.jpg); */
+  background-color: #001D47;
 }
 .building_page_wrapper.floorplans_page_wrapper
   .workspace_section
