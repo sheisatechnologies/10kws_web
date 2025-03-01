@@ -757,7 +757,7 @@ body.scroll-off {
 .copyright {
   padding: 20px 0 0;
   border-top: 1px solid #eeeeee;
-  color: #fff;
+  color: #EFEDDF;
   font-size: 16px;
   margin-top: 60px;
   font-family: "DM Sans", sans-serif;
@@ -898,7 +898,7 @@ footer h6 {
 }
 .footer-block h5 {
   font-size: 16px;
-  color: #fff;
+  color: #EFEDDF;
   font-weight: 400;
   margin-bottom: 20px;
   font-family: "DM Sans", sans-serif;
@@ -1081,7 +1081,7 @@ select.form-control {
 } */
 .hero_section .hero_heading h1 {
   font-size: 128px;
-  color: #fff;
+  color: #EFEDDF;
   margin: 0;
   display: flex;
   align-items: center;
@@ -1096,8 +1096,7 @@ select.form-control {
 
 .hero_section .hero_heading h1 span {
   justify-content: center;
-
-  font-family: "DM Sans", sans-serif;
+  font-family: "MADE Mirage";
 }
 
 .hero_heading {
@@ -1634,7 +1633,7 @@ select.form-control {
   transform: translate(-50%, -50%);
 }
 .varied_section .section_tittle .heading_tittle {
-  color: #fff;
+  color: #EFEDDF;
   font-size: 70.15px;
 }
 .content_wrapper p.pink_text {
@@ -2178,8 +2177,8 @@ video {
 }
 
 .button_builf {
-  color: #fff;
-  border: 3px solid #fff;
+  color: #EFEDDF;
+  border: 3px solid #EFEDDF;
   padding: 12px 24px;
   background: transparent;
   font-size: 16px;
@@ -2499,7 +2498,7 @@ video {
 
 .reveal-container-buil button{
   background-color: #004514;
-  color: white;
+  color: #EFEDDF;
 }
 
 .reveal-container-buil button:hover{
