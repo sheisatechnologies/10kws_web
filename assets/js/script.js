@@ -198,7 +198,7 @@ var swiper = new Swiper('.mySwiper', {
 
 var swiper = new Swiper(".mySwiper5", {
   autoplay: {
-    delay: 2000,
+    delay: 3000,
   },
   slidesPerView: 1,
   spaceBetween: 30,
@@ -1518,5 +1518,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
 
 
