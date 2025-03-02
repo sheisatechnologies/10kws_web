@@ -390,7 +390,7 @@ mm.add("(min-width: 800px)", () => {
     {
       clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
       duration: 1,
-      x: -500,
+      x: -1300,
       ease: "power1.inOut",
       rotate: 0,
       y: 0
@@ -405,7 +405,7 @@ mm.add("(min-width: 800px)", () => {
       {
         clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
       duration: 1,
-      x: -500,
+      x: -1300,
       ease: "power1.inOut",
       rotate: 0,
       y: 0
@@ -421,7 +421,7 @@ mm.add("(min-width: 800px)", () => {
       {
         clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
       duration: 1,
-      x: -500,
+      x: -1300,
       ease: "power1.inOut",
       rotate: 0,
       y: 0
