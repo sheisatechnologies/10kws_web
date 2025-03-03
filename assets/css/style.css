@@ -393,6 +393,8 @@ body.scroll-off {
 /* Logo Visibility */
 .default-logo {
   display: block;
+  position: relative;
+    z-index: 5555;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -403,7 +405,7 @@ body.scroll-off {
 
 /* When Navbar Becomes Sticky */
 .is-sticky .default-logo {
-  display: none;
+  display: none !important;
 }
 
 .is-sticky .sticky-logo {

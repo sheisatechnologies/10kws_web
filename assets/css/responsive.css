@@ -57,9 +57,9 @@
     margin-left: 15px;
   }
 
-  #header .navbar-brand img {
+  /* #header .navbar-brand img {
     height: 30px;
-  }
+  } */
   .hero_section .hero_heading h1 {
     font-size: 90px;
     justify-content: center;
@@ -148,10 +148,10 @@
     left: 0;
     z-index: 9;
   }
-  #header .navbar-brand img {
+  /* #header .navbar-brand img {
     max-height: 32px;
     width: auto;
-  }
+  } */
   #header .navbar-nav .dropdown-menu {
     border: none;
     /* background: transparent; */
