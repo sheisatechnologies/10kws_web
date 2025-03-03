@@ -1902,7 +1902,7 @@ select.form-control {
 
 /* slider section start */
 .building_page_wrapper.floorplans_page_wrapper .slider_section {
-  background-color: #EFEDDF;
+  background-color: #fff;
   padding: 108px 0;
 }
 .building_page_wrapper.floorplans_page_wrapper
@@ -1958,7 +1958,7 @@ select.form-control {
 }
 .building_page_wrapper.floorplans_page_wrapper .faq_wrapper .accordion-button {
   background-color: transparent;
-  border-bottom: 1px solid #EFEDDFfff;
+  border-bottom: 1px solid #fff;
   letter-spacing: 1px;
   font-family: "DM Sans", sans-serif;
 }
