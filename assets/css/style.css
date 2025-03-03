@@ -1184,29 +1184,33 @@ select.form-control {
 
 .content_wrapper p {
   color: #001d47;
-  font-size: 16px;
+  
   font-weight: 400;
   margin-bottom: 50px;
   padding-left: 4px;
   padding-right: 4px;
   font-family: "DM Sans";
-  line-height: 27px !important;
+  
 }
 
 .content_wrapper_buil p{
   color: #004514;
+  line-height: 22px;
 }
 
 .content_wrapper_ameni p{
   color: #771212;
+  line-height: 22px;
 }
 
 .content_wrapper_loc p{
   color: #004514;
+  line-height: 22px;
 }
 
 .content_wrapper_white p{
   color: #EFEDDF;
+  line-height: 22px;
 }
 
 .para2 {
@@ -1352,9 +1356,7 @@ select.form-control {
   min-height: 95px;
 }
 
-.workspace_section .reveal-container p {
-  font-size: 16px !important;
-}
+
 
 /* services_section end */
 
@@ -2037,8 +2039,29 @@ select.form-control {
 .hero_section {
   text-align: center;
   padding: 0px 0;
-  margin-top: -90px;
+  
 }
+
+.body-para{
+
+  font-size: 16px !important;
+  line-height: 22px !important;
+  max-width: 690px;
+  margin: auto;
+  text-align: center;
+  color: #004514;
+}
+
+.page-hero-intro{
+  font-size: 20px !important;
+  line-height: 27px !important;
+  max-width: 690px;
+  margin: auto;
+  text-align: center;
+  color: #004514;
+
+}
+
 
 .hero_section_home{
   background-color: #DDE5F7;
@@ -2296,10 +2319,7 @@ video {
   color: #EFEDDF !important;
 }
 
-.cw_title {
-  font-size: 20px !important;
-  line-height: 27px !important;
-}
+
 
 /* Amenities css start */
 
@@ -2506,9 +2526,7 @@ video {
   opacity: 0;
 }
 
-.reveal-container p {
-  font-size: 16px !important;
-}
+
 
 
 

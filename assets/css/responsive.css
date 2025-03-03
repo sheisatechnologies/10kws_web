@@ -3,6 +3,12 @@
     font-size: 90px;
     justify-content: center;
   }
+
+  .building-hero .hero_heading h1 {
+    font-size: 90px;
+    line-height: 80px;
+    justify-content: center;
+  }
   .hero_section .hero_heading img {
     max-height: 70px;
     margin-left: 9px;
