@@ -1836,6 +1836,8 @@ select.form-control {
 .sub-basement-img {
   width: 20% !important;
   position: absolute;
+  left: 75%;
+  top: 85%;
 }
 
 /* summary section start */
