@@ -635,7 +635,7 @@ heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
     });
   
     blSliderTl1.fromTo('.gc-animation1 img', {
-      clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
+      clipPath: "polygon(0% 0%, 92.401% 19.5282%, 103.6884% 102.9949%, 101.228% 101.578%, -5.7875% 101.052%, 0% 101.562%, 0% 0.0567%)",
       duration: 1,
       ease: "power1.inOut"
     }, {
