@@ -2168,7 +2168,7 @@ video {
   background: transparent;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.1s;
   font-family: "DM Sans";
   font-size: 14px;
   font-weight: bold;
@@ -2570,4 +2570,8 @@ padding-bottom: 200px;
 
 .contact_details span a{
   color: #EFEDDF;
+}
+
+.accordion-body p{
+  color: white;
 }
