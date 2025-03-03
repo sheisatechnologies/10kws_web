@@ -1836,8 +1836,6 @@ select.form-control {
 .sub-basement-img {
   width: 20% !important;
   position: absolute;
-  left: 70%;
-  top: 75%;
 }
 
 /* summary section start */
@@ -2160,7 +2158,10 @@ video {
   background-color: #771212 !important;
 }
 
+.mb-8{
 
+  margin-bottom: 8rem !important;
+}
 .button_buil {
   color: #001d47;
   border: 3px solid #001d47;
