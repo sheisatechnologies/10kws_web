@@ -393,7 +393,9 @@ body.scroll-off {
 /* Logo Visibility */
 .default-logo {
   display: block;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3sease-in-out;
+    position: relative;
+    z-index: 555;
 }
 
 .sticky-logo {

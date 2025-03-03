@@ -4,11 +4,7 @@
     justify-content: center;
   }
 
-  .building-hero .hero_heading h1 {
-    font-size: 90px;
-    line-height: 80px;
-    justify-content: center;
-  }
+ 
   .hero_section .hero_heading img {
     max-height: 70px;
     margin-left: 9px;
@@ -17,6 +13,16 @@
     width: 98%;
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1440px) {
+  .building-hero .hero_heading h1 {
+    font-size: 90px;
+    line-height: 89px;
+    justify-content: center;
+  }
+
+}
+
 
 @media (min-width: 1200px) and (max-width: 1309px) {
 }
@@ -407,7 +413,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991px) {
   .tittle_slide h3 span {
     display: block;
     font-family: "MADE Mirage";
