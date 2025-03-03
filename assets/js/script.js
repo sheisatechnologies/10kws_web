@@ -876,10 +876,10 @@ mm.add("(max-width: 799px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
-      start: '-25% 50%',
+      start: 'bottom bottom', // When the middle of the section reaches the bottom of the viewport
       end: '150% 50%',
       scrub: true,
-      // markers: true,
+      markers: true,
     }
   });
 
