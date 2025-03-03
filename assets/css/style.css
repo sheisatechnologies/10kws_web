@@ -378,15 +378,38 @@ body.scroll-off {
   transition: all 0.3s ease-in-out; /* Smooth effect */
 }
 
+/* Default Navbar */
 .sticky-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: white; /* Add background to avoid transparency issues */
+  background: white;
   z-index: 1000;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
+
+/* Logo Visibility */
+.default-logo {
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sticky-logo {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* When Navbar Becomes Sticky */
+.is-sticky .default-logo {
+  display: none;
+}
+
+.is-sticky .sticky-logo {
+  display: block;
+}
+
 
 
 
@@ -2054,7 +2077,7 @@ video {
 }
 
 .custom-slider-container {
-  margin: 20px auto;
+  margin: 0px auto;
 }
 .custom-slider {
   padding: 0;
@@ -2160,10 +2183,7 @@ video {
   background-color: #771212 !important;
 }
 
-.mb-8{
 
-  margin-bottom: 8rem !important;
-}
 .button_buil {
   color: #001d47;
   border: 3px solid #001d47;
@@ -2577,4 +2597,9 @@ padding-bottom: 200px;
 
 .accordion-body p{
   color: white;
+}
+
+.mb-8{
+
+  margin-bottom: 8rem !important;
 }

@@ -5,44 +5,39 @@ $(document).ready(function () {
   // $('body').css('padding-top', HeadH);
 
   var scrollWindow = function () {
-    $(window).on('load scroll', function () {
-      var navbar = $('#header');
-
-      // if ($(this).scrollTop() > HeadH) {
+    $(window).on("load scroll", function () {
+      var navbar = $("#header");
+  
       if ($(this).scrollTop() > 150) {
-        if (!navbar.hasClass('is-sticky')) {
-          navbar.addClass('is-sticky');
-          $('body').css('padding-top', HeadH);
+        if (!navbar.hasClass("is-sticky")) {
+          navbar.addClass("is-sticky");
+          $("body").css("padding-top", navbar.outerHeight());
         }
       }
-      // if ($(this).scrollTop() < HeadH) {
-      if ($(this).scrollTop() < 250) {
-        if (navbar.hasClass('is-sticky')) {
-          navbar.removeClass('is-sticky');
-          $('body').css('padding-top', 0);
+  
+      if ($(this).scrollTop() < 150) {
+        if (navbar.hasClass("is-sticky")) {
+          navbar.removeClass("is-sticky");
+          $("body").css("padding-top", 0);
         }
       }
-      // if ($(this).scrollTop() > HeadH*2) {
+  
       if ($(this).scrollTop() > 250) {
-        if (!navbar.hasClass('awake')) {
-          navbar.addClass('awake');
+        if (!navbar.hasClass("awake")) {
+          navbar.addClass("awake");
         }
       }
-      // if ($(this).scrollTop() < HeadH*2) {
+  
       if ($(this).scrollTop() < 50) {
-        if (navbar.hasClass('awake')) {
-          navbar.removeClass('awake');
+        if (navbar.hasClass("awake")) {
+          navbar.removeClass("awake");
         }
       }
-      // if ($(this).scrollTop() >= 400) { 
-      //     $('.back_top').addClass('active');
-      // }
-      // else {
-      //     $('.back_top').removeClass('active');
-      // }
     });
   };
+  
   scrollWindow();
+  
 
 
   var btn = $('#top-button');
@@ -186,6 +181,7 @@ var swiper = new Swiper('.mySwiper', {
     delay: 4000,
     disableOnInteraction: false,
   },
+  speed: 1000, // Slows down transition speed (1 second)
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -198,8 +194,10 @@ var swiper = new Swiper('.mySwiper', {
 
 var swiper = new Swiper(".mySwiper5", {
   autoplay: {
-    delay: 3000,
+    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
+    disableOnInteraction: false, // Ensures autoplay continues after interaction
   },
+  speed: 1000, // Slows down transition speed (1 second)
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -258,8 +256,10 @@ var swiper = new Swiper(".mySwiper2", {
 
 var swiper = new Swiper(".mySwiper3", {
   autoplay: {
-    delay: 2000,
+    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
+    disableOnInteraction: false, // Ensures autoplay continues after interaction
   },
+  speed: 1000, // Slows down transition speed (1 second)
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -317,8 +317,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 var swiper = new Swiper(".mySwiper4", {
   autoplay: {
-    delay: 2000,
+    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
+    disableOnInteraction: false, // Ensures autoplay continues after interaction
   },
+  speed: 1000, // Slows down transition speed (1 second)
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -633,7 +635,7 @@ heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
     });
   
     blSliderTl1.fromTo('.gc-animation1 img', {
-      clipPath: "polygon(0% 0%, 94% 0%, 88% 7%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
+      clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
       duration: 1,
       ease: "power1.inOut"
     }, {
@@ -876,10 +878,10 @@ mm.add("(max-width: 799px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
-      start: 'bottom bottom', // When the middle of the section reaches the bottom of the viewport
+      start: '-25% 50%',
       end: '150% 50%',
       scrub: true,
-      markers: true,
+      // markers: true,
     }
   });
 
