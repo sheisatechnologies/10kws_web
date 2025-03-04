@@ -1207,6 +1207,11 @@ select.form-control {
   line-height: 22px;
 }
 
+.content_wrapper_buil2 p{
+  color: #001D47;
+  line-height: 22px;
+}
+
 .content_wrapper_loc p{
   color: #004514;
   line-height: 22px;
@@ -2562,6 +2567,18 @@ video {
 .text-reveal-wrapper {
   overflow: visible;
 }
+
+
+.reveal-container-buil2 button{
+  background-color: #001D47;
+  color: #EFEDDF;
+}
+
+.reveal-container-buil2 button:hover{
+  background-color: transparent;
+  color: #001D47;
+}
+
 
 /* Ensure containers don't affect layout */
 .reveal-container {
