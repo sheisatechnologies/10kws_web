@@ -507,7 +507,8 @@
   }
   .details_section img {
     max-height: 279.88px;
-    scale: 1.5;
+    scale: 1.3 !important;
+
   }
   
   .right_part .theem_btn_outline {
