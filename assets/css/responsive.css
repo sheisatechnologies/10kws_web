@@ -477,7 +477,7 @@
   }
   .eco_section {
     padding: 80px 0;
-    background: url(../img/eco-bg-m.png);
+    background: url(../images/eco-bg.png);
   }
   .eco_section .services_slider {
     margin-top: 0px;
@@ -509,9 +509,7 @@
     max-height: 279.88px;
     scale: 1.5;
   }
-  .footer_wrapper {
-    background-image: url(../img/footer-bg-m.png);
-  }
+  
   .right_part .theem_btn_outline {
     font-size: 12px;
   }
@@ -692,11 +690,29 @@
   }
 
   .heading_tittle {
-    color: #000;
+    color: #001d47;
     font-size: 38px;
     font-weight: 600;
     margin: 0;
     text-transform: uppercase;
+  }
+
+
+  .heading_tittle_white{
+    color: white;
+  }
+
+  .heading_tittle_buil{
+    color: #004514;
+  }
+
+
+  .heading_tittle_ameni{
+    color: #771212;
+  }
+
+  .heading_tittle_loc{
+    color: #004514;
   }
 
   .cw_title {
@@ -836,8 +852,4 @@
   }
 }
 
-@media (max-width: 767.98px) {
-  .footer_wrapper {
-    background-image: url(../img/footer-bg-m.png);
-  }
-}
+
