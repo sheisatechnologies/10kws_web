@@ -1964,7 +1964,7 @@ select.form-control {
 }
 .building_page_wrapper.floorplans_page_wrapper .faq_wrapper .accordion-button {
   background-color: transparent;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #EFEDDF;
   letter-spacing: 1px;
   font-family: "DM Sans", sans-serif;
 }
@@ -2384,6 +2384,9 @@ video {
   color: #001d47;
 }
 
+.loc_text_color{
+  color:#004514 !important;
+}
 .contact-title {
   font-size: 30px;
   line-height: 33px;
@@ -2403,7 +2406,48 @@ video {
 }
 
 
+@media (max-width: 991px) {
+  .varied_section .red {
+    width: 450px;
+    height: 450px;
+    background-image: url(../images/building-assets/building-facade-1.1.jpg);
+    background-size: cover;
+   
+   
+    clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
+  
+  
+  }
+  
+  .varied_section .orange {
+    width: 450px;
+    height: 450px;
+    background-image: url(../images/building-assets/building-facade-2.1.jpg);
+    background-size: cover;
+  
+    
+    clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
+  
+  
+  }
+  
+  .varied_section .purple {
+    width: 450px;
+    height: 450px;
+    background-image: url(../images/building-assets/building-facade-3.1.jpg);
+    background-size: cover;
+    
+    
+    clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
+  
+  
+  
+  }
+  
 
+
+  
+}
 .varied_section .red {
   width: 450px;
   height: 450px;

@@ -370,6 +370,14 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
+
+
+
+
+
+
+    
+
 // Building Page Dynamic Scroll Animation
 let mm = gsap.matchMedia();
 
@@ -432,6 +440,150 @@ mm.add("(min-width: 800px)", () => {
       y: 0
       }, 's'
     );
+
+
+
+
+    // Building Page Dynamic Scroll Animation
+let mm = gsap.matchMedia();
+
+// ✅ Animation for min-width: 800px (Desktop)
+mm.add("(min-width: 800px)", () => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".varied_section",
+      start: "-30% 50%",
+      end: "120% 50%",
+      scrub: true,
+      // markers: true,
+    }
+  });
+
+  tl.fromTo(".red",
+    {
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      x: 500,
+      y: 100
+    },
+    {
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      duration: 1,
+      x: -1300,
+      ease: "power1.inOut",
+      rotate: 0,
+      y: 0
+    }, 's'
+  )
+  .fromTo(".orange",
+    {
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      x: 500,
+      y: 100
+    },
+    {
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      duration: 1,
+      x: -1300,
+      ease: "power1.inOut",
+      rotate: 0,
+      y: 0
+    }, 's'
+  )
+  .fromTo(".purple",
+    {
+      clippath: "polygon(0% -130%, 100% -48%, -160% 101%, 0% 95%, 226% 131%)",
+      x: 500,
+      y: 100
+    },
+    {
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      duration: 1,
+      x: -1300,
+      ease: "power1.inOut",
+      rotate: 0,
+      y: 0
+    }, 's'
+  );
+});
+
+mm.add("(max-width: 800px)", () => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".varied_section",
+      start: "-30% 50%",
+      end: "120% 50%",
+      scrub: true,
+    }
+  });
+
+  tl.fromTo(".red",
+    {
+      width: "100vw", 
+      height: "100vw",
+      scale: 1.5,
+      clippath: "polygon(0% -15%, 121% 28%, 100% -34%, 105% 101%, 0% 87%, -24% 128%)",
+      x: 500,
+      y: 100
+    },
+    {
+      scale: 2, 
+      width: "120vw",
+      height: "120vw",
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      x: -1300,
+      y: 0,
+      ease: "power1.inOut",
+      duration: 1
+    }, 's'
+  )
+  .fromTo(".orange",
+    {
+      width: "100vw",
+      height: "100vw",
+      scale: 1.5,
+      clippath: "polygon(0% -15%, 121% 28%, 100% -34%, 105% 101%, 0% 87%, -24% 128%)",
+      x: 500,
+      y: 100
+    },
+    {
+      scale: 2,
+      width: "120vw",
+      height: "120vw",
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      x: -1300,
+      y: 0,
+      ease: "power1.inOut",
+      duration: 1
+    }, 's'
+  )
+  .fromTo(".purple",
+    {
+      width: "100vw",
+      height: "100vw",
+      scale: 1.5,
+      clippath: "polygon(0% -15%, 121% 28%, 100% -34%, 105% 101%, 0% 87%, -24% 128%)",
+      x: 500,
+      y: 100
+    },
+    {
+      scale: 2,
+      width: "120vw",
+      height: "120vw",
+      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+     
+      x: -1300,
+      y: 0,
+      ease: "power1.inOut",
+      duration: 1
+    }, 's'
+  );
+});
+
+
+
+
+
+
 
 
   // View section animation
