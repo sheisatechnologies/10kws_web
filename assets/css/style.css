@@ -2410,7 +2410,7 @@ video {
   .varied_section .red {
     width: 450px;
     height: 450px;
-    background-image: url(../images/building-assets/building-facade-1.1.jpg);
+    background-image: url(../images/building-assets/bld-hs-img-1.jpg);
     background-size: cover;
    
    
@@ -2422,7 +2422,7 @@ video {
   .varied_section .orange {
     width: 450px;
     height: 450px;
-    background-image: url(../images/building-assets/building-facade-2.1.jpg);
+    background-image: url(../images/building-assets/bld-hs-img-2.jpg
     background-size: cover;
   
     
@@ -2434,7 +2434,7 @@ video {
   .varied_section .purple {
     width: 450px;
     height: 450px;
-    background-image: url(../images/building-assets/building-facade-3.1.jpg);
+    background-image: url(../images/building-assets/bld-hs-img-3.jpg);
     background-size: cover;
     
     
@@ -2451,7 +2451,7 @@ video {
 .varied_section .red {
   width: 450px;
   height: 450px;
-  background-image: url(../images/building-assets/building-facade-1.1.jpg);
+  background-image: url(../images/building-assets/bld-hs-img-1.jpg);
   background-size: cover;
  
   clip-path: polygon(0% -15%, 121% 28%, 100% -34%, 105% 101%, 0% 87%, -24% 128%);
@@ -2462,7 +2462,7 @@ video {
 .varied_section .orange {
   width: 450px;
   height: 450px;
-  background-image: url(../images/building-assets/building-facade-2.1.jpg);
+  background-image: url(../images/building-assets/bld-hs-img-2.jpg);
   background-size: cover;
 
   clip-path: polygon(0% -15%, 121% 28%, 100% -34%, 105% 101%, 0% 87%, -24% 128%);
@@ -2473,7 +2473,7 @@ video {
 .varied_section .purple {
   width: 450px;
   height: 450px;
-  background-image: url(../images/building-assets/building-facade-3.1.jpg);
+  background-image: url(../images/building-assets/bld-hs-img-3.jpg);
   background-size: cover;
   
   clip-path: polygon(0% -15%, 121% 28%, 100% -34%, 105% 101%, 0% 87%, -24% 128%);
