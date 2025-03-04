@@ -438,7 +438,7 @@ body.scroll-off {
   transform: translateY(-100%);
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  height: 65px;
+  height: 86px;
   border-bottom: 0;
   background-color: #001d47 !important;
 }
@@ -468,6 +468,7 @@ body.scroll-off {
 
 #header .navbar-expand-lg .navbar-nav .nav-item {
   margin-right: 25px;
+  padding-bottom: 20px;
 }
 
 #header .navbar-expand-lg .navbar-nav .nav-item:last-child {
