@@ -1654,31 +1654,39 @@ function revealAccordion() {
   });
 }
 
-// Call the function when document is ready
-document.addEventListener('DOMContentLoaded', revealAccordion);
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.querySelector(".navbar-toggler");
+
+let lastScrollY = 0; // Store last scroll position
+
+function toggleMenu(open) {
+  const menu = document.querySelector(".menu");
   const body = document.body;
 
-  function getScrollbarWidth() {
-    return window.innerWidth - document.documentElement.clientWidth;
+  if (open) {
+    lastScrollY = window.scrollY; // Store scroll position
+    body.style.top = `-${lastScrollY}px`; // Keep page in place
+    body.classList.add("menu-open");
+    body.style.position = "fixed"; // Prevent scrolling
+    menu.classList.add("menu-open");
+  } else {
+    body.classList.remove("menu-open");
+    menu.classList.remove("menu-open");
+    body.style.position = ""; // Restore scrolling
+    body.style.top = "";
+    window.scrollTo(0, lastScrollY); // Restore last scroll position
   }
+}
 
-  menuToggle.addEventListener("click", function () {
-    if (body.classList.contains("menu-open")) {
-      body.classList.remove("menu-open");
-      document.documentElement.style.setProperty("--scrollbar-width", "0px");
-    } else {
-      const scrollbarWidth = getScrollbarWidth() + "px";
-      document.documentElement.style.setProperty("--scrollbar-width", scrollbarWidth);
-      body.classList.add("menu-open");
-    }
-  });
+// Open Menu
+document.querySelector(".menu-button").addEventListener("click", () => {
+  toggleMenu(true);
 });
 
-
+// Close Menu
+document.querySelector(".close-button").addEventListener("click", () => {
+  toggleMenu(false);
+});
 
 
 

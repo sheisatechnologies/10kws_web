@@ -640,7 +640,7 @@
   .mobile_logo,
   #header.is-sticky {
     height: 60px;
-    padding-top: 24px;
+    
   }
   header .collapse:not(.show) {
     padding-top: 130px;
