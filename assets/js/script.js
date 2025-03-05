@@ -1706,6 +1706,20 @@ document.querySelector(".close-button").addEventListener("click", () => {
   toggleMenu(false);
 });
 
+$(document).ready(function(){
+  $('.slick-carousel').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: $('.slick-prev'),
+      nextArrow: $('.slick-next')
+  });
+});
+
 
 
 

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Carousel</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    
+    <style>
+        .carousel-container {
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+        .carousel-inner {
+            background-color: #DDE5F7;
+            padding: 40px 20px;
+            border-radius: 0;
+        }
+        .slide-top {
+            font-size: 17px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #001D47;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        .slider-para{
+                text-align: left;
+                color:#001D47 ;
+            }
+        .divider1 {
+            border-top: 2px solid #001D47;
+            margin: 20px auto;
+            width: 99%;
+            
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+        }
+        .carousel-control-prev-icon {
+            background-image: url('./arrow2.svg');
+        }
+        .carousel-control-next-icon {
+            background-image: url('./arrow1.svg');
+        }
+        .slick-slider .slick-slide {
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-view {
+                display: none;
+            }
+            .mobile-slider {
+                display: block;
+                background-color: #DDE5F7;
+            }
+            .slider-para{
+                text-align: left;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .desktop-view {
+                display: block;
+            }
+            .mobile-slider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="carousel-container">
+        <div class="desktop-view">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-3">
+                                <p class="slide-top">DeveloperS</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                
+                                <p class="slider-para">Helical plc are a leading London-focussed property investment and development company who create sustainable and inspiring workplaces which are technologically smart, rich in amenities and promote employee wellbeing.</p>
+    
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+    
+                                <p class="slider-para">Places for London is Transport for London’s property company. With a portfolio valued at £2bn, generating gross income of £83m an investment strategy to see the organisation double the total asset value over the next 10 year, the organisation have big plans for the capital. </p>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="slide-top">COST CONSULTANT</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                <p class="slider-para">Fletcher Priest is an award-winning, cosmopolitan design practice formed of a highly collaborative group of people and led by a partnership group with wide ranging internal and external interests. The practice has studios in London, Cologne and Riga with the majority of the teams based in the UK.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="slide-top">PROJECT MANAGER</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                <p class="slider-para">Third London Wall is a specialist project management and cost consultancy firm with a proven track record in UK property developments. Our unique approach ensures we manage all aspects of design, procurement, construction, and handover to meet time, cost, and quality targets.</p>
+                                <p class="slider-para">Founded in 2020 by Mike Blinco, we are a privately owned firm with a team of 35 experts. We have experience in commercial office spaces, hotels, hospitality projects, life sciences, student accommodations, and private residential schemes.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="slide-top">STRUCTURAL ENGINEER</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                <p class="slider-para">Established in 1982, Robert Bird Group (RBG) is a global consulting engineering firm with over 700 staff across twelve offices. We offer expertise in Structural, Civil, Construction, Geotechnical (UK & MENA), and Virtual Design & Construction (VDC) engineering. </p>
+                                <p class="slider-para"> Our services, offered individually or combined, cater to projects of all sizes in various sectors. We focus on our clients’ needs and deliver their vision through early design engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row ">
+                            <div class="col-md-3">
+                                <p class="slide-top">MEP ENGINEER</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                <p class="slider-para">BHoare Lea is an award-winning engineering consultancy with a creative team of engineers, designers and technical specialists. We provide innovative solutions to complex engineering and design challenges for buildings.<br>Irrespective of the scale or complexity of a project, we provide a full range of MEP, environmental and sustainability services, bringing buildings to life and ensuring that they perform in operation as well as they look. </p>
+                                    <p class="slider-para">
+                                        Whatever our client’s vision, we exist to make it a celebrated reality. We focus on the future and invest for the long term. We fiercely protect our hard-earned reputation so that our firm can be passed on to those who will follow</p>
+                                        <p  class="slider-para">As the UK’s largest MEP Engineering Consultancy, we are building on more than 150 years of proud heritage. We are experienced in many sectors, involved and influential within our industry and further afield. Our people are focussed specialists; we only do what we are good at. We win awards – both for our firm and for our clients – and celebrate our impressive legacy of outstanding, innovative work.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="slide-top">COST CONSULTANTS</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                <p class="slider-para">Core Five was founded in 2012 and are proud to have become an Employee Ownership Trust (EOT) in 2023. Now a 180-strong team, we provide world-class Cost Consultancy and Employer’s Agent services to market leading Clients.</p>
+                                <p class="slider-para">From complex commercial, residential, mixed-use and towers, to unique cultural venues and international stadia, Core Five has been a driving force in supporting some of the most complex, innovative, and sustainable projects in the UK and internationally.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-slider">
+            <div class="slick-carousel">
+                <div>
+                    <p class="slide-top">DeveloperS</p>
+                    <hr class="divider1">
+                    <div class="text-start">
+                        <img src="logo.svg" class="py-5">
+                    </div>
+                    
+                    <p class="slider-para">Helical plc are a leading London-focussed property investment and development company who create sustainable and inspiring workplaces which are technologically smart, rich in amenities and promote employee wellbeing.</p>
+
+                    <div class="text-start">
+                        <img src="logo.svg" class="py-5">
+                    </div>
+
+                    <p class="slider-para">Places for London is Transport for London’s property company. With a portfolio valued at £2bn, generating gross income of £83m an investment strategy to see the organisation double the total asset value over the next 10 year, the organisation have big plans for the capital. </p>
+                </div>
+                <div>
+                    <p class="slide-top">COST CONSULTANT</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                <p class="slider-para">Fletcher Priest is an award-winning, cosmopolitan design practice formed of a highly collaborative group of people and led by a partnership group with wide ranging internal and external interests. The practice has studios in London, Cologne and Riga with the majority of the teams based in the UK.</p>
+                </div>
+                <div>
+                    <p class="slide-top">PROJECT MANAGER</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                <p class="slider-para">Third London Wall is a specialist project management and cost consultancy firm with a proven track record in UK property developments. Our unique approach ensures we manage all aspects of design, procurement, construction, and handover to meet time, cost, and quality targets.</p>
+                                <p class="slider-para">Founded in 2020 by Mike Blinco, we are a privately owned firm with a team of 35 experts. We have experience in commercial office spaces, hotels, hospitality projects, life sciences, student accommodations, and private residential schemes.</p>
+                </div>
+                <div>
+                    <p class="slide-top">STRUCTURAL ENGINEER</p>
+                    <hr class="divider1">
+                    <div class="text-start">
+                        <img src="logo.svg" class="py-5">
+                    </div>
+                    <p class="slider-para">Established in 1982, Robert Bird Group (RBG) is a global consulting engineering firm with over 700 staff across twelve offices. We offer expertise in Structural, Civil, Construction, Geotechnical (UK & MENA), and Virtual Design & Construction (VDC) engineering. </p>
+                    <p class="slider-para"> Our services, offered individually or combined, cater to projects of all sizes in various sectors. We focus on our clients’ needs and deliver their vision through early design engagement.</p>
+                </div>
+                <div>
+                    <p class="slide-top">MEP ENGINEER</p>
+                                <hr class="divider1">
+                                <div class="text-start">
+                                    <img src="logo.svg" class="py-5">
+                                </div>
+                                <p class="slider-para">BHoare Lea is an award-winning engineering consultancy with a creative team of engineers, designers and technical specialists. We provide innovative solutions to complex engineering and design challenges for buildings.<br>Irrespective of the scale or complexity of a project, we provide a full range of MEP, environmental and sustainability services, bringing buildings to life and ensuring that they perform in operation as well as they look. </p>
+                                    <p class="slider-para">
+                                        Whatever our client’s vision, we exist to make it a celebrated reality. We focus on the future and invest for the long term. We fiercely protect our hard-earned reputation so that our firm can be passed on to those who will follow</p>
+                                        <p  class="slider-para">As the UK’s largest MEP Engineering Consultancy, we are building on more than 150 years of proud heritage. We are experienced in many sectors, involved and influential within our industry and further afield. Our people are focussed specialists; we only do what we are good at. We win awards – both for our firm and for our clients – and celebrate our impressive legacy of outstanding, innovative work.</p>
+
+                        <div>
+                            <p class="slide-top">COST CONSULTANTS</p>
+                            <hr class="divider1">
+                            <div class="text-start">
+                                <img src="logo.svg" class="py-5">
+                            </div>
+                            <p class="slider-para">Core Five was founded in 2012 and are proud to have become an Employee Ownership Trust (EOT) in 2023. Now a 180-strong team, we provide world-class Cost Consultancy and Employer’s Agent services to market leading Clients.</p>
+                            <p class="slider-para">From complex commercial, residential, mixed-use and towers, to unique cultural venues and international stadia, Core Five has been a driving force in supporting some of the most complex, innovative, and sustainable projects in the UK and internationally.</p>
+                        </div>
+                        
+                </div>
+                
+                
+            </div>
+            
+    </div>
+    
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+       $(document).ready(function(){
+            $('.slick-carousel').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                prevArrow: $('.slick-prev'),
+                nextArrow: $('.slick-next')
+            });
+        });
+    </script>
+</body>
+</html>
