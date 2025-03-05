@@ -1363,7 +1363,7 @@ select.form-control {
 /* details section start */
 .section_tittle {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .heading_tittle {
   color: #001d47;
@@ -2401,6 +2401,7 @@ video {
 
 
 @media (max-width: 991px) {
+
   .varied_section .red {
     width: 450px;
     height: 450px;
@@ -2416,7 +2417,7 @@ video {
   .varied_section .orange {
     width: 450px;
     height: 450px;
-    background-image: url(../images/building-assets/bld-hs-img-2.jpg
+    background-image: url(../images/building-assets/bld-hs-img-2.jpg);
     background-size: cover;
   
     
@@ -2442,6 +2443,7 @@ video {
 
   
 }
+
 .varied_section .red {
   width: 450px;
   height: 450px;
