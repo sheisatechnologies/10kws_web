@@ -2405,36 +2405,36 @@ video {
   .varied_section .red {
     width: 450px;
     height: 450px;
-    background-image: url(../images/building-assets/bld-hs-img-1.jpg);
+    /* background-image: url(../images/building-assets/bld-hs-img-1.jpg); */
     background-size: cover;
    
    
-    clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
-  
+    /* clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
+   */
   
   }
   
   .varied_section .orange {
     width: 450px;
     height: 450px;
-    background-image: url(../images/building-assets/bld-hs-img-2.jpg);
+    /* background-image: url(../images/building-assets/bld-hs-img-2.jpg); */
     background-size: cover;
   
-    
+/*     
     clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
-  
+   */
   
   }
   
   .varied_section .purple {
     width: 450px;
     height: 450px;
-    background-image: url(../images/building-assets/bld-hs-img-3.jpg);
+    /* background-image: url(../images/building-assets/bld-hs-img-3.jpg); */
     background-size: cover;
     
-    
+/*     
     clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
-  
+   */
   
   
   }
