@@ -1267,14 +1267,26 @@ select.form-control {
   left: auto;
 }
 
+.swiper-button-prev-keyfact{
+  left: -52px !important;
+  right: auto;
+  top: 59%;
+}
+
+.swiper-button-next-keyfact{
+  right: -52px !important;
+  left: auto;
+  top: 59%;
+}
+
 .building-arrow .swiper-button-prev {
-  left: 0px;
+  left: -52px;
   right: auto;
   
 }
 
 .building-arrow .swiper-button-next {
-  right: 0px;
+  right: -52px;
   left: auto;
 }
 
@@ -1708,7 +1720,7 @@ select.form-control {
 }
 .eco_section .swiper-button-next,
 .eco_section .swiper-button-prev {
-  top: 80%;
+  top: 68%;
 }
 /* eco section start */
 
@@ -2405,36 +2417,36 @@ video {
   .varied_section .red {
     width: 450px;
     height: 450px;
-    /* background-image: url(../images/building-assets/bld-hs-img-1.jpg); */
+    background-image: url(../images/building-assets/bld-hs-img-1.jpg);
     background-size: cover;
    
    
-    /* clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
-   */
+    clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
+  
   
   }
   
   .varied_section .orange {
     width: 450px;
     height: 450px;
-    /* background-image: url(../images/building-assets/bld-hs-img-2.jpg); */
+    background-image: url(../images/building-assets/bld-hs-img-2.jpg);
     background-size: cover;
   
-/*     
+    
     clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
-   */
+  
   
   }
   
   .varied_section .purple {
     width: 450px;
     height: 450px;
-    /* background-image: url(../images/building-assets/bld-hs-img-3.jpg); */
+    background-image: url(../images/building-assets/bld-hs-img-3.jpg);
     background-size: cover;
     
-/*     
+    
     clip-path: polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%);
-   */
+  
   
   
   }
@@ -2681,6 +2693,35 @@ padding-bottom: 200px;
 
   margin-bottom: 8rem !important;
 }
+
+
+.button_down {
+  display: inline-block;
+  width: 180px; /* Set a fixed width for uniformity */
+  text-align: center;
+  border: 3px solid #001d47;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #001D47; /* Adjust color */
+  color: #fff;
+  
+  transition: 0.3s;
+}
+
+.button_down:hover {
+  background-color: #EFEDDF;
+}
+
+.view_section_floor{
+  background-color: white;
+}
+
+.card_tittle_floor{
+  color: #001D47;
+}
+
 
 
 
