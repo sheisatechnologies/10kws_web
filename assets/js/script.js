@@ -5,42 +5,44 @@ $(document).ready(function () {
   // $('body').css('padding-top', HeadH);
 
   var scrollWindow = function () {
-    $(window).on("load scroll", function () {
-      var navbar = $("#header");
-      var defaultLogo = $(".default-logo");
-      var stickyLogo = $(".sticky-logo");
-  
+    $(window).on('load scroll', function () {
+      var navbar = $('#header');
+
+      // if ($(this).scrollTop() > HeadH) {
       if ($(this).scrollTop() > 150) {
-        if (!navbar.hasClass("is-sticky")) {
-          navbar.addClass("is-sticky");
-          $("body").css("padding-top", navbar.outerHeight());
-          defaultLogo.hide();
-          stickyLogo.show();
-        }
-      } else {
-        if (navbar.hasClass("is-sticky")) {
-          navbar.removeClass("is-sticky");
-          $("body").css("padding-top", 0);
-          defaultLogo.show();
-          stickyLogo.hide();
+        if (!navbar.hasClass('is-sticky')) {
+          navbar.addClass('is-sticky');
+          $('body').css('padding-top', HeadH);
         }
       }
-  
+      // if ($(this).scrollTop() < HeadH) {
+      if ($(this).scrollTop() < 250) {
+        if (navbar.hasClass('is-sticky')) {
+          navbar.removeClass('is-sticky');
+          $('body').css('padding-top', 0);
+        }
+      }
+      // if ($(this).scrollTop() > HeadH*2) {
       if ($(this).scrollTop() > 250) {
-        if (!navbar.hasClass("awake")) {
-          navbar.addClass("awake");
-        }
-      } else if ($(this).scrollTop() < 50) {
-        if (navbar.hasClass("awake")) {
-          navbar.removeClass("awake");
+        if (!navbar.hasClass('awake')) {
+          navbar.addClass('awake');
         }
       }
+      // if ($(this).scrollTop() < HeadH*2) {
+      if ($(this).scrollTop() < 50) {
+        if (navbar.hasClass('awake')) {
+          navbar.removeClass('awake');
+        }
+      }
+      // if ($(this).scrollTop() >= 400) { 
+      //     $('.back_top').addClass('active');
+      // }
+      // else {
+      //     $('.back_top').removeClass('active');
+      // }
     });
   };
-  
   scrollWindow();
-  
-  
 
 
   var btn = $('#top-button');
@@ -184,7 +186,6 @@ var swiper = new Swiper('.mySwiper', {
     delay: 4000,
     disableOnInteraction: false,
   },
-  speed: 1000, // Slows down transition speed (1 second)
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -197,10 +198,8 @@ var swiper = new Swiper('.mySwiper', {
 
 var swiper = new Swiper(".mySwiper5", {
   autoplay: {
-    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
-    disableOnInteraction: false, // Ensures autoplay continues after interaction
+    delay: 2000,
   },
-  speed: 1000, // Slows down transition speed (1 second)
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -259,10 +258,8 @@ var swiper = new Swiper(".mySwiper2", {
 
 var swiper = new Swiper(".mySwiper3", {
   autoplay: {
-    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
-    disableOnInteraction: false, // Ensures autoplay continues after interaction
+    delay: 2000,
   },
-  speed: 1000, // Slows down transition speed (1 second)
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -302,11 +299,6 @@ document.addEventListener("DOMContentLoaded", function () {
       el: '.swiper-pagination',
       clickable: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-      clickable: true,
-    },
     breakpoints: {
       768: {
         slidesPerView: 1, // Keep 1 slide visible for smaller screens (e.g., mobile)
@@ -320,10 +312,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 var swiper = new Swiper(".mySwiper4", {
   autoplay: {
-    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
-    disableOnInteraction: false, // Ensures autoplay continues after interaction
+    delay: 2000,
   },
-  speed: 1000, // Slows down transition speed (1 second)
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -370,14 +360,6 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-
-
-
-
-
-
-    
-
 // Building Page Dynamic Scroll Animation
 let mm = gsap.matchMedia();
 
@@ -386,8 +368,9 @@ mm.add("(min-width: 800px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
-      start: '-30% 50%',
-      end: '120% 50%',
+      start: '10% bottom',   // Start animation when section is 10% in view
+      end: '60% top',
+
       scrub: true,
       // markers: true,
     }
@@ -395,199 +378,47 @@ mm.add("(min-width: 800px)", () => {
 
   tl.fromTo('.red',
     {
-      
-      // clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       x: 500,
-      y: 100
+      
     },
     {
-      // clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 1,
-      x: -1300,
+      x: -500,
       ease: "power1.inOut",
-      rotate: 0,
-      y: 0
+      
+      
     }, 's'
   )
     .fromTo('.orange',
       {
-        // clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         x: 500,
-        y: 100
       },
       {
-        // clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      duration: 1,
-      x: -1300,
-      ease: "power1.inOut",
-      rotate: 0,
-      y: 0
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 1,
+        x: -500,
+        ease: "power1.inOut"
+        
       }, 's'
     )
     .fromTo('.purple',
       {
-        // clippath: "polygon(0% -130%, 100% -48%, -160% 101%, 0% 95%, 226% 131%)",
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         x: 500,
-        y: 100
         
       },
       {
-        // clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      duration: 1,
-      x: -1300,
-      ease: "power1.inOut",
-      rotate: 0,
-      y: 0
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 1,
+        x: -500,
+        ease: "power1.inOut",
+       
+       
       }, 's'
     );
-
-
-
-
-    // Building Page Dynamic Scroll Animation
-let mm = gsap.matchMedia();
-
-// ✅ Animation for min-width: 800px (Desktop)
-mm.add("(min-width: 800px)", () => {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".varied_section",
-      start: "-30% 50%",
-      end: "120% 50%",
-      scrub: true,
-      // markers: true,
-    }
-  });
-
-  tl.fromTo(".red",
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      x: 500,
-      y: 100
-    },
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      duration: 1,
-      x: -1300,
-      ease: "power1.inOut",
-      rotate: 0,
-      y: 0
-    }, 's'
-  )
-  .fromTo(".orange",
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      x: 500,
-      y: 100
-    },
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      duration: 1,
-      x: -1300,
-      ease: "power1.inOut",
-      rotate: 0,
-      y: 0
-    }, 's'
-  )
-  .fromTo(".purple",
-    {
-      clippath: "polygon(0% -130%, 100% -48%, -160% 101%, 0% 95%, 226% 131%)",
-      x: 500,
-      y: 100
-    },
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      duration: 1,
-      x: -1300,
-      ease: "power1.inOut",
-      rotate: 0,
-      y: 0
-    }, 's'
-  );
-});
-
-
-
-
-
-mm.add("(max-width: 800px)", () => {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".varied_section",
-      start: "-30% 50%",
-      end: "120% 50%",
-      scrub: true,
-    }
-  });
-
-  tl.fromTo(".red",
-    {
-      width: "100vw", 
-      height: "100vw",
-      scale: 1.5,
-      clippath: "polygon(-91.1577% -124.6877%, 113.8822% 20.2818%, 158.49% 9.265%, 99.2618% 188.9495%, -37.4763% 50.1914%)",
-      x: 500,
-      y: 100
-    },
-    {
-      scale: 2, 
-      width: "120vw",
-      height: "120vw",
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      x: -1300,
-      y: 0,
-      ease: "power1.inOut",
-      duration: 1
-    }, 's'
-  )
-  .fromTo(".orange",
-    {
-      width: "100vw",
-      height: "100vw",
-      scale: 1.5,
-      clippath: "polygon(-91.1577% -124.6877%, 113.8822% 20.2818%, 158.49% 9.265%, 99.2618% 188.9495%, -37.4763% 50.1914%)",
-      x: 500,
-      y: 100
-    },
-    {
-      scale: 2,
-      width: "120vw",
-      height: "120vw",
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      x: -1300,
-      y: 0,
-      ease: "power1.inOut",
-      duration: 1
-    }, 's'
-  )
-  .fromTo(".purple",
-    {
-      width: "100vw",
-      height: "100vw",
-      scale: 1.5,
-      clippath: "polygon(-91.1577% -124.6877%, 113.8822% 20.2818%, 158.49% 9.265%, 99.2618% 188.9495%, -37.4763% 50.1914%)",
-      x: 500,
-      y: 100
-    },
-    {
-      scale: 2,
-      width: "120vw",
-      height: "120vw",
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-     
-      x: -1300,
-      y: 0,
-      ease: "power1.inOut",
-      duration: 1
-    }, 's'
-  );
-});
-
-
-
-
-
-
 
 
   // View section animation
@@ -649,119 +480,6 @@ mm.add("(max-width: 800px)", () => {
   });
 
 
-
-
-
-  // Building Page Hero Section Animation (Duplicate)
-let heroTlDuplicate = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.hero_section_bg_img_duplicate',
-    start: 'top top',
-    end: '100% 0%',
-    scrub: 1,
-    // markers: true,
-  }
-});
-
-heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
-  clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
-  duration: 1,
-  ease: "power1.inOut"
-}, {
-  clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
-});
-
-
-
-  
-
-  // Building Page Hero Section Animation (Duplicate)
-  let heroTlLocation = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.hero_section_bg_img_location',
-      start: 'top top',
-      end: '100% 0%',
-      scrub: 1,
-      // markers: true,
-    }
-  });
-  
-  heroTlLocation.fromTo('.hero_section_bg_img_location', {
-    clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
-    duration: 1,
-    ease: "power1.inOut"
-  }, {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
-  });
-
-
-  // Building Page Hero Section Animation (Duplicate)
-  let heroTlFloorplans = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.hero_section_bg_img_floorplans',
-      start: 'top top',
-      end: '100% 0%',
-      scrub: 1,
-      // markers: true,
-    }
-  });
-  
-  heroTlFloorplans.fromTo('.hero_section_bg_img_floorplans', {
-    clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
-    duration: 1,
-    ease: "power1.inOut"
-  }, {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
-  });
-
-
-  // Building Page Hero Section Animation (Duplicate)
-  let heroTlContact = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.hero_section_bg_img_contact',
-      start: 'top top',
-      end: '100% 0%',
-      scrub: 1,
-      // markers: true,
-    }
-  });
-  
-  heroTlContact.fromTo('.hero_section_bg_img_contact', {
-    clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
-    duration: 1,
-    ease: "power1.inOut"
-  }, {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
-  });
-
-  
-
-
-    // Building Page Hero Section Animation (Duplicate)
-    let heroTlamenilast = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.hero_section_bg_img_full2',
-        start: 'top top',
-        end: '100% 0%',
-        scrub: 1,
-        // markers: true,
-      }
-    });
-    
-    heroTlamenilast.fromTo('.hero_section_bg_img_full2', {
-      clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
-      duration: 1,
-      ease: "power1.inOut"
-    }, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
-    });
-
-
-  
-
-
-
-
   // Building Page Slider Section Above Animation
   let blSliderTl = gsap.timeline({
     scrollTrigger: {
@@ -774,92 +492,13 @@ heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
   });
 
   blSliderTl.fromTo('.gc-animation img', {
-    clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
+    clipPath: "polygon(-27% -43%, 190% 60%, 185% 157%, 220% 256%, -66% 26%, -63% 35%)",
     duration: 1,
     ease: "power1.inOut"
   }, {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
   });
 
-
-    // Building Page Slider Section Above Animation
-    let blSliderTl1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.gc-animation1 img',
-        start: 'top 100%',
-        end: '100% 0%',
-        scrub: 1,
-        // markers: true,
-      }
-    });
-  
-    blSliderTl1.fromTo('.gc-animation1 img', {
-      clipPath: "polygon(0% 0%, 92.401% 19.5282%, 103.6884% 102.9949%, 101.228% 101.578%, -5.7875% 101.052%, 0% 101.562%, 0% 0.0567%)",
-      duration: 1,
-      ease: "power1.inOut"
-    }, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
-    });
-  
-
-
-
-
-     // Building Page Slider Section Above Animation
-     let blSliderTl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.gc-animation2 img',
-        start: 'top 100%',
-        end: '100% 0%',
-        scrub: 1,
-        // markers: true,
-      }
-    });
-  
-    blSliderTl2.fromTo('.gc-animation2 img', {
-      clipPath: "polygon(28% 0%, 94% 0%, 88% 87%, 66% 100%, 0% 100%, 0% 100%, 0% 24%)",
-      duration: 1,
-      ease: "power1.inOut"
-    }, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
-    });
-  
-
-
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.double_gc_section2',
-        start: '20% 100%',
-        end: '80% 80%',
-        scrub: true,
-        // markers: true,
-      }
-    })
-      .fromTo('.double_gc_section2 img', {
-        clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-      }, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-        ease: 'none'
-      });
-  
-  
-  
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.double_gc_section3',
-          start: '20% 100%',
-          end: '80% 80%',
-          scrub: true,
-          // markers: true,
-        }
-      })
-        .fromTo('.double_gc_section3 img', {
-          clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-        }, {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-          ease: 'none'
-        });
 
 
 
@@ -881,170 +520,6 @@ heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
 });
 
 
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.double_gc_section1',
-    start: '20% 100%',
-    end: '80% 80%',
-    scrub: true,
-    // markers: true,
-  }
-})
-  .fromTo('.double_gc_section1 img', {
-    clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-  }, {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-    ease: 'none'
-  });
-
-
-
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: '.double_gc_section1a',
-      start: '20% 100%',
-      end: '80% 80%',
-      scrub: true,
-      // markers: true,
-    }
-  })
-    .fromTo('.double_gc_section1a img', {
-      clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-    }, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-      ease: 'none'
-    });
-  
-
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: '.double_gc_section4',
-      start: '20% 100%',
-      end: '80% 80%',
-      scrub: true,
-      // markers: true,
-    }
-  })
-    .fromTo('.double_gc_section4 img', {
-      clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-    }, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-      ease: 'none'
-    });
-
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.double_gc_section5',
-        start: '20% 100%',
-        end: '80% 80%',
-        scrub: true,
-        // markers: true,
-      }
-    })
-      .fromTo('.double_gc_section5 img', {
-        clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-      }, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-        ease: 'none'
-      });
-
-
-
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.double_gc_section6',
-          start: '20% 100%',
-          end: '80% 80%',
-          scrub: true,
-          // markers: true,
-        }
-      })
-        .fromTo('.double_gc_section6 img', {
-          clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-        }, {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-          ease: 'none'
-        });
-
-
-
-// location js animation
-
-
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.double_gc_section7',
-    start: '20% 100%',
-    end: '80% 80%',
-    scrub: true,
-    // markers: true,
-  }
-})
-  .fromTo('.double_gc_section7 img', {
-    clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-  }, {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-    ease: 'none'
-  });
-
-
-
-
-
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: '.double_gc_section8',
-      start: '20% 100%',
-      end: '80% 80%',
-      scrub: true,
-      // markers: true,
-    }
-  })
-    .fromTo('.double_gc_section8 img', {
-      clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-    }, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-      ease: 'none'
-    });
-
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.double_gc_section9',
-        start: '20% 100%',
-        end: '80% 80%',
-        scrub: true,
-        // markers: true,
-      }
-    })
-      .fromTo('.double_gc_section9 img', {
-        clipPath: "polygon(0% 0%, 60% 0%, 100% 21%, 100% 100%, 29% 100%, 0% 83%)",
-      }, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%)",
-        ease: 'none'
-      });
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Responsive Animation
@@ -1062,12 +537,12 @@ mm.add("(max-width: 799px)", () => {
 
   tl.fromTo('.red',
     {
-      clipPath: "polygon(50% 0%, 100% 26%, 100% 90%, 18% 100%, 0% 17%)",
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       x: 200,
       y: 100
     },
     {
-      clipPath: "polygon(0% 17%, 50% 0%, 100% 26%, 100% 90%, 18% 100%)",
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 1,
       x: -1000,
       ease: "power1.inOut",
@@ -1077,29 +552,29 @@ mm.add("(max-width: 799px)", () => {
   )
     .fromTo('.orange',
       {
-        clipPath: "polygon(5% 8%, 96% 28%, 74% 61%, 50% 100%, 2% 71%)",
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         x: 200,
       },
       {
-        clipPath: "polygon(2% 71%, 5% 8%, 96% 28%, 74% 61%, 50% 100%)",
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
         x: -1000,
         ease: "power1.inOut",
-        rotate: 5,
+        rotate: -15,
       }, 's'
     )
     .fromTo('.purple',
       {
-        clipPath: "polygon(59% 3%, 100% 65%, 45% 100%, 7% 85%, 6% 20%)",
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         x: 200,
         y: 100
       },
       {
-        clipPath: "polygon(6% 20%, 59% 3%, 100% 65%, 45% 100%, 7% 85%)",
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
         x: -1000,
         ease: "power1.inOut",
-        rotate: 5,
+        rotate: 15,
         y: -100
       }, 's'
     )
@@ -1179,9 +654,6 @@ mm.add("(max-width: 799px)", () => {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
   });
 
-
-
-
   gsap.timeline({
     scrollTrigger: {
       trigger: '.double_gc_section',
@@ -1230,162 +702,6 @@ mm.add("(max-width: 767px)", () => {
       ease: 'none'
     });
 });
-
-
-// Add this after your existing GSAP animations
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-})
-  .to('.highlight_section .parallax-bg_location', {
-    y: '20%',
-    ease: 'none'
-  });
-
-// Add responsive handling
-mm.add("(max-width: 767px)", () => {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  })
-    .to('.highlight_section .parallax-bg_location', {
-      y: '30%',
-      ease: 'none'
-    });
-});
-
-
-// Add this after your existing GSAP animations
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-})
-  .to('.highlight_section .parallax-bg_buil', {
-    y: '20%',
-    ease: 'none'
-  });
-
-// Add responsive handling
-mm.add("(max-width: 767px)", () => {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  })
-    .to('.highlight_section .parallax-bg_buil', {
-      y: '30%',
-      ease: 'none'
-    });
-});
-
-
-
-// Ensure GSAP and ScrollTrigger are loaded
-gsap.registerPlugin(ScrollTrigger);
-
-// First Animation for `.parallax-bg_ameni`
-gsap.to('.highlight_section .parallax-bg_ameni', {
-  y: '20%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-});
-
-// Responsive Handling for `.parallax-bg_ameni`
-mm.add("(max-width: 767px)", () => {
-  gsap.to('.highlight_section .parallax-bg_ameni', {
-    y: '30%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  });
-});
-
-// Ensure GSAP and ScrollTrigger are loaded
-gsap.registerPlugin(ScrollTrigger);
-
-// Second Animation for `.parallax-bg_amenia`
-gsap.to('.highlight_section .parallax-bg_amenia', {
-  y: '20%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-});
-
-// Responsive Handling for `.parallax-bg_amenia`
-mm.add("(max-width: 767px)", () => {
-  gsap.to('.highlight_section .parallax-bg_amenia', {
-    y: '30%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  });
-});
-
-// Ensure GSAP and ScrollTrigger are loaded
-gsap.registerPlugin(ScrollTrigger);
- 
-// Third Animation for `.parallax-bg_amenib`
-gsap.to('.highlight_section .parallax-bg_amenib', {
-  y: '20%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-});
-
-// Responsive Handling for `.parallax-bg_amenib`
-mm.add("(max-width: 767px)", () => {
-  gsap.to('.highlight_section .parallax-bg_amenib', {
-    y: '30%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  });
-});
-
-
-
-
-
 
 // Add this with your other GSAP animations
 gsap.registerPlugin(ScrollTrigger);
@@ -1672,54 +988,8 @@ function revealAccordion() {
   });
 }
 
-
-
-
-let lastScrollY = 0; // Store last scroll position
-
-function toggleMenu(open) {
-  const menu = document.querySelector(".menu");
-  const body = document.body;
-
-  if (open) {
-    lastScrollY = window.scrollY; // Store scroll position
-    body.style.top = `-${lastScrollY}px`; // Keep page in place
-    body.classList.add("menu-open");
-    body.style.position = "fixed"; // Prevent scrolling
-    menu.classList.add("menu-open");
-  } else {
-    body.classList.remove("menu-open");
-    menu.classList.remove("menu-open");
-    body.style.position = ""; // Restore scrolling
-    body.style.top = "";
-    window.scrollTo(0, lastScrollY); // Restore last scroll position
-  }
-}
-
-// Open Menu
-document.querySelector(".menu-button").addEventListener("click", () => {
-  toggleMenu(true);
-});
-
-// Close Menu
-document.querySelector(".close-button").addEventListener("click", () => {
-  toggleMenu(false);
-});
-
-$(document).ready(function(){
-  $('.slick-carousel').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: true,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      prevArrow: $('.slick-prev'),
-      nextArrow: $('.slick-next')
-  });
-});
-
+// Call the function when document is ready
+document.addEventListener('DOMContentLoaded', revealAccordion);
 
 
 
