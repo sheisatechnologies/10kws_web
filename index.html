@@ -101,16 +101,28 @@
     
 
     
-    <section class="hero_section position-relative hero_section_home">
+    <section class="hero_section hero_section_home position-relative hero_section_home">
       <div class="container-fluid p-0">
-        <div class="row align-items-center">
-          <video autoplay muted loop playsinline>
-            <source src="assets/video/10KWS-desktop.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+          <div class="row align-items-center">
+              <!-- Desktop Video: Visible on Medium & Larger Screens -->
+              <div class="d-none d-md-block">
+                  <video class="w-100" autoplay muted loop playsinline>
+                      <source src="assets/video/10KWS-desktop.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+  
+              <!-- Mobile Video: Visible on Small Screens -->
+              <div class="d-md-none">
+                  <video class="w-100" autoplay muted loop playsinline>
+                      <source src="assets/video/10KWS-mobile.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+          </div>
       </div>
-    </section>
+  </section>
+  
 
     <!--  workspace_section  -->
     <section class="workspace_section workspace_section_home">

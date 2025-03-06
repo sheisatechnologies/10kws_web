@@ -589,9 +589,14 @@
     padding: 109px 0;
   }
   .hero_section {
+    
+    min-height: 652px !important;
+  }
+  .hero_section_home {
     background-image: url(../img/building/building-hero-phon.jpg);
     min-height: 852px;
   }
+
   .hero_section .hero_heading h1 {
     font-size: 49px;
     display: block;
