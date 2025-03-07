@@ -924,7 +924,7 @@ mm.add("(max-width: 799px)", () => {
   tl.fromTo('.red',
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      x: 500,
+      x: 700,
       force3D: false
       
     },
@@ -940,7 +940,7 @@ mm.add("(max-width: 799px)", () => {
     .fromTo('.orange',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 500,
+        x: 700,
         force3D: false
       },
       {
@@ -955,7 +955,7 @@ mm.add("(max-width: 799px)", () => {
     .fromTo('.purple',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 500,
+        x: 700,
         force3D: false
         
       },
