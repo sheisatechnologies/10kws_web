@@ -1,10 +1,27 @@
 @font-face {
-  font-family: "MADE Mirage";
-  src: url("../font/MADEMirage-Thin.woff2") format("woff2"),
-    url("../font/MADEMirage-Thin.woff") format("woff");
-  font-weight: 100;
+  font-family: "MD Sans";
+  src: url("../font/MDSans.woff2") format("woff2"),
+       url("../font/MDSans.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "MADE Mirage";
+  src: url("../font/MADEMirage.woff2") format("woff2"),
+       url("../font/MADEMirage.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; /* Ensures font loads first before showing text */
+}
+
+@font-face {
+  font-family: "MD Sans";
+  src: url("../font/MDSans.woff2") format("woff2"),
+       url("../font/MDSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -43,8 +60,19 @@
   font-display: swap;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
+
+
+html, body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+body.menu-open {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 0px); /* Stops content shift */
+}
 
 
 html {
@@ -77,17 +105,26 @@ body.menu-open {
 }
 
 
-
-
-
-
 #header {
-  position: relative; /* Start as relative */
+  height: 86px; /* Set a fixed height */
+  position: relative; /* Default position */
   width: 100%;
-  margin-top: 0;
-  transition: all 0.3s ease-in-out; /* Smooth effect */
-  font-family: "DM Sans", sans-serif;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
 }
+
+#header.is-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 86px; /* Must match default height */
+  background-color: #001d47 !important;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
 
 .sticky-nav {
   position: fixed;
@@ -98,6 +135,8 @@ body.menu-open {
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
 }
+
+
 
 
 ::selection {
@@ -403,34 +442,10 @@ body.scroll-off {
 
 
 
-#header {
-  height: auto;
-  display: flex;
-  align-items: center;
-  z-index: 555;
-  box-shadow: none;
-  background: 0 0 !important;
-  background-color: transparent;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  padding-top: 25px;
-  padding-bottom: 24px;
-}
 
 
-#header.is-sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 86px;
-  background-color: #001d47 !important;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  padding: 0;
-}
+
+
 
 #header.is-sticky.awake {
   transform: translateY(0%);
@@ -473,7 +488,7 @@ body.scroll-off {
   color: #EFEDDF;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif !important;
 }
 #header .navbar-expand-lg .navbar-nav .nav-link:hover,
 #header .navbar-expand-lg .navbar-nav .nav-item.active .nav-link {
@@ -2054,6 +2069,8 @@ select.form-control {
 .hero_section {
   text-align: center;
   padding: 0px 0;
+  margin-top: -87px;
+  z-index: -1;
   
 }
 
@@ -2080,6 +2097,7 @@ select.form-control {
 
 .hero_section_home{
   background-color: #DDE5F7;
+ 
 }
 
 video {
