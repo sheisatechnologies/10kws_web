@@ -394,12 +394,12 @@ mm.add("(min-width: 800px)", () => {
   tl.fromTo('.red',
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      x: 1400,
+      x: 1600,
       y: 100
     },
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 1,
+      duration: 3,
       x: -2000,
       ease: "power1.inOut",
       
@@ -409,11 +409,11 @@ mm.add("(min-width: 800px)", () => {
     .fromTo('.orange',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 1400,
+        x: 1600,
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 1,
+        duration: 3,
         x: -2000,
         ease: "power1.inOut",
         
@@ -422,12 +422,12 @@ mm.add("(min-width: 800px)", () => {
     .fromTo('.purple',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 1400,
+        x: 1600,
         y: 100
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 1,
+        duration: 3,
         x: -2000,
         ease: "power1.inOut",
        

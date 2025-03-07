@@ -2438,22 +2438,25 @@ video {
 
 
 .varied_section .red {
-  width: 500px;
-  height: 350px;
+  width: 100%;
+  height: 50vh;
+  margin: 50px;
   background-image: url(../images/building-assets/bld-hs-img-1.jpg);
   background-size: cover;
-  transform: translate3d(334.057px, 66.8115px, 0px)  scale(1.2); /* Increase scale */
+  transform:   scale(1.0); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
 
 
 }
 
 .varied_section .orange {
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 50vh;
+  
+  margin: 70px;
   background-image: url(../images/building-assets/bld-hs-img-2.jpg);
   background-size: cover;
-  transform: translate3d(334.057px, 66.8115px, 0px)  scale(1.2); /* Increase scale */
+  transform:   scale(1.3); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
 
 
@@ -2462,11 +2465,13 @@ video {
 
 
 .varied_section .purple {
-  width: 500px;
-  height: 350px;
+  width: 100%;
+  height: 50vh;
+  
+  margin: 50px;
   background-image: url(../images/building-assets/bld-hs-img-3.jpg);
   background-size: cover;
-  transform: translate3d(334.057px, 66.8115px, 0px)  scale(1.2); /* Increase scale */
+  transform:   scale(1.0); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
 
 
