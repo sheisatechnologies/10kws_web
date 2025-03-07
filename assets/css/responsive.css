@@ -541,6 +541,28 @@
   .swiper-button-prev {
     left: 17px;
   }
+
+  .swiper-button-next-keyfact {
+    right: 18px !important;
+    left: auto;
+    top: 48%;
+}
+
+.swiper-button-prev-keyfact {
+  left: 18px !important;
+  right: auto;
+  top: 48%;
+}
+
+.building-arrow .swiper-button-next {
+  right: 5px;
+  left: auto;
+}
+
+.building-arrow .swiper-button-prev {
+  left: 5px;
+  right: auto;
+}
   .services_section {
     background-color: transparent;
   }
@@ -548,10 +570,10 @@
     padding: 0 0;
     padding-bottom: 70px;
   }
-  .img_box img {
+  /* .img_box img {
     filter: brightness(0) saturate(100%) invert(10%) sepia(80%) saturate(1758%)
       hue-rotate(198deg) brightness(88%) contrast(107%);
-  }
+  } */
   .services_section .swiper-button-next,
   .services_section .swiper-button-prev {
     /* filter: brightness(0) saturate(100%) invert(10%) sepia(80%) saturate(1758%) hue-rotate(198deg)

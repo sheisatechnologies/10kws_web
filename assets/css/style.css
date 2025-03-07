@@ -2417,7 +2417,7 @@ video {
 .varied_section .red {
   width: 500px;
   height: 350px;
-  background-image: url(../images/building-assets/building-full-img-1.jpg);
+  background-image: url(../images/building/scrolling-image/building-facade-1.1.jpg);
   background-size: cover;
   transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1); /* Increase scale */
   /* clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%); */
@@ -2428,7 +2428,7 @@ video {
 .varied_section .orange {
   width: 600px;
   height: 400px;
-  background-image: url(../images/building-assets/building-exemplary-amenities.jpg);
+  background-image: url(../images/building/scrolling-image/building-facade-2.1.jpg);
   background-size: cover;
   transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1.2); /* Increase scale */
   /* clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%); */
@@ -2436,10 +2436,12 @@ video {
 
 }
 
+
+
 .varied_section .purple {
   width: 500px;
   height: 350px;
-  background-image: url(../images/building-assets/building-facade-2.jpg);
+  background-image: url(../images/building/scrolling-image/building-facade-3.1.jpg);
   background-size: cover;
   transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1); /* Increase scale */
   /* clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%); */
@@ -2447,6 +2449,40 @@ video {
 
 }
 
+
+.varied_ssection_ameni .red {
+  width: 500px;
+  height: 350px;
+  background-image: url(../images/amenities/amn-hs-img-1.jpg);
+  background-size: cover;
+  transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1); /* Increase scale */
+  /* clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%); */
+
+
+}
+
+
+.varied_ssection_ameni .orange {
+  width: 600px;
+  height: 400px;
+  background-image: url(../images/amenities/amn-hs-img-2.jpg);
+  background-size: cover;
+  transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1.2); /* Increase scale */
+  /* clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%); */
+  
+
+}
+
+.varied_ssection_ameni .purple {
+  width: 500px;
+  height: 350px;
+  background-image: url(../images/amenities/amn-hs-img-3.jpg);
+  background-size: cover;
+  transform: translate3d(334.057px, 66.8115px, 0px) rotate(2.5deg) scale(1); /* Increase scale */
+  /* clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%); */
+
+
+}
 
 
 @media (max-width: 991px) {
