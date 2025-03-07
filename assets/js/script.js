@@ -374,10 +374,6 @@ requestAnimationFrame(raf);
 
 
 
-
-
-    
-
 // Building Page Dynamic Scroll Animation
 let mm = gsap.matchMedia();
 
@@ -386,10 +382,11 @@ mm.add("(min-width: 800px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
-      start: '10% bottom',   // Start animation when section is 10% in view
-      end: '60% top',
-
-      scrub: true,
+      start: '-30% 50%',
+      end: '120% 50%',
+     
+      scrub: 1.5, // Smoothens animation timing (higher value = smoother)
+      anticipatePin: 1,
       // markers: true,
     }
   });
@@ -397,111 +394,54 @@ mm.add("(min-width: 800px)", () => {
   tl.fromTo('.red',
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      x: 500,
-      
+      x: 1400,
+      y: 100
     },
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 1,
-      x: -500,
+      x: -2000,
       ease: "power1.inOut",
       
-      
+      y: -100
     }, 's'
   )
     .fromTo('.orange',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 500,
+        x: 1400,
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
-        x: -500,
-        ease: "power1.inOut"
+        x: -2000,
+        ease: "power1.inOut",
         
       }, 's'
     )
     .fromTo('.purple',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 500,
-        
+        x: 1400,
+        y: 100
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
-        x: -500,
+        x: -2000,
         ease: "power1.inOut",
        
-       
+        y: -100
       }, 's'
     );
 
+    
 
 
-    // Building Page Dynamic Scroll Animation
-let mm = gsap.matchMedia();
 
-// ✅ Animation for min-width: 800px (Desktop)
-mm.add("(min-width: 800px)", () => {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".varied_section",
-      start: "-30% 50%",
-      end: "120% 50%",
-      scrub: true,
-      // markers: true,
-    }
-  });
 
-  tl.fromTo(".red",
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      x: 500,
-      y: 100
-    },
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      duration: 1,
-      x: -1300,
-      ease: "power1.inOut",
-      rotate: 0,
-      y: 0
-    }, 's'
-  )
-  .fromTo(".orange",
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      x: 500,
-      y: 100
-    },
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      duration: 1,
-      x: -1300,
-      ease: "power1.inOut",
-      rotate: 0,
-      y: 0
-    }, 's'
-  )
-  .fromTo(".purple",
-    {
-      clippath: "polygon(0% -130%, 100% -48%, -160% 101%, 0% 95%, 226% 131%)",
-      x: 500,
-      y: 100
-    },
-    {
-      clippath: "polygon(0% 0%, 94.9288% 0%, 100% 2.6624%, 100% 100%, 3.6766% 100%, 0% 97.8447%)",
-      duration: 1,
-      x: -1300,
-      ease: "power1.inOut",
-      rotate: 0,
-      y: 0
-    }, 's'
-  );
-});
 
+   
 
 
 
