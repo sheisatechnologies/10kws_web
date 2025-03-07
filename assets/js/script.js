@@ -575,6 +575,11 @@ mm.add("(min-width: 800px)", () => {
 
 
 
+ 
+
+
+
+
 
   // Building Page Hero Section Animation (Duplicate)
 let heroTlDuplicate = gsap.timeline({
@@ -1083,6 +1088,90 @@ mm.add("(max-width: 799px)", () => {
   }, {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
   });
+
+
+
+   // Building Page Hero Section Animation
+   let heroTlami = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero_section_bg_img_duplicate',
+      start: 'top top',
+      end: '100% 0%',
+      scrub: 1,
+      // markers: true,
+    }
+  });
+  heroTlami.fromTo('.hero_section_bg_img_duplicate', {
+    clipPath: "polygon(70% 0%, 100% 0%, 100% 60%, 61% 104%, 0% 100%, 0% 68%, 0% 12%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+  });
+
+
+  // Building Page Hero Section Animation (Duplicate)
+  let heroTlLocation = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero_section_bg_img_location',
+      start: 'top top',
+      end: '100% 0%',
+      scrub: 1,
+      // markers: true,
+    }
+  });
+  
+  heroTlLocation.fromTo('.hero_section_bg_img_location', {
+    clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+  });
+
+
+ // Building Page Hero Section Animation (Duplicate)
+ let heroTlFloorplans = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.hero_section_bg_img_floorplans',
+    start: 'top top',
+    end: '100% 0%',
+    scrub: 1,
+    // markers: true,
+  }
+});
+
+heroTlFloorplans.fromTo('.hero_section_bg_img_floorplans', {
+  clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
+  duration: 1,
+  ease: "power1.inOut"
+}, {
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+});
+
+
+
+// Building Page Hero Section Animation (Duplicate)
+let heroTlContact = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.hero_section_bg_img_contact',
+    start: 'top top',
+    end: '100% 0%',
+    scrub: 1,
+    // markers: true,
+  }
+});
+
+heroTlContact.fromTo('.hero_section_bg_img_contact', {
+  clipPath: "polygon(50% 0%, 81% 0%, 100% 41%, 100% 100%, 11% 100%, 0% 68%, 0% 25%)",
+  duration: 1,
+  ease: "power1.inOut"
+}, {
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%)",
+});
+
+
+
 
 
   // Building Page Slider Section Above Animation

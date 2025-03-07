@@ -22,7 +22,34 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Custom Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
-
+    <style>
+        .panel {
+        margin-right: 40px; /* Adjust spacing between images */
+    }
+    
+    /* Remove margin from last image */
+    .panel:last-child {
+        margin-right: 0;
+    }
+    
+    @media (max-width: 991.98px) {
+    
+      .panel {
+        margin: 70px; /* Adjust spacing between images */
+    }
+    
+    .panel img{
+        max-height: 370px; /* Adjust spacing between images */
+    }
+    
+    /* Remove margin from last image */
+    .panel:last-child {
+        margin-right: 0;
+    }
+    
+    }
+    
+       </style>
 </head>
 
 <body class="building_page_wrapper amenities_page_wrapper">
@@ -490,26 +517,39 @@
 
 
 
-<!-- varied section start -->
-<section class="varied_section varied_ssection_ameni">
+
+
+
+ <!-- varied section start -->
+ <section class="varied_section varied_ssection_ameni">
     <div class="container position-relative">
-        <div class="inner_container">
-            <div class="panel red">
-               <img src="assets/images/item-img1.png" alt="#">
-              </div>
-              <div class="panel orange">
-                <img src="assets/images/item-img2.png" alt="#">
-              </div>
-              <div class="panel purple">
-                <img src="assets/images/item-img3.png" alt="#">
-              </div>
+      <div class="inner_container">
+        <div class="panel red p-5">
+          <!-- <img src="assets/img/item-img1.png" alt="#" /> -->
         </div>
-        <div class="section_tittle">
-            <h2 class="heading_tittle">end of journey
-                <span>facilities</span></h2>
+        <div class="panel orange p-5">
+          <!-- <img src="assets/img/item-img2.png" alt="#" /> -->
         </div>
+        <div class="panel purple p-5">
+          <!-- <img src="assets/img/item-img3.png" alt="#" /> -->
+        </div>
+      </div>
+      <div class="section_tittle">
+        <div class="reveal-container">
+          <h2 class="heading_tittle gc_anim_title">
+            double height <span>reception</span>
+          </h2>
+        </div>
+      </div>
+      <div class="section_tittle">
+        <h2 class="heading_tittle">
+            end of journey <span>facilities</span>
+        </h2>
+      </div>
     </div>
-</section>
+  </section>
+
+
 
 <!-- stunning  -->
 <section class="details_section city_view double_gc_section6">
