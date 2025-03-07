@@ -2483,7 +2483,7 @@ video {
   height: 350px;
   background-image: url(../images/amenities/amn-hs-img-1.jpg);
   background-size: cover;
-  transform: translate3d(334.057px, 66.8115px, 0px)  scale(1.2); /* Increase scale */
+  transform:   scale(1.2); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
 
 
@@ -2495,7 +2495,7 @@ video {
   height: 400px;
   background-image: url(../images/amenities/amn-hs-img-2.jpg);
   background-size: cover;
-  transform: translate3d(334.057px, 66.8115px, 0px)  scale(1.2); /* Increase scale */
+  transform:  scale(1.2); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
 
 
@@ -2506,7 +2506,7 @@ video {
   height: 350px;
   background-image: url(../images/amenities/amn-hs-img-3.jpg);
   background-size: cover;
-  transform: translate3d(334.057px, 66.8115px, 0px)  scale(1.2); /* Increase scale */
+  transform:   scale(1.2); /* Increase scale */
   clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
 
 
@@ -2521,7 +2521,7 @@ video {
     background-image: url(../images/building-assets/bld-hs-img-1.jpg);
     background-size: cover;
    
-   
+    transform:rotateX('angle') !important;
     clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
   
   
@@ -2532,7 +2532,7 @@ video {
     height: 250px;
     background-image: url(../images/building-assets/bld-hs-img-2.jpg);
     background-size: cover;
-  
+    transform:rotateX('angle') !important;
     
     clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
   
@@ -2544,7 +2544,7 @@ video {
     height: 250px;
     background-image: url(../images/building-assets/bld-hs-img-3.jpg);
     background-size: cover;
-    
+    transform:rotateX('angle') !important;
     
     clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%, 50% 100%);
   

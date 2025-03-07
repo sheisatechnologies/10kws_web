@@ -909,7 +909,7 @@ gsap.timeline({
 
 
 
-
+ gsap.defaults({ force3D: false });
 mm.add("(max-width: 799px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -924,44 +924,49 @@ mm.add("(max-width: 799px)", () => {
   tl.fromTo('.red',
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      x: 1200,
-      y: 100
+      x: 500,
+      force3D: false
+      
     },
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 1,
-      x: -2000,
+      x: -500,
       ease: "power1.inOut",
+      force3D: false
       
-      y: -100
     }, 's'
   )
     .fromTo('.orange',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 1200,
+        x: 500,
+        force3D: false
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
-        x: -2000,
+        x: -500,
         ease: "power1.inOut",
+        force3D: false
         
       }, 's'
     )
     .fromTo('.purple',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 1200,
-        y: 100
+        x: 500,
+        force3D: false
+        
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
-        x: -2000,
+        x: -500,
         ease: "power1.inOut",
+        force3D: false
        
-        y: -100
+        
       }, 's'
     );
 
