@@ -910,67 +910,69 @@ gsap.timeline({
 
 
 
-
-
-
-
-
-// Responsive Animation
-
 mm.add("(max-width: 799px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
       start: '-25% 50%',
       end: '150% 50%',
-      scrub: true,
-      // markers: true,
+      scrub: 1.5, // Smoothens animation timing (higher value = smoother)
+      anticipatePin: 1,
     }
   });
 
   tl.fromTo('.red',
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      x: 200,
+      x: 1200,
       y: 100
     },
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 1,
-      x: -1000,
+      x: -2000,
       ease: "power1.inOut",
-      rotate: 15,
+      
       y: -100
     }, 's'
   )
     .fromTo('.orange',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 200,
+        x: 1200,
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
-        x: -1000,
+        x: -2000,
         ease: "power1.inOut",
-        rotate: -15,
+        
       }, 's'
     )
     .fromTo('.purple',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 200,
+        x: 1200,
         y: 100
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
-        x: -1000,
+        x: -2000,
         ease: "power1.inOut",
-        rotate: 15,
+       
         y: -100
       }, 's'
-    )
+    );
+
+    
+
+
+
+
+
+
+
 
 
   // View section animation for mobile
