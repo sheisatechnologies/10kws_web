@@ -58,6 +58,14 @@
 
 }
 
+      /* Fix for page shifting */
+      html {
+        overflow-y: scroll;
+      }
+      body {
+        overflow-x: hidden;
+      }
+ 
    </style>
   </head>
 
@@ -828,81 +836,67 @@
       </div>
     </section>
 
-    <section class="workspace_section workspace_section_buil text-center">
+    <section class="workspace_section workspace_section_buil text-center py-5">
       <div class="container">
         
-          <div class="section_tittle">
-            <div class="reveal-container">
-              <h2 class="heading_tittle heading_tittle_buil gc_anim_title">YOUR SMART
-                  <span>BUILDING</span></h2>
-            </div>
-            <div class="text-reveal-wrapper">
-              <div class="reveal-container">
-                  <p class="b-text b-text-buil content_wrapper cw_title gc_mob_title body-para">
-                    <div class="body-para">Sustainability and smart building tech go hand
-                      in hand and 10 King William Street will be market leading in its
-                       approach, with cutting edge systems installed as part of the base
-                        build to enable sustainable and stress free occupation.</div> </p>
-              </div>
+        <!-- Section Title -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section_tittle">
+              <h2 class="heading_tittle heading_tittle_buil gc_anim_title">
+                YOUR SMART <span>BUILDING</span>
+              </h2>
+              <p class="b-text b-text-buil content_wrapper cw_title gc_mob_title body-para">
+                Sustainability and smart building tech go hand in hand, and 10 King William Street will be market-leading in its approach, with cutting-edge systems installed as part of the base build to enable sustainable and stress-free occupation.
+              </p>
             </div>
           </div>
-
-          
-              
-              
-        <div class="row d-md-flex px-5">
-          <div class="col-md-4 mb-4">
-            <div class="p-md-4 ">
-              <div class="section_tittle">
-                  <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">BESPOKE APP</h2>
-              </div>
-              <p class="b-text b-text-buil">Bespoke building app for system control,
-                 access and connectivity at your fingertips.</p>
+        </div>
+    
+        <!-- Features Grid -->
+        <div class="row g-4 mt-4">
+    
+          <!-- Feature Item -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="p-4 border rounded shadow-sm">
+              <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">BESPOKE APP</h2>
+              <p class="b-text b-text-buil">Bespoke building app for system control, access, and connectivity at your fingertips.</p>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="p-md-4 ">
-              <div class="section_tittle ">
-                  <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">MARKET LEADING</h2>
-              </div>
-              <p class="b-text b-text-buil">Market leading base build systems,
-                 enabling granular control, maintenance and customisation options.</p>
+    
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="p-4 border rounded shadow-sm">
+              <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">MARKET LEADING</h2>
+              <p class="b-text b-text-buil">Market-leading base build systems, enabling granular control, maintenance, and customization options.</p>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="p-md-4 ">
-              <div class="section_tittle ">
-                  <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">MONITORING
-                     </h2>
-              </div>
-              <p class="b-text b-text-buil">Extensive sensor network monitoring
-                real time building conditions and usage and enabling smart
-                 and sustainable occupation. </p>
+    
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="p-4 border rounded shadow-sm">
+              <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">MONITORING</h2>
+              <p class="b-text b-text-buil">Extensive sensor network monitoring real-time building conditions and usage, enabling smart and sustainable occupation.</p>
             </div>
           </div>
-
-          <div class="col-md-6 ps-md-5 ps-0">
-            <div class="p-md-4 ">
-              <div class="section_tittle ">
-                  <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">BOOKING SYSTEM</h2>
-              </div>
-              <p class="b-text b-text-buil px-md-5">Potential via tenant fit out to enable
-                 meeting room/desk booking and other customisation options</p>
+    
+          <!-- Two-Column Layout for Larger Screens -->
+          <div class="col-12 col-md-6">
+            <div class="p-4 border rounded shadow-sm">
+              <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">BOOKING SYSTEM</h2>
+              <p class="b-text b-text-buil">Potential via tenant fit-out to enable meeting room/desk booking and other customization options.</p>
             </div>
           </div>
-
-          <div class="col-md-6 pe-md-5 pe-0 pt-5 pt-md-0">
-            <div class="p-md-4 ">
-              <div class="section_tittle ">
-                  <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">CONNECTIVITY</h2>
-              </div>
-              <p class="b-text b-text-buil px-md-5">Featuring exemplary connectivity credentials. </p>
+    
+          <div class="col-12 col-md-6">
+            <div class="p-4 border rounded shadow-sm">
+              <h2 class="heading_tittle heading_tittle_buil heading_tittle_sub">CONNECTIVITY</h2>
+              <p class="b-text b-text-buil">Featuring exemplary connectivity credentials.</p>
             </div>
           </div>
-         
+    
         </div>
       </div>
     </section>
+    
 
     <section class="view_section view_section_buil pb-200">
       <div class="container">
@@ -1064,7 +1058,20 @@
     <script src="assets/js/script.js"></script>
 
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let navbarLinks = document.querySelectorAll(".nav-link");
+        let navbarCollapse = document.querySelector(".navbar-collapse");
 
+        navbarLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            if (navbarCollapse.classList.contains("show")) {
+              new bootstrap.Collapse(navbarCollapse).hide();
+            }
+          });
+        });
+      });
+    </script>
    
   </body>
 </html>

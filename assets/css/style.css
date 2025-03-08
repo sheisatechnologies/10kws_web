@@ -67,6 +67,7 @@ html, body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   scroll-behavior: smooth;
   font-family: "DM Sans", sans-serif !important;
+  
 }
 
 body.menu-open {

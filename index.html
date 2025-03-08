@@ -32,6 +32,15 @@
       href="https://unpkg.com/lenis@1.1.20/dist/lenis.css"
     />
 
+    <style>
+      /* Fix for page shifting */
+      html {
+        overflow-y: scroll;
+      }
+      body {
+        overflow-x: hidden;
+      }
+    </style>
   </head>
 
   <body>
@@ -827,6 +836,20 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/theia-sticky-sidebar.js"></script>
     <script src="assets/js/script.js"></script>
-    
+    <!-- JavaScript Fix for Closing Menu After Click -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let navbarLinks = document.querySelectorAll(".nav-link");
+        let navbarCollapse = document.querySelector(".navbar-collapse");
+
+        navbarLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            if (navbarCollapse.classList.contains("show")) {
+              new bootstrap.Collapse(navbarCollapse).hide();
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
