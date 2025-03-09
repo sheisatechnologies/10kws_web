@@ -620,7 +620,9 @@ body.scroll-off {
 #header .dropdown-item {
   font-weight: 300;
 }
-
+#header .navbar-expand-lg .navbar-nav {
+  max-width: 741px;
+}
 /*#header .dropdown-item:hover {
     background-color: #30383d;
     color: rgba(255,255,255,0.60);
