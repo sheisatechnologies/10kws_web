@@ -418,9 +418,8 @@
     margin-bottom: 0;
   }
 
-  .img_card {
-    height: 300px;
-  }
+
+
 
   .card_tittle h4 {
     font-size: 20px;
@@ -479,13 +478,8 @@
   .view_section .order_1_m img {
     min-height: 330px;
   }
-  .img_card {
-    height: 330px;
-    margin-top: 24px;
-  }
-  .img_card img {
-    max-width: 298px;
-  }
+  
+  
   .view_section {
     padding: 0 0 76px;
   }
@@ -767,11 +761,15 @@
     font-size: 16px !important;
     line-height: 21.6px !important;
   }
-  
   .img_card {
-    height: 250px;
-  filter: grayscale(0);
-  }
+    width: 100%;  /* Makes the image responsive */
+    height: auto; /* Keeps aspect ratio */
+    display: block; /* Removes extra space below inline images */
+    margin: 0; /* Removes any margin */
+    filter: grayscale(0);
+   
+  margin-top: 24px;
+}
 
   .img_card img {
     width: 100% !important;
