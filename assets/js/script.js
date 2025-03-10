@@ -753,8 +753,8 @@ heroTlDuplicate.fromTo('.hero_section_bg_img_duplicate', {
 gsap.timeline({
   scrollTrigger: {
     trigger: '.double_gc_section1',
-    start: '20% 100%',
-    end: '80% 80%',
+    start: 'top 90%',  // Start animation earlier
+    end: 'bottom 40%', // Ensure animation lasts longer
     scrub: true,
     // markers: true,
   }
@@ -771,8 +771,8 @@ gsap.timeline({
   gsap.timeline({
     scrollTrigger: {
       trigger: '.double_gc_section1a',
-      start: '20% 100%',
-      end: '80% 80%',
+      start: 'top 90%',  // Start animation earlier
+      end: 'bottom 40%', // Ensure animation lasts longer
       scrub: true,
       // markers: true,
     }
@@ -788,8 +788,8 @@ gsap.timeline({
   gsap.timeline({
     scrollTrigger: {
       trigger: '.double_gc_section4',
-      start: '20% 100%',
-      end: '80% 80%',
+      start: 'top 90%',  // Start animation earlier
+      end: 'bottom 40%', // Ensure animation lasts longer
       scrub: true,
       // markers: true,
     }
@@ -805,8 +805,8 @@ gsap.timeline({
     gsap.timeline({
       scrollTrigger: {
         trigger: '.double_gc_section5',
-        start: '20% 100%',
-        end: '80% 80%',
+        start: 'top 90%',  // Start animation earlier
+    end: 'bottom 40%', // Ensure animation lasts longer
         scrub: true,
         // markers: true,
       }
@@ -823,8 +823,8 @@ gsap.timeline({
       gsap.timeline({
         scrollTrigger: {
           trigger: '.double_gc_section6',
-          start: '20% 100%',
-          end: '80% 80%',
+          start: 'top 90%',  // Start animation earlier
+          end: 'bottom 40%', // Ensure animation lasts longer
           scrub: true,
           // markers: true,
         }
@@ -844,8 +844,8 @@ gsap.timeline({
 gsap.timeline({
   scrollTrigger: {
     trigger: '.double_gc_section7',
-    start: '20% 100%',
-    end: '80% 80%',
+    start: 'top 90%',  // Start animation earlier
+    end: 'bottom 40%', // Ensure animation lasts longer
     scrub: true,
     // markers: true,
   }
@@ -864,8 +864,8 @@ gsap.timeline({
   gsap.timeline({
     scrollTrigger: {
       trigger: '.double_gc_section8',
-      start: '20% 100%',
-      end: '80% 80%',
+      start: 'top 90%',  // Start animation earlier
+      end: 'bottom 40%', // Ensure animation lasts longer
       scrub: true,
       // markers: true,
     }
@@ -881,8 +881,8 @@ gsap.timeline({
     gsap.timeline({
       scrollTrigger: {
         trigger: '.double_gc_section9',
-        start: '20% 100%',
-        end: '80% 80%',
+        start: 'top 90%',  // Start animation earlier
+    end: 'bottom 40%', // Ensure animation lasts longer
         scrub: true,
         // markers: true,
       }
