@@ -24,7 +24,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Custom Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
-
+<style>
+  .swiper-backface-hidden .swiper-slide {
+    transform: none;
+    backface-visibility: hidden;
+}
+</style>
 </head>
 
 <body class="building_page_wrapper floorplans_page_wrapper">
@@ -44,9 +49,9 @@
               <div id="header-placeholder"></div>
 
               <a class="navbar-brand" href="index.html">
-                <img src="assets/images/10KWS_Logo_Neg 2.png" alt="Default Logo" class="default-logo w-50 d-none d-md-block" />
-                <img src="assets/images/10kws_logo.svg" alt="Default Logo" class="default-logo w-70 d-block d-md-none" />
-                <img src="assets/images/10kws_logo.svg" alt="Sticky Logo" class="sticky-logo" />
+                <img src="assets/images/10KWS_Logo.svg" alt="Default Logo" class="default-logo w-70 d-none d-md-block" />
+                <img src="assets/images/10kws_logo_sticky.svg" alt="Default Logo" class="default-logo w-70 d-block d-md-none" />
+                <img src="assets/images/10kws_logo_sticky.svg" alt="Sticky Logo" class="sticky-logo" />
               </a>
     
               <button class="navbar-toggler" type="button">
@@ -142,7 +147,7 @@
                 <div class="section_tittle">
                     <h2 class="heading_tittle">AREA SUMMARY</h2>                       
                 </div>
-                <div class="table-responsive tbl_wrapper">
+                <div class="table-responsive tbl_wrapper pt-4">
 
                     <table class="table">
                         <thead class="bg-table-row">
