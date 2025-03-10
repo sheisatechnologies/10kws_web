@@ -292,6 +292,7 @@
   .mobile_logo img {
     max-height: 45px;
     width: auto;
+    z-index: -1;
   }
   #header .navbar-expand-lg .navbar-nav .nav-link.sign_up {
     margin-top: 20px;
@@ -418,9 +419,18 @@
     margin-bottom: 0;
   }
 
-
-
-
+  .img_card {
+    height: 300px;
+  }
+  .img_card_sp {
+    width: 100% !important;  /* Makes the image responsive */
+    height: auto; /* Keeps aspect ratio */
+    display: block; /* Removes extra space below inline images */
+    margin: 0; /* Removes any margin */
+    filter: grayscale(0);
+    margin-top: 24px;
+    
+}
   .card_tittle h4 {
     font-size: 20px;
   }
@@ -478,8 +488,16 @@
   .view_section .order_1_m img {
     min-height: 330px;
   }
-  
-  
+  .img_card {
+    height: 330px;
+    margin-top: 24px;
+  }
+  .img_card img {
+    max-width: 298px;
+  }
+  .img_card_sp img {
+    max-width: 100%;
+}
   .view_section {
     padding: 0 0 76px;
   }
@@ -761,15 +779,11 @@
     font-size: 16px !important;
     line-height: 21.6px !important;
   }
+  
   .img_card {
-    width: 100%;  /* Makes the image responsive */
-    height: auto; /* Keeps aspect ratio */
-    display: block; /* Removes extra space below inline images */
-    margin: 0; /* Removes any margin */
-    filter: grayscale(0);
-   
-  margin-top: 24px;
-}
+    height: 250px;
+  filter: grayscale(0);
+  }
 
   .img_card img {
     width: 100% !important;
