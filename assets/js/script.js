@@ -475,22 +475,22 @@ mm.add("(min-width: 800px)", () => {
 
   // Slider section animation for desktop
 
-  // let slideTl = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: '.slider_section',
-  //     start: 'top 50%',
-  //     end: 'bottom 10%',
-  //     scrub: true,
+  let slideTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.slider_section',
+      start: 'top 50%',
+      end: 'bottom 10%',
+      scrub: true,
       
-  //   }
-  // });
-  // slideTl.fromTo('.slider_section .slider_wrapper', {
-  //   clipPath: "polygon(35% 0%, 68% 0%, 100% 15%, 100% 51%, 84% 100%, 0% 100%, 0% 23%)",
-  //   duration: 1,
-  //   ease: "power1.inOut"
-  // }, {
-  //   clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%)",
-  // });
+    }
+  });
+  slideTl.fromTo('.slider_section .slider_wrapper', {
+    clipPath: "polygon(35% 0%, 68% 0%, 100% 15%, 100% 51%, 84% 100%, 0% 100%, 0% 23%)",
+    duration: 1,
+    ease: "power1.inOut"
+  }, {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%)",
+  });
 
 
 
@@ -916,8 +916,8 @@ mm.add("(max-width: 799px)", () => {
       trigger: '.varied_section',
       start: '-25% 50%',
       end: '150% 50%',
-      duration: 20, // Increase this for a slower movement
-      scrub: 1.5, // Smoothens animation timing (higher value = smoother)
+      duration: 20,
+      scrub: 5, // Smoothens animation timing (higher value = smoother)
       anticipatePin: 1,
     }
   });

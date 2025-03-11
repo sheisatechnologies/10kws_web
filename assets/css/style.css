@@ -1117,6 +1117,10 @@ select.form-control {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.hero_section_home{
+  min-height: 0 !important;
+}
 /* .container {
   max-width: 1365px;
 } */
@@ -1197,9 +1201,7 @@ select.form-control {
 
 .content_wrapper p {
   color: #001d47;
-  
   font-weight: 400;
-  margin-bottom: 50px;
   padding-left: 4px;
   padding-right: 4px;
   font-family: "DM Sans";
