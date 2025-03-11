@@ -916,6 +916,7 @@ mm.add("(max-width: 799px)", () => {
       trigger: '.varied_section',
       start: '-25% 50%',
       end: '150% 50%',
+      duration: 20, // Increase this for a slower movement
       scrub: 1.5, // Smoothens animation timing (higher value = smoother)
       anticipatePin: 1,
     }
