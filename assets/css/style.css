@@ -106,6 +106,9 @@ body.menu-open {
 }
 
 
+.text-white{
+  color: #EFEDDF !important;
+}
 #header {
   height: 86px; /* Set a fixed height */
   position: relative; /* Default position */
@@ -2775,7 +2778,7 @@ padding-bottom: 200px;
 }
 
 .accordion-body p{
-  color: white;
+  color: #EFEDDF;
 }
 
 .mb-8{
@@ -2794,7 +2797,7 @@ padding-bottom: 200px;
   font-weight: bold;
   text-decoration: none;
   background-color: #001D47; /* Adjust color */
-  color: #fff;
+  color: #EFEDDF;
   
   transition: 0.3s;
 }
