@@ -1474,6 +1474,19 @@ select.form-control {
 }
 
 /* Add this for advanced parallax */
+.highlight_section .parallax-bg-amep {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(../images/home-assets/home-btm-img.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Add this for advanced parallax */
 .highlight_section .parallax-bg_location {
   position: absolute;
   top: -30%;
@@ -1513,7 +1526,7 @@ select.form-control {
 }
 
 
-.highlight_section .parallax-bg_amenia {
+.highlight_section .parallax-bg_amenipara {
   position: absolute;
   top: -30%;
   left: 0;

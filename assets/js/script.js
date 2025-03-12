@@ -1196,6 +1196,38 @@ mm.add("(max-width: 767px)", () => {
 });
 
 
+
+// Add this after your existing GSAP animations
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+})
+  .to('.highlight_section .parallax-bg', {
+    y: '20%',
+    ease: 'none'
+  });
+
+// Add responsive handling
+mm.add("(max-width: 767px)", () => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.highlight_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  })
+    .to('.highlight_section .parallax-bg', {
+      y: '30%',
+      ease: 'none'
+    });
+});
+
+
 // Add this after your existing GSAP animations
 gsap.timeline({
   scrollTrigger: {
@@ -1263,6 +1295,35 @@ mm.add("(max-width: 767px)", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 // First Animation for `.parallax-bg_ameni`
+gsap.to('.highlight_section .parallax-bg_amenipara', {
+  y: '20%',
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.highlight_section',
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+  }
+});
+
+// Responsive Handling for `.parallax-bg_ameni`
+mm.add("(max-width: 767px)", () => {
+  gsap.to('.highlight_section .parallax-bg_amenipara', {
+    y: '30%',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.highlight_section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  });
+});
+
+// Ensure GSAP and ScrollTrigger are loaded
+gsap.registerPlugin(ScrollTrigger);
+
+// First Animation for `.parallax-bg_ameni`
 gsap.to('.highlight_section .parallax-bg_ameni', {
   y: '20%',
   ease: 'none',
@@ -1288,63 +1349,10 @@ mm.add("(max-width: 767px)", () => {
   });
 });
 
-// Ensure GSAP and ScrollTrigger are loaded
-gsap.registerPlugin(ScrollTrigger);
 
-// Second Animation for `.parallax-bg_amenia`
-gsap.to('.highlight_section .parallax-bg_amenia', {
-  y: '20%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-});
 
-// Responsive Handling for `.parallax-bg_amenia`
-mm.add("(max-width: 767px)", () => {
-  gsap.to('.highlight_section .parallax-bg_amenia', {
-    y: '30%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  });
-});
 
-// Ensure GSAP and ScrollTrigger are loaded
-gsap.registerPlugin(ScrollTrigger);
- 
-// Third Animation for `.parallax-bg_amenib`
-gsap.to('.highlight_section .parallax-bg_amenib', {
-  y: '20%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-});
 
-// Responsive Handling for `.parallax-bg_amenib`
-mm.add("(max-width: 767px)", () => {
-  gsap.to('.highlight_section .parallax-bg_amenib', {
-    y: '30%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  });
-});
 
 
 
