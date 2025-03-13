@@ -2203,7 +2203,7 @@ video {
 }
 
 .b-text {
-  color: #771212;
+  color: #E4D0D0;
 }
 
 .b-text-buil{
@@ -2834,4 +2834,30 @@ padding-bottom: 200px;
 }
 
 
+.below-ameni{
+  background-color: #771212;
+}
 
+.ameni_tittle{
+  color: #E4D0D0 !important;
+}
+
+.green-bg{
+  background-color:#004514;
+}
+
+
+.buil-arrow-1 .swiper-button-prev {
+  left: 10px;
+  right: auto;
+}
+
+.buil-arrow-1 .swiper-button-next {
+  right: 10px;
+  left: auto;
+}
+
+
+.b-text-buil1{
+  color: #CCDAD0;
+}
