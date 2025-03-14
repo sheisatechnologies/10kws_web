@@ -1383,6 +1383,14 @@ select.form-control {
   color: #efeddf;
   text-align: center;
 }
+
+.tittle_slide_next h3 {
+  font-size: 30px;
+  color: #CCDAD0;
+  text-align: center;
+}
+
+
 .tittle_slide h3 span {
   display: block;
   font-family: "MADE Mirage";
@@ -2860,6 +2868,7 @@ padding-bottom: 200px;
 
 .b-text-buil1{
   color: #CCDAD0;
+  font-size: 16px;
 }
 
 
