@@ -420,6 +420,20 @@
 }
 
 
+.buil-arrow-1 .swiper-button-next {
+  right: 147px !important;
+  left: auto;
+  top: 220px;
+}
+
+
+.buil-arrow-1 .swiper-button-prev {
+  left: 147px !important;
+  right: auto;
+  top: 220px;
+}
+
+
 
   .sub-basement-img {
     left: 79%;
