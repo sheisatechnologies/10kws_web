@@ -433,6 +433,18 @@
   top: 220px;
 }
 
+.ameni-arrow .swiper-button-next {
+  right: 147px !important;
+  left: auto;
+  top: 303px;
+}
+
+.ameni-arrow .swiper-button-prev {
+  left: 147px !important;
+  right: auto;
+  top: 303px;
+}
+
 
 
   .sub-basement-img {
@@ -536,8 +548,13 @@
     padding: 0 0 76px;
   }
   .eco_section {
-    padding: 80px 0;
-    background: url(../images/eco-bg.png);
+    
+      padding: 80px 0;
+      background: url(../images/building/eco-sec-mob.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  
   }
   .eco_section .services_slider {
     margin-top: 0px;
