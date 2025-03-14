@@ -1715,6 +1715,10 @@ document.querySelector(".close-button").addEventListener("click", () => {
 $(document).ready(function(){
   $('.slick-carousel').slick({
       infinite: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: false,

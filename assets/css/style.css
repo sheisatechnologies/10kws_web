@@ -2861,3 +2861,18 @@ padding-bottom: 200px;
 .b-text-buil1{
   color: #CCDAD0;
 }
+
+
+@media (max-width: 768px) {
+  .services_section {
+    padding: 0px 0; /* Adjust this value as needed */
+  }
+
+  .eco_sec_loc_green {
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+}

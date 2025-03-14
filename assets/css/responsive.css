@@ -401,6 +401,26 @@
     padding-bottom: 0px !important;
   }
 
+  .swiper-pagination-loc{
+    margin-bottom: -76px;
+  }
+  .swiper-pagination-loc .swiper-pagination-bullet {
+    width: 109px;
+    height: 3px;
+    border-radius: 0;
+    background-color: #EFEDDF;
+    opacity: 0.4;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    margin: 0 !important; /* Removes the gap between bullets */
+}
+
+.swiper-pagination-loc .swiper-pagination-bullet-active {
+    background-color: #001D47; /* Dark blue */
+    opacity: 1;
+}
+
+
+
   .sub-basement-img {
     left: 79%;
   }
