@@ -605,8 +605,15 @@
     font-size: 12px;
   }
 
+  .eco_sec_loc-1 {
+    padding: 64px 0;
+    background-repeat: no-repeat;
+    background-color: #efeddf;
+    background-size: cover;
+}
+
   .details_section {
-    padding: 109px 0;
+    padding: 66px 0;
   }
   .details_section .section_tittle {
     margin-top: 80px;
