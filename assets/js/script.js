@@ -934,10 +934,10 @@ mm.add("(max-width: 799px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
-      start: '-65% 90%',
+      start: '-150% 90%',
       end: '150% 50%',
       duration: 10,
-      scrub: 5, // Smoothens animation timing (higher value = smoother)
+      scrub: 2, // Smoothens animation timing (higher value = smoother)
       anticipatePin: 1,
     }
   });
