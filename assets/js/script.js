@@ -1181,6 +1181,7 @@ gsap.timeline({
     ease: 'none'
   });
 
+
 // Add responsive handling
 mm.add("(max-width: 767px)", () => {
   gsap.timeline({
@@ -1198,36 +1199,6 @@ mm.add("(max-width: 767px)", () => {
 });
 
 
-
-// Add this after your existing GSAP animations
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-})
-  .to('.highlight_section .parallax-bg_amenipara', {
-    y: '20%',
-    ease: 'none'
-  });
-
-// Add responsive handling
-mm.add("(max-width: 767px)", () => {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  })
-    .to('.highlight_section .parallax-bg_amenipara', {
-      y: '30%',
-      ease: 'none'
-    });
-});
 
 
 
@@ -1326,68 +1297,77 @@ mm.add("(max-width: 767px)", () => {
 
 
 
-
-
-
 // Ensure GSAP and ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger);
 
-// First Animation for `.parallax-bg_ameni`
-gsap.to('.highlight_section .parallax-bg_ameni', {
-  y: '20%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
+let mma = gsap.matchMedia(); // ✅ Use a single matchMedia instance
+
+// Select all `.highlight_section1` elements and apply animations separately
+document.querySelectorAll('.highlight_section1').forEach(section => {
+  
+  let bgAmeni = section.querySelector('.parallax-bg_ameni');
+  let bgAmeni1 = section.querySelector('.parallax-bg_ameni1');
+
+  if (bgAmeni) {
+    gsap.to(bgAmeni, {
+      y: '20%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: section, // ✅ Uses the specific section as trigger
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      }
+    });
+
+    // ✅ Responsive Handling
+    mma.add("(max-width: 767px)", () => {
+      gsap.to(bgAmeni, {
+        y: '30%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+    });
+  }
+
+  if (bgAmeni1) {
+    gsap.to(bgAmeni1, {
+      y: '20%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: section, // ✅ Uses the specific section as trigger
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      }
+    });
+
+    // ✅ Responsive Handling
+    mma.add("(max-width: 767px)", () => {
+      gsap.to(bgAmeni1, {
+        y: '30%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+    });
   }
 });
 
-// Responsive Handling for `.parallax-bg_ameni`
-mm.add("(max-width: 767px)", () => {
-  gsap.to('.highlight_section .parallax-bg_ameni', {
-    y: '30%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  });
-});
+// ✅ Refresh ScrollTrigger to ensure proper initialization
+ScrollTrigger.refresh();
 
 
 
-// Ensure GSAP and ScrollTrigger are loaded
-gsap.registerPlugin(ScrollTrigger);
-
-// First Animation for `.parallax-bg_ameni`
-gsap.to('.highlight_section .parallax-bg_ameniparav', {
-  y: '20%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.highlight_section',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true,
-  }
-});
-
-// Responsive Handling for `.parallax-bg_ameni`
-mm.add("(max-width: 767px)", () => {
-  gsap.to('.highlight_section .parallax-bg_ameniparav', {
-    y: '30%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.highlight_section',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-    }
-  });
-});
 
 
 
