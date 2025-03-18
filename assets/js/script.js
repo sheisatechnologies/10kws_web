@@ -382,11 +382,13 @@ mm.add("(min-width: 800px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
-      start: '-30% 50%',
-      end: '120% 50%',
-     
-      scrub: 1.5, // Smoothens animation timing (higher value = smoother)
+      start: 'top top', // Start when section reaches top
+      end: '200% top', // Adjusted to avoid getting stuck
+      pin: true,
+      scrub: 6, // Smoothens animation timing (higher value = smoother)
       anticipatePin: 1,
+      duration:10,
+
       // markers: true,
     }
   });
@@ -399,7 +401,7 @@ mm.add("(min-width: 800px)", () => {
     },
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 1,
+      duration: 15,
       x: -2000,
       ease: "power1.inOut",
       
@@ -413,7 +415,7 @@ mm.add("(min-width: 800px)", () => {
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 1,
+        duration: 15,
         x: -2000,
         ease: "power1.inOut",
         
@@ -427,7 +429,7 @@ mm.add("(min-width: 800px)", () => {
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 1,
+        duration: 15,
         x: -2000,
         ease: "power1.inOut",
        

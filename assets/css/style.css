@@ -1709,6 +1709,8 @@ select.form-control {
   min-height: auto;
   padding: 149px 0;
   background-color: #004514;
+  height: 100vh; /* Full screen height */
+  width: 100%;
 }
 .inner_container {
   display: flex;
