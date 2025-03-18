@@ -901,8 +901,8 @@
 
 
 .varied_ssection_ameni .red {
-  width: 350px;
-  height: 250px;
+  width: 248px;
+  height: 257px;
   background-image: url(../images/amenities/amn-hs-img-1.jpg);
   background-size: cover;
  
@@ -913,8 +913,8 @@
 }
 
 .varied_ssection_ameni .orange {
-  width: 350px;
-  height: 250px;
+  width: 248px;
+  height: 257px;
   background-image: url(../images/amenities/amn-hs-img-2.jpg);
   background-size: cover;
   transform:rotateX('angle') !important;
@@ -925,8 +925,8 @@
 }
 
 .varied_ssection_ameni .purple {
-  width: 350px;
-  height: 250px;
+  width: 248px;
+  height: 257px;
   background-image:url(../images/amenities/amn-hs-img-3.jpg);
   background-size: cover;
   transform:rotateX('angle') !important;
