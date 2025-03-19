@@ -222,10 +222,10 @@ var swiper = new Swiper(".mySwiper5", {
 
 var swiper = new Swiper(".mySwiper2", {
   autoplay: {
-    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
-    disableOnInteraction: false, // Ensures autoplay continues after interaction
+    delay: 3000, // Reduced delay to 3 seconds for a slightly faster autoplay
+    disableOnInteraction: false,
   },
-  speed: 1000, // Slows down transition speed (1 second)
+  speed: 800, // Reduced transition speed to 0.8 seconds
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -234,7 +234,6 @@ var swiper = new Swiper(".mySwiper2", {
   },
   slidesPerView: 1,
   spaceBetween: 10,
-  // centeredSlides: true, 
 
   breakpoints: {
     0: {
@@ -257,12 +256,13 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 
+
 var swiper = new Swiper(".mySwiper3", {
   autoplay: {
-    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
+    delay: 3000, // Increased delay to slow down autoplay (4 seconds)
     disableOnInteraction: false, // Ensures autoplay continues after interaction
   },
-  speed: 1000, // Slows down transition speed (1 second)
+  speed: 800, // Slows down transition speed (1 second)
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -320,10 +320,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 var swiper = new Swiper(".mySwiper4", {
   autoplay: {
-    delay: 4000, // Increased delay to slow down autoplay (4 seconds)
+    delay: 3000, // Increased delay to slow down autoplay (4 seconds)
     disableOnInteraction: false, // Ensures autoplay continues after interaction
   },
-  speed: 1000, // Slows down transition speed (1 second)
+  speed: 800, // Slows down transition speed (1 second)
   loop: true,
   pagination: {
     el: ".swiper-pagination",
