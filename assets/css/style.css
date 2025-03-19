@@ -2503,8 +2503,8 @@ video {
 
 
 .varied_section .red {
-  width: 100%;
-  height: 50vh;
+  width: 500px;
+  height: 470px;
   margin: 20px;
   background-image: url(../images/building-assets/bld-hs-img-1.jpg);
   background-size: cover;
@@ -2515,8 +2515,8 @@ video {
 }
 
 .varied_section .orange {
-  width: 100%;
-  height: 50vh;
+  width: 500px;
+  height: 470px;
   
   margin: 30px;
   background-image: url(../images/building-assets/bld-hs-img-2.jpg);
@@ -2530,8 +2530,8 @@ video {
 
 
 .varied_section .purple {
-  width: 100%;
-  height: 50vh;
+  width: 500px;
+  height: 470px;
   
   margin: 20px;
   background-image: url(../images/building-assets/bld-hs-img-3.jpg);
@@ -2544,8 +2544,8 @@ video {
 
 
 .varied_ssection_ameni .red {
-  width: 500px;
-  height: 350px;
+  width: 600px;
+  height: 400px;
   background-image: url(../images/amenities/amn-hs-img-1.jpg);
   background-size: cover;
   transform:   scale(1.2); /* Increase scale */
