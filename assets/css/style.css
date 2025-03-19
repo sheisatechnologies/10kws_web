@@ -1721,17 +1721,21 @@ select.form-control {
   width: 100%;
 }
 
+
+
 .varied_section {
   min-height: auto;
   padding: 149px 0;
   background-color: #004514;
   height: 100vh; /* Full screen height */
   width: 100%;
+ 
 }
 .inner_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 130px !important;
 }
 .varied_section .section_tittle {
   position: absolute;
@@ -2504,7 +2508,7 @@ video {
 
 .varied_section .red {
   width: 500px;
-  height: 470px;
+  height: 380px;
   margin: 20px;
   background-image: url(../images/building-assets/bld-hs-img-1.jpg);
   background-size: cover;
@@ -2516,7 +2520,7 @@ video {
 
 .varied_section .orange {
   width: 500px;
-  height: 470px;
+  height: 380px;
   
   margin: 30px;
   background-image: url(../images/building-assets/bld-hs-img-2.jpg);
@@ -2531,7 +2535,7 @@ video {
 
 .varied_section .purple {
   width: 500px;
-  height: 470px;
+  height: 380px;
   
   margin: 20px;
   background-image: url(../images/building-assets/bld-hs-img-3.jpg);
