@@ -1286,30 +1286,28 @@ select.form-control {
   
 }
 .swiper-button-next {
-  right: 40px;
+  right: 10px;
   left: auto;
 }
 
 .swiper-button-prev-keyfact{
-  left: -52px !important;
-  right: auto;
-  top: 59%;
+  left: 10px;
+    right: auto;
 }
 
 .swiper-button-next-keyfact{
-  right: -52px !important;
+  right: 10px;
   left: auto;
-  top: 59%;
 }
 
 .building-arrow .swiper-button-prev {
-  left: -52px;
+  left: 10px;
   right: auto;
   
 }
 
 .building-arrow .swiper-button-next {
-  right: -52px;
+  right: 10px;
   left: auto;
 }
 
@@ -2876,13 +2874,13 @@ padding-bottom: 200px;
 
 
 .buil-arrow-1 .swiper-button-prev {
-  left: 10px;
-  right: auto;
+  left: 0px;
+    right: auto;
 }
 
 .buil-arrow-1 .swiper-button-next {
-  right: 10px;
-  left: auto;
+  right: 0px;
+    left: auto;
 }
 
 
