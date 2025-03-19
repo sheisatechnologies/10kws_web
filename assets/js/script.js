@@ -396,7 +396,7 @@ mm.add("(min-width: 800px)", () => {
   tl.fromTo('.red',
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      x: 1400,
+      x: 1500,
       
     },
     {
@@ -411,7 +411,7 @@ mm.add("(min-width: 800px)", () => {
     .fromTo('.orange',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 1400,
+        x: 1500,
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -424,7 +424,7 @@ mm.add("(min-width: 800px)", () => {
     .fromTo('.purple',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 1400,
+        x: 1500,
         
       },
       {
