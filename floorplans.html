@@ -26,6 +26,37 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 <style>
  
+/* Adjust Swiper height */
+.slider_section {
+    max-height: 800px; /* Adjust height as needed */
+    overflow: hidden; /* Prevent previous slides from appearing */
+}
+
+/* Ensure the swiper wrapper takes the full height */
+.swiper-wrapper {
+    height: 800px;
+}
+
+/* Style Swiper slides properly */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    flex-direction: column;
+}
+
+/* Ensure images fit without cropping */
+.swiper-slide img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 500px; /* Adjust height for smaller view */
+    object-fit: contain; /* Ensure full visibility */
+}
+
+/* Remove visibility of non-active slides */
+
+
 
 
 
@@ -1223,7 +1254,6 @@
     }
 });
 
-
 </script>
 
 <script>
@@ -1250,6 +1280,7 @@
 });
 
 </script>
+
 </body>
 
 </html>
