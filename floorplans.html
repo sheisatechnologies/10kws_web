@@ -1147,7 +1147,54 @@
             }
         });
     </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tableRows = document.querySelectorAll("tbody tr");
+    const swiperContainer = document.querySelector(".mySwiper5");
+    const sliderSection = document.querySelector(".slider_section"); // Target section
 
+    if (swiperContainer) {
+        const swiperInstance = new Swiper(swiperContainer, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        tableRows.forEach((row) => {
+            row.addEventListener("click", () => {
+                const floorId = row.getAttribute("data-floor");
+                const floorNumber = floorId.replace("floor", "");
+                const slides = document.querySelectorAll(".swiper-slide");
+
+                let targetSlideIndex = -1;
+                slides.forEach((slide, index) => {
+                    const slideTitle = slide.querySelector("h2.heading_tittle span");
+                    if (slideTitle && slideTitle.innerText.includes(`FLOOR ${floorNumber}`)) {
+                        targetSlideIndex = index;
+                    }
+                });
+
+                if (targetSlideIndex !== -1) {
+                    swiperInstance.slideTo(targetSlideIndex, 500);
+                }
+
+                // Scroll to the next section
+                if (sliderSection) {
+                    sliderSection.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+    }
+});
+
+</script>
 </body>
 
 </html>
