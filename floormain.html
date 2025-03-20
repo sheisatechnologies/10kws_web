@@ -25,11 +25,10 @@
     <!-- Custom Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 <style>
- 
-
-
-
-
+  .swiper-backface-hidden .swiper-slide {
+    transform: none;
+    backface-visibility: hidden;
+}
 </style>
 </head>
 
@@ -205,7 +204,6 @@
                                 <td>-</td>
                               </tr>
     
-                             
                               <tr data-imp-trigger-object-on-mouseover="floorm" data-floor="floorm">                            
                                 <td>M</td>
                                 <td>-</td>
@@ -226,8 +224,7 @@
                                 <td>-</td>
                                 <td>-</td>
                               </tr>
-
-
+    
                               <tr class="tr-sp">                            
                                 <td>Total</td>
                                 <td>139,810</td>
@@ -242,7 +239,16 @@
             <div class="col-sm-12 col-md-6 col-lg-6 order_1_m">
                 <div class="image-container">
                     <div id="image-map-pro"></div>
-                    
+                    <!-- <img src="assets/images/bulding-img.svg" alt="Building Map">
+                   
+                    <div id="floor1" class="highlight" style="top: 230px;left: 72px;width: calc(100% - 131px);height: 30px;"></div>
+                    <div id="floor2" class="highlight" style="top: 196px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
+                    <div id="floor3" class="highlight" style="top: 166px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
+                    <div id="floor4" class="highlight" style="top: 138px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
+                    <div id="floor5" class="highlight" style="top: 108px; left: 72px;width: calc(100% - 131px); height: 30px;"></div>
+                    <div id="floor6" class="highlight" style="top: 68px;left: 90px;width: calc(100% - 158px);height: 30px;"></div>
+                    <div id="floor7" class="highlight" style="top: 36px;left: 96px;width: calc(100% - 231px);height: 30px;"></div> -->
+
 
 
         
@@ -257,7 +263,7 @@
 
 
 <!--  workspace_section  -->
-<section class="slider_section position-relative py-5">
+<section class="slider_section position-relative">
   <div class="container">
      
      
@@ -277,15 +283,15 @@
                     <h3>2,066 SQ M / 22,247 SQ FT</h3>
                 </div>
 
-                <div class="pt-3">
-                  <img class="floorc-img" src="assets/images/floorplans/10KWS_Basement.png" alt="">
+                <div class="pt-5 mb-8">
+                  <img  src="assets/images/floorplans/10KWS_Basement.png" alt="">
                   <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Basement.png" alt="">
                   
                 </div>
                      
                   </div>
 
-                  <div class="swiper-slide py-5">
+                  <div class="swiper-slide">
                     <div class="section_tittle">
                       <h2 class="heading_tittle">
                           <span>FLOOR 1</span></h2>
@@ -295,8 +301,8 @@
                     <h3>2,066 SQ M / 22,247 SQ FT</h3>
                 </div>
 
-                <div class="pt-3">
-                      <img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 1.png" alt="">
+                <div class="pt-5 mb-8">
+                      <img  src="assets/images/floorplans/10KWS_Floor 1.png" alt="">
                       <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor1.png" alt="">
                 </div>
                   </div>
@@ -312,9 +318,9 @@
                     <h3>2,066 SQ M / 22,247 SQ FT</h3>
                 </div>
 
-              <div class="pt-3">
+              <div class="pt-5 mb-8">
 
-                  <img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 2.png" alt="">
+                  <img  src="assets/images/floorplans/10KWS_Floor 2.png" alt="">
                   <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor2.png" alt="">
               
                </div>
@@ -323,7 +329,7 @@
 
 
 
-            <div class="swiper-slide py-5">
+            <div class="swiper-slide">
 
               <div class="section_tittle">
                 <h2 class="heading_tittle">
@@ -334,9 +340,9 @@
               <h3>2,066 SQ M / 22,247 SQ FT</h3>
           </div>
 
-        <div class="pt-3">
+        <div class="pt-5 mb-8">
 
-            <img  class="floorc-img" src="assets/images/floorplans/10KWS_Floor 3.png" alt="">
+            <img  src="assets/images/floorplans/10KWS_Floor 3.png" alt="">
             <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor3.png" alt="">
         
          </div>
@@ -355,9 +361,9 @@
         <h3>2,066 SQ M / 22,247 SQ FT</h3>
     </div>
 
-  <div class="pt-3">
+  <div class="pt-5 mb-8">
 
-      <img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 4.png" alt="">
+      <img  src="assets/images/floorplans/10KWS_Floor 4.png" alt="">
       <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor4.png" alt="">
   
    </div>
@@ -378,9 +384,9 @@
   <h3>2,066 SQ M / 22,247 SQ FT</h3>
 </div>
 
-<div class="pt-3">
+<div class="pt-5 mb-8">
 
-<img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 5.png" alt="">
+<img  src="assets/images/floorplans/10KWS_Floor 5.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor5.png" alt="">
 
 </div>
@@ -400,9 +406,9 @@
 <h3>2,066 SQ M / 22,247 SQ FT</h3>
 </div>
 
-<div class="pt-3">
+<div class="pt-5 mb-8">
 
-<img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 6.png" alt="">
+<img  src="assets/images/floorplans/10KWS_Floor 6.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor6.png" alt="">
 
 </div>
@@ -423,7 +429,7 @@
 
 <div class="pt-5 mb-8">
 
-<img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 7.png" alt="">
+<img  src="assets/images/floorplans/10KWS_Floor 7.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor7.png" alt="">
 
 </div>
@@ -436,6 +442,7 @@
 <div class="section_tittle">
   <h2 class="heading_tittle d-none">
       <span>FLOOR G</span></h2>
+
       <h2 class="heading_tittle">
         <span>Ground</span></h2>
 </div>
@@ -444,9 +451,9 @@
 <h3>2,066 SQ M / 22,247 SQ FT</h3>
 </div>
 
-<div class="pt-5 mb-8 p-5">
+<div class="pt-5 mb-8">
 
-<img class="floorc-img" src="assets/images/floorplans/10KWS_Ground.png" alt="">
+<img  src="assets/images/floorplans/10KWS_Ground.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Ground.png" alt="">
 
 </div>
@@ -456,10 +463,11 @@
 <div class="swiper-slide">
 
 <div class="section_tittle">
-   <h2 class="heading_tittle d-none">
-    <span>FLOOR M</span></h2>
-    <h2 class="heading_tittle">
-      <span>Mezzanine</span></h2>
+  <h2 class="heading_tittle d-none">
+      <span>FLOOR M</span></h2>
+
+      <h2 class="heading_tittle">
+        <span>Mezzanine</span></h2>
 </div>
 
 <div class="sub_tittle">
@@ -468,7 +476,7 @@
 
 <div class="pt-5 mb-8">
 
-<img class="floorc-img" src="assets/images/floorplans/10KWS_Mezzanine.png" alt="">
+<img  src="assets/images/floorplans/10KWS_Mezzanine.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Mezzanine.png" alt="">
 
 </div>
@@ -480,16 +488,12 @@
               </div>
              
               <div class="swiper-pagination"></div>
-
-              
           </div>
-
-         
       </div>
       <div class="arrow_icon">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
   </div>
  
 </section>
@@ -1155,9 +1159,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     const tableRows = document.querySelectorAll("tbody tr");
     const swiperContainer = document.querySelector(".mySwiper5");
-    const sliderSection = document.querySelector(".slider_section");
-
-    let lastSlideIndex = 0; // Store the last viewed slide index
+    const sliderSection = document.querySelector(".slider_section"); // Target section
 
     if (swiperContainer) {
         const swiperInstance = new Swiper(swiperContainer, {
@@ -1176,38 +1178,24 @@
         tableRows.forEach((row) => {
             row.addEventListener("click", () => {
                 const floorId = row.getAttribute("data-floor");
-
-                // Convert "floorm" -> "FLOOR M", "floorg" -> "FLOOR G"
-                let floorName = floorId.replace("floor", "FLOOR ").toUpperCase();
-
+                const floorNumber = floorId.replace("floor", "");
                 const slides = document.querySelectorAll(".swiper-slide");
 
                 let targetSlideIndex = -1;
                 slides.forEach((slide, index) => {
                     const slideTitle = slide.querySelector("h2.heading_tittle span");
-                    if (slideTitle && slideTitle.innerText.trim() === floorName) {
+                    if (slideTitle && slideTitle.innerText.includes(`FLOOR ${floorNumber}`)) {
                         targetSlideIndex = index;
                     }
                 });
 
-                // If a matching slide is found, go to that slide
                 if (targetSlideIndex !== -1) {
                     swiperInstance.slideTo(targetSlideIndex, 500);
-                    lastSlideIndex = targetSlideIndex;
-                } else {
-                    swiperInstance.slideTo(lastSlideIndex, 500);
                 }
 
-                // Ensure Swiper updates properly
-                setTimeout(() => {
-                    swiperInstance.update();
-                }, 300);
-
-                // Scroll to the slider section smoothly
+                // Scroll to the next section
                 if (sliderSection) {
-                    setTimeout(() => {
-                        sliderSection.scrollIntoView({ behavior: "smooth" });
-                    }, 500);
+                    sliderSection.scrollIntoView({ behavior: "smooth" });
                 }
             });
         });
