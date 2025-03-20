@@ -479,14 +479,14 @@ mm.add("(min-width: 800px)", () => {
 
   let slideTl = gsap.timeline({
     scrollTrigger: {
-      trigger: '.slider_section',
+      trigger: '.slider_section1',
       start: 'top 50%',
       end: 'bottom 10%',
       scrub: true,
       
     }
   });
-  slideTl.fromTo('.slider_section .slider_wrapper', {
+  slideTl.fromTo('.slider_section1 .slider_wrapper', {
     clipPath: "polygon(35% 0%, 68% 0%, 100% 15%, 100% 51%, 84% 100%, 0% 100%, 0% 23%)",
     duration: 1,
     ease: "power1.inOut"

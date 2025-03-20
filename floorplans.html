@@ -25,12 +25,31 @@
     <!-- Custom Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 <style>
-  .swiper-backface-hidden .swiper-slide {
-    transform: none;
-    backface-visibility: hidden;
-    margin-left: 18px;
-    margin: 19px;
+ 
+
+
+/* Ensure swiper slides take full width */
+.swiper-slide {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    clip-path: none;
+  transition: none;
 }
+
+.floorc-img{
+
+  width: 85% !important;
+    height: auto; /* Ensures image maintains aspect ratio */
+    object-fit: contain; /* Prevents cropping */
+    max-height: 40%; /* Ensures it fits within viewport */
+
+}
+
+
 </style>
 </head>
 
@@ -258,7 +277,7 @@
 
 
 <!--  workspace_section  -->
-<section class="slider_section position-relative">
+<section class="slider_section position-relative py-5">
   <div class="container">
      
      
@@ -278,8 +297,8 @@
                     <h3>2,066 SQ M / 22,247 SQ FT</h3>
                 </div>
 
-                <div class="pt-5 mb-8">
-                  <img  src="assets/images/floorplans/10KWS_Basement.png" alt="">
+                <div class="pt-3">
+                  <img class="floorc-img" src="assets/images/floorplans/10KWS_Basement.png" alt="">
                   <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Basement.png" alt="">
                   
                 </div>
@@ -296,8 +315,8 @@
                     <h3>2,066 SQ M / 22,247 SQ FT</h3>
                 </div>
 
-                <div class="pt-5 mb-8">
-                      <img  src="assets/images/floorplans/10KWS_Floor 1.png" alt="">
+                <div class="pt-3">
+                      <img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 1.png" alt="">
                       <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor1.png" alt="">
                 </div>
                   </div>
@@ -313,9 +332,9 @@
                     <h3>2,066 SQ M / 22,247 SQ FT</h3>
                 </div>
 
-              <div class="pt-5 mb-8">
+              <div class="pt-3">
 
-                  <img  src="assets/images/floorplans/10KWS_Floor 2.png" alt="">
+                  <img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 2.png" alt="">
                   <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor2.png" alt="">
               
                </div>
@@ -335,9 +354,9 @@
               <h3>2,066 SQ M / 22,247 SQ FT</h3>
           </div>
 
-        <div class="pt-5 mb-8">
+        <div class="pt-3">
 
-            <img  src="assets/images/floorplans/10KWS_Floor 3.png" alt="">
+            <img  class="floorc-img" src="assets/images/floorplans/10KWS_Floor 3.png" alt="">
             <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor3.png" alt="">
         
          </div>
@@ -356,9 +375,9 @@
         <h3>2,066 SQ M / 22,247 SQ FT</h3>
     </div>
 
-  <div class="pt-5 mb-8">
+  <div class="pt-3">
 
-      <img  src="assets/images/floorplans/10KWS_Floor 4.png" alt="">
+      <img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 4.png" alt="">
       <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor4.png" alt="">
   
    </div>
@@ -379,9 +398,9 @@
   <h3>2,066 SQ M / 22,247 SQ FT</h3>
 </div>
 
-<div class="pt-5 mb-8">
+<div class="pt-3">
 
-<img  src="assets/images/floorplans/10KWS_Floor 5.png" alt="">
+<img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 5.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor5.png" alt="">
 
 </div>
@@ -401,9 +420,9 @@
 <h3>2,066 SQ M / 22,247 SQ FT</h3>
 </div>
 
-<div class="pt-5 mb-8 p-5">
+<div class="pt-3">
 
-<img  src="assets/images/floorplans/10KWS_Floor 6.png" alt="">
+<img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 6.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor6.png" alt="">
 
 </div>
@@ -424,7 +443,7 @@
 
 <div class="pt-5 mb-8">
 
-<img  src="assets/images/floorplans/10KWS_Floor 7.png" alt="">
+<img class="floorc-img" src="assets/images/floorplans/10KWS_Floor 7.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Floor7.png" alt="">
 
 </div>
@@ -435,8 +454,10 @@
 <div class="swiper-slide">
 
 <div class="section_tittle">
-  <h2 class="heading_tittle">
-      <span>Ground</span></h2>
+  <h2 class="heading_tittle d-none">
+      <span>FLOOR G</span></h2>
+      <h2 class="heading_tittle">
+        <span>Ground</span></h2>
 </div>
 
 <div class="sub_tittle">
@@ -445,7 +466,7 @@
 
 <div class="pt-5 mb-8 p-5">
 
-<img  src="assets/images/floorplans/10KWS_Ground.png" alt="">
+<img class="floorc-img" src="assets/images/floorplans/10KWS_Ground.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Ground.png" alt="">
 
 </div>
@@ -455,7 +476,9 @@
 <div class="swiper-slide">
 
 <div class="section_tittle">
-  <h2 class="heading_tittle">
+   <h2 class="heading_tittle d-none">
+    <span>FLOOR M</span></h2>
+    <h2 class="heading_tittle">
       <span>Mezzanine</span></h2>
 </div>
 
@@ -465,7 +488,7 @@
 
 <div class="pt-5 mb-8">
 
-<img  src="assets/images/floorplans/10KWS_Mezzanine.png" alt="">
+<img class="floorc-img" src="assets/images/floorplans/10KWS_Mezzanine.png" alt="">
 <img class="sub-basement-img" src="assets/images/floorplans/stacker/10KWS_Stacker_Mezzanine.png" alt="">
 
 </div>
@@ -1152,7 +1175,9 @@
   document.addEventListener("DOMContentLoaded", function () {
     const tableRows = document.querySelectorAll("tbody tr");
     const swiperContainer = document.querySelector(".mySwiper5");
-    const sliderSection = document.querySelector(".slider_section"); // Target section
+    const sliderSection = document.querySelector(".slider_section");
+
+    let lastSlideIndex = 0; // Store the last viewed slide index
 
     if (swiperContainer) {
         const swiperInstance = new Swiper(swiperContainer, {
@@ -1171,26 +1196,65 @@
         tableRows.forEach((row) => {
             row.addEventListener("click", () => {
                 const floorId = row.getAttribute("data-floor");
-                const floorNumber = floorId.replace("floor", "");
+
+                // Convert "floorm" -> "FLOOR M", "floorg" -> "FLOOR G"
+                let floorName = floorId.replace("floor", "FLOOR ").toUpperCase();
+
                 const slides = document.querySelectorAll(".swiper-slide");
 
                 let targetSlideIndex = -1;
                 slides.forEach((slide, index) => {
                     const slideTitle = slide.querySelector("h2.heading_tittle span");
-                    if (slideTitle && slideTitle.innerText.includes(`FLOOR ${floorNumber}`)) {
+                    if (slideTitle && slideTitle.innerText.trim() === floorName) {
                         targetSlideIndex = index;
                     }
                 });
 
+                // If a matching slide is found, go to that slide
                 if (targetSlideIndex !== -1) {
                     swiperInstance.slideTo(targetSlideIndex, 500);
+                    lastSlideIndex = targetSlideIndex;
+                } else {
+                    swiperInstance.slideTo(lastSlideIndex, 500);
                 }
 
-                // Scroll to the next section
+                // Ensure Swiper updates properly
+                setTimeout(() => {
+                    swiperInstance.update();
+                }, 300);
+
+                // Scroll to the slider section smoothly
                 if (sliderSection) {
-                    sliderSection.scrollIntoView({ behavior: "smooth" });
+                    setTimeout(() => {
+                        sliderSection.scrollIntoView({ behavior: "smooth" });
+                    }, 500);
                 }
             });
+        });
+    }
+});
+
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiperContainer = document.querySelector(".mySwiper5");
+
+    if (swiperContainer) {
+        const swiperInstance = new Swiper(swiperContainer, {
+            slidesPerView: 1, // Show only one slide fully
+            spaceBetween: 0, // No gap between slides
+            centeredSlides: false, // Prevents shifting issues
+            loop: false, // Ensures slides don't move unexpectedly
+            autoHeight: true, // Adjusts height dynamically
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     }
 });
