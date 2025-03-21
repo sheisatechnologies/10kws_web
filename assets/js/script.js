@@ -382,13 +382,9 @@ mm.add("(min-width: 800px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
-      start: 'top top', // Start when section reaches top
-      end: '200% top', // Adjusted to avoid getting stuck
-      pin: true,
-      scrub: 6, // Smoothens animation timing (higher value = smoother)
-      anticipatePin: 1,
-      duration:10,
-
+      start: '-30% 50%',
+      end: '120% 50%',
+      scrub: true,
       // markers: true,
     }
   });
@@ -396,27 +392,27 @@ mm.add("(min-width: 800px)", () => {
   tl.fromTo('.red',
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      x: 1500,
+      x: 500,
       
     },
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 15,
-      x: -2000,
+      duration: 1,
+      x: -500,
       ease: "power1.inOut",
       
-     
+      
     }, 's'
   )
     .fromTo('.orange',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 1500,
+        x: 500,
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 15,
-        x: -2000,
+        duration: 1,
+        x: -500,
         ease: "power1.inOut",
         
       }, 's'
@@ -424,22 +420,18 @@ mm.add("(min-width: 800px)", () => {
     .fromTo('.purple',
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        x: 1500,
-        
+        x: 500,
+       
       },
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 15,
-        x: -2000,
+        duration: 1,
+        x: -500,
         ease: "power1.inOut",
-       
+        
        
       }, 's'
     );
-
-    
-
-
 
 
 
