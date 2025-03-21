@@ -1140,32 +1140,7 @@
 
 
 
-    <script>
-        const tableRows = document.querySelectorAll('tbody tr');
-        const highlights = document.querySelectorAll('.highlight');
-
-        tableRows.forEach(row => {
-            row.addEventListener('click', () => {
-                // Hide all highlights
-                highlights.forEach(highlight => highlight.style.display = 'none');
-
-                // Show the selected highlight
-                const floorId = row.dataset.floor;
-                const highlight = document.getElementById(floorId);
-                if (highlight) {
-                    highlight.style.display = 'block';
-                }
-            });
-        });
-
-        // Hide highlights when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('table') && !e.target.closest('.image-container')) {
-                highlights.forEach(highlight => highlight.style.display = 'none');
-            }
-        });
-    </script>
-
+   
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
