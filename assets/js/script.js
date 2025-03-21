@@ -398,7 +398,7 @@ mm.add("(min-width: 800px)", () => {
     {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 1,
-      x: -500,
+      x: -800,
       ease: "power1.inOut",
       
       
@@ -412,7 +412,7 @@ mm.add("(min-width: 800px)", () => {
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
-        x: -500,
+        x: -800,
         ease: "power1.inOut",
         
       }, 's'
@@ -426,7 +426,7 @@ mm.add("(min-width: 800px)", () => {
       {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
-        x: -500,
+        x: -800,
         ease: "power1.inOut",
         
        
