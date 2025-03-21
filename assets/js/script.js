@@ -382,7 +382,7 @@ mm.add("(min-width: 800px)", () => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.varied_section',
-      start: '-30% 50%',
+      start: '-50% 60%',
       end: '120% 50%',
       scrub: true,
       // markers: true,
