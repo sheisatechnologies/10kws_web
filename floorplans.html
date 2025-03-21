@@ -37,6 +37,9 @@
 }
 
 
+.swiper-slide {
+    width: 100% !important;
+}
 
 
 
@@ -271,7 +274,7 @@
 
 
 <!--  workspace_section  -->
-<section class="slider_section position-relative py-5">
+<section class="slider_section">
   <div class="container">
      
      
@@ -649,8 +652,7 @@
                       <li>Basement South</li>
                       <li>Changing/ Lounges and GF Cycle store</li>
                       <li>10ACH over wet area/ 6ACH to changing</li>
-                      <li>Lounges @ 12L/s/occ @ 1:8m2 density</li><br>
-
+                      <li>Lounges @ 12L/s/occ @ 1:8m2 density</li>
                       <li>For the GF retail unit, a louvred band is provided at high level ground to allow for general ventilation plant to be fitted out by the retail tenant. Roof plant space & riser provision have been included and coordinated within the shell & core for a commercial kitchen extract system.</li>
                       </ul>
                       
@@ -1241,6 +1243,26 @@
 
 </script>
 
+<script>
+  var swiper = new Swiper(".mySwiper5", {
+    loop: true,             // Enable infinite looping
+    autoplay: {
+        delay: 3000,        // Auto-slide every 3 seconds
+        disableOnInteraction: false
+    },
+    slidesPerView: 1,       // Show only one slide at a time
+    spaceBetween: 0,        // No extra space between slides
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+</script>
 </body>
 
 </html>
