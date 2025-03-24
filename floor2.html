@@ -1174,7 +1174,7 @@
 
 </script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     let swiper = new Swiper(".mySwiper5", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -1182,33 +1182,65 @@
         navigation: false,
         pagination: false,
         loop: false,
+        on: {
+            slideChange: function () {
+                let activeSlide = document.querySelector(".swiper-slide-active");
+                let floor = activeSlide.getAttribute("data-floor");
+                activateFloorNav(floor);
+            }
+        }
     });
 
+    function activateFloorNav(floor) {
+        document.querySelectorAll(".floor-nav").forEach((el) => el.classList.remove("active"));
+        let activeNav = document.querySelector(`.floor-nav[data-floor="${floor}"]`);
+        if (activeNav) {
+            activeNav.classList.add("active");
+        }
+    }
+
+    // Click event for floor navigation buttons
     document.querySelectorAll(".floor-nav").forEach((button) => {
         button.addEventListener("click", function () {
             let floor = this.getAttribute("data-floor");
             let slides = document.querySelectorAll(".swiper-slide");
-            let targetIndex = -1;
-
-            slides.forEach((slide, index) => {
-                if (slide.getAttribute("data-floor") === floor) {
-                    targetIndex = index;
-                }
-            });
+            let targetIndex = Array.from(slides).findIndex(slide => slide.getAttribute("data-floor") === floor);
 
             if (targetIndex !== -1) {
                 swiper.slideTo(targetIndex, 500);
             }
 
-            // Remove active class from all and set active on clicked
-            document.querySelectorAll(".floor-nav").forEach((el) => el.classList.remove("active"));
-            this.classList.add("active");
+            activateFloorNav(floor);
+        });
+    });
+
+    // Click event for table rows
+    document.querySelectorAll("tr[data-floor]").forEach((row) => {
+        row.addEventListener("click", function () {
+            let floor = this.getAttribute("data-floor");
+            let slides = document.querySelectorAll(".swiper-slide");
+            let targetIndex = Array.from(slides).findIndex(slide => slide.getAttribute("data-floor") === floor);
+
+            if (targetIndex !== -1) {
+                swiper.slideTo(targetIndex, 500);
+            }
+
+            activateFloorNav(floor);
+
+            document.querySelector(".slider_section").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
         });
     });
 });
 
 </script>
 
+
+<script>
+  
+</script>
 </body>
 
 </html>
