@@ -1148,6 +1148,21 @@ select.form-control {
   /* font-family: 'MADE Mirage'; */
 }
 
+.hero_section .hero_heading_error h1 {
+  font-size: 70px;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-weight: 500;
+  line-height: 115px;
+  letter-spacing: 8px;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  /* font-family: 'MADE Mirage'; */
+}
+
 .hero_section .hero_heading h1 span {
   justify-content: center;
   font-family: "MADE Mirage";
@@ -2014,7 +2029,7 @@ select.form-control {
 .building_page_wrapper.floorplans_page_wrapper
   .slider_section
   .swiper-pagination {
-  bottom: 0;
+  bottom: -28px;
 }
 .building_page_wrapper.floorplans_page_wrapper .slider_section .section_tittle {
   padding-bottom: 18px;
@@ -3145,7 +3160,42 @@ padding-bottom: 200px;
 }
 
    
+.floor_icon .swiper-button-next {
+  right: 0px;
+    left: auto;
+}
+
+.floor_icon .swiper-button-prev {
+  left: 0px;
+    right: auto;
+}
+
+
+.hero_section_error {
+  background-color: #001D47 !important;
+  min-height: 900px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.text-white-err{
+font-size: 20px;
+font-weight: 400;
+}
+
+.hero_section_error {
+  background-color: #001D47 !important;
+   min-height: 900px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   z-index: 1 !important;
+ }
 
 
 
 
+ @media (min-width: 991px) {
+  .heading_tittle_error span{
+    margin-top: -39px !important;
+   }
+ }
+ 

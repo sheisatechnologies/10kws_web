@@ -4,6 +4,15 @@
     justify-content: center;
   }
 
+  
+
+  .hero_section .hero_heading_error h1 {
+    font-size: 70px;
+    justify-content: center;
+  }
+
+
+
  
   .hero_section .hero_heading img {
     max-height: 70px;
@@ -68,6 +77,11 @@
   } */
   .hero_section .hero_heading h1 {
     font-size: 90px;
+    justify-content: center;
+  }
+
+  .hero_section .hero_heading_error h1 {
+    font-size: 70px;
     justify-content: center;
   }
   .hero_section .hero_heading img {
