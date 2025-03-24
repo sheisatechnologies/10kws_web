@@ -739,7 +739,7 @@
                   <ul>
                     <li>4no 21-person high speed passenger lifts (3no dedicated and 1no through car passenger/firefighters lift)</li>
                   <li>Population 1 person/10m2 with 80% utilization</li>
-                  <li>Average waiting time (up peak) <28 seconds</li>
+                  <li>Average waiting time (up peak) 28 seconds</li>
                   <li>Morning Handling capacity (up peak) 12% (of total population) in a 5 min period, of which 80-85% Incoming (tenancy split dependent)</li>
                   <li>Lunch Handling capacity (2 way) 13% (of total population) in a 5 min period, of which 40-45% Incoming (tenancy split dependent)</li>
                   <li>Office goods/firefighting lift serving all floors</li>
@@ -1072,7 +1072,7 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".mySwiper5", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -1092,12 +1092,9 @@
 
     function killAutoplay() {
         if (swiper.autoplay.running) {
-            swiper.autoplay.stop(); // ✅ STOP autoplay
-            swiper.params.autoplay = false; // ✅ Disable autoplay in settings
-            swiper.update(); // ✅ Update Swiper to apply changes
+            swiper.autoplay.stop();  // ✅ Stop autoplay once
+            swiper.params.autoplay = false; // ✅ Disable autoplay permanently
         }
-        
-        console.log("Autoplay stopped."); // ✅ Debugging log
     }
 
     document.querySelectorAll("tr[data-floor]").forEach((row) => {
@@ -1114,7 +1111,7 @@
 
             if (targetIndex !== -1) {
                 swiper.slideTo(targetIndex, 500);
-                killAutoplay(); // ✅ STOP autoplay forever
+                killAutoplay(); // ✅ Stop autoplay when manually selecting a slide
             }
 
             document.querySelector(".slider_section").scrollIntoView({
@@ -1124,16 +1121,11 @@
         });
     });
 
-    swiper.on("slideChange", killAutoplay); // ✅ Stop autoplay if slides change manually
+    swiper.on("slideChange", function () {
+        killAutoplay(); // ✅ Stop autoplay only when user changes slides
+    });
 
-    // ✅ EXTRA Safety: Kill autoplay every 100ms (Just in case Swiper tries to restart)
-    setInterval(() => {
-        swiper.autoplay.stop();
-        swiper.params.autoplay = false;
-        swiper.update();
-    }, 100);
 });
-
 
 </script>
 
