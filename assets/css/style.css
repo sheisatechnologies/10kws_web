@@ -3094,3 +3094,30 @@ font-weight: 400;
    }
  }
  
+/* building page  */
+
+ .custom-mySwiper3 .swiper-button-prev{
+  background-image: url('../images/building-assets/arrow-buil-sec-prev.svg') !important;
+ }
+
+ .custom-mySwiper3 .swiper-button-next{
+  background-image: url('../images/building-assets/arrow-buil-sec-next.svg') !important;
+ }
+
+ .b-text-buil1{
+  color: #004514;
+  font-size: 16px;
+  padding: 0px 35px 24px 52px;
+}
+ .tittle_slide_next h3 {
+  font-size: 30px;
+  color: #004514;
+  text-align: center;
+}
+
+.ameni_tittle {
+  color: #771212 !important;
+}
+  .b-text_ameni_new {
+  color: #771212;
+}
