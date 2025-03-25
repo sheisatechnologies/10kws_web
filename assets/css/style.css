@@ -2742,10 +2742,37 @@ video {
 
 
 
+@media (min-width: 1401px) {
+  .varied_section .section_tittle .heading_tittle {
+    font-size: 48.15px !important;
+  }
+
+  .varied_section, .varied_section_ameni {
+    display: flex;
+    gap: 50px; /* Reduced gap for better spacing */
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px;
+    min-height: 600px; /* Ensures minimum height */
+  }
 
 
+  .varied_section_ameni .red, 
+  .varied_section_ameni .orange, 
+  .varied_section_ameni .purple {
+    width: 45%; /* Responsive width */
+    max-width: 700px; 
+    height: 600px; /* Ensures height */
+    background-size: contain; /* Ensures full image is shown */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 80px; /* Reduce margin */
+  }
+}
 
-@media (min-width: 1200px) {
+
+@media (max-width: 1400px) {
   .varied_section .section_tittle .heading_tittle {
     font-size: 48.15px !important;
   }
@@ -2799,7 +2826,7 @@ video {
     background-size: contain; /* Ensures full image is shown */
     background-position: center;
     background-repeat: no-repeat;
-    margin: 20px; /* Reduce margin */
+    margin: 30px; /* Reduce margin */
   }
 }
 
