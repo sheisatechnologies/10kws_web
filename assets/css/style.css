@@ -2627,7 +2627,12 @@ video {
 
 
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
+
+  .section_tittle .heading_tittle {
+  
+    font-size: 58.15px;
+}
 
 .varied_section {
         display: flex;
@@ -2636,7 +2641,7 @@ video {
         flex-wrap: wrap;
         align-items: center;
         padding: 50px;
-        height: 798px;
+        
 }
 
 .varied_section .red, 
