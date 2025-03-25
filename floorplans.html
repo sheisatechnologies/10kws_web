@@ -59,13 +59,60 @@
     .building_page_wrapper.floorplans_page_wrapper .slider_section {
     background-color: #fff;
     padding: 0px 0;
-    height: 530px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     }
 }
+
+
+.floor-navigation {
+    margin-bottom: 15px;
+}
+
+.floor-nav-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.floor-nav {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    color: #808EA3;
+}
+
+/* Active & Hover Effect */
+.floor-nav:hover, .floor-nav.active {
+    color: #001d47;
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .floor-nav {
+        font-size: 16px;
+    }
+    .floor-nav-wrapper {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floor-nav {
+        font-size: 14px;
+    }
+    .floor-nav-wrapper {
+        gap: 21px;
+    }
+}
+
 
 </style>
 </head>
@@ -295,9 +342,29 @@
 
 
 
-<section class="slider_section">
-    <div class="container">
+<section class="slider_section mb-5">
+    <div class="container">   
+        <section class="floor-navigation p-4 pt-5">
+            <div class="container text-center">
+                <div class="floor-nav-wrapper">
+                    
+                    <span class="floor-nav" data-floor="floor7">7</span>
+                    <span class="floor-nav" data-floor="floor6">6</span>
+                    <span class="floor-nav" data-floor="floor5">5</span>
+                    <span class="floor-nav" data-floor="floor4">4</span>
+                    <span class="floor-nav" data-floor="floor3">3</span>
+                    <span class="floor-nav" data-floor="floor2">2</span>
+                    <span class="floor-nav" data-floor="floor1">1</span>
+                    <span class="floor-nav" data-floor="floorm">M</span>
+                    <span class="floor-nav active" data-floor="floorg">G</span>
+                    <span class="floor-nav" data-floor="floorb">B</span>
+                   
+                </div>
+            </div>
+        </section>
       <div class="slider_wrapper">
+
+     
         <div class="swiper mySwiper5">
           <div class="swiper-wrapper">
   
@@ -1108,8 +1175,69 @@
 });
 
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let swiper = new Swiper(".mySwiper5", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: false,
+        navigation: false,
+        pagination: false,
+        loop: false,
+        on: {
+            slideChange: function () {
+                let activeSlide = document.querySelector(".swiper-slide-active");
+                let floor = activeSlide.getAttribute("data-floor");
+                activateFloorNav(floor);
+            }
+        }
+    });
 
+    function activateFloorNav(floor) {
+        document.querySelectorAll(".floor-nav").forEach((el) => el.classList.remove("active"));
+        let activeNav = document.querySelector(`.floor-nav[data-floor="${floor}"]`);
+        if (activeNav) {
+            activeNav.classList.add("active");
+        }
+    }
 
+    // Click event for floor navigation buttons
+    document.querySelectorAll(".floor-nav").forEach((button) => {
+        button.addEventListener("click", function () {
+            let floor = this.getAttribute("data-floor");
+            let slides = document.querySelectorAll(".swiper-slide");
+            let targetIndex = Array.from(slides).findIndex(slide => slide.getAttribute("data-floor") === floor);
+
+            if (targetIndex !== -1) {
+                swiper.slideTo(targetIndex, 500);
+            }
+
+            activateFloorNav(floor);
+        });
+    });
+
+    // Click event for table rows
+    document.querySelectorAll("tr[data-floor]").forEach((row) => {
+        row.addEventListener("click", function () {
+            let floor = this.getAttribute("data-floor");
+            let slides = document.querySelectorAll(".swiper-slide");
+            let targetIndex = Array.from(slides).findIndex(slide => slide.getAttribute("data-floor") === floor);
+
+            if (targetIndex !== -1) {
+                swiper.slideTo(targetIndex, 500);
+            }
+
+            activateFloorNav(floor);
+
+            document.querySelector(".slider_section").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    });
+});
+
+</script>
 </body>
 
 </html>
