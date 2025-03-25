@@ -2659,10 +2659,7 @@ video {
 
   .varied_section .red, 
   .varied_section .orange, 
-  .varied_section .purple,
-  .varied_section_ameni .red, 
-  .varied_section_ameni .orange, 
-  .varied_section_ameni .purple {
+  .varied_section .purple {
     width: 45%; /* Responsive width */
     max-width: 700px; 
     height: 600px; /* Ensures height */
