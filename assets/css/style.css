@@ -3238,3 +3238,12 @@ font-weight: 400;
   .b-text_ameni_new {
   color: #771212;
 }
+
+
+.custom-mySwiper3 .swiper-button-prev, 
+.custom-mySwiper3 .swiper-button-next {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+}
