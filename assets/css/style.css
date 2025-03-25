@@ -2727,7 +2727,7 @@ video {
     height: 600px; /* Ensures height */
     background-size: contain; /* Ensure full image is shown */
     background-position: center;
-    margin: 25px;
+    margin: 11px;
   }
 }
 
