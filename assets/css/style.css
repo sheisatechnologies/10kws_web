@@ -2666,7 +2666,7 @@ video {
     background-size: contain; /* Ensures full image is shown */
     background-position: center;
     background-repeat: no-repeat;
-    margin: 50px; /* Reduce margin */
+    margin: 80px; /* Reduce margin */
   }
 }
 
