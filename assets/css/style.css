@@ -2624,7 +2624,7 @@ video {
 
 
 @media (min-width: 1200px) {
-  .section_tittle .heading_tittle {
+  .varied_section .section_tittle .heading_tittle {
     font-size: 48.15px !important;
   }
 
@@ -2655,7 +2655,7 @@ video {
 }
 
 @media (max-width: 1200px) {
-  .section_tittle .heading_tittle {
+  .varied_section .section_tittle .heading_tittle {
     font-size: 47.15px !important;
   }
 
