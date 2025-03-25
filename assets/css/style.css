@@ -2770,7 +2770,7 @@ video {
     background-size: contain; /* Ensures full image is shown */
     background-position: center;
     background-repeat: no-repeat;
-    margin: 80px; /* Reduce margin */
+    margin: 45px; /* Reduce margin */
   }
 }
 
