@@ -460,6 +460,19 @@
   top: 250px;
 }
 
+.buil-arrow-2 .swiper-button-next {
+  right: 147px !important;
+  left: auto;
+  top: 250px;
+}
+
+
+.buil-arrow-2 .swiper-button-prev {
+  left: 147px !important;
+  right: auto;
+  top: 250px;
+}
+
 .ameni-arrow .swiper-button-next {
   right: 125px !important;
   left: auto;
