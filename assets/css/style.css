@@ -3130,6 +3130,17 @@ padding-bottom: 200px;
 }
 
 
+.buil-arrow-2 .swiper-button-prev {
+  left: 0px;
+    right: auto;
+}
+
+.buil-arrow-2 .swiper-button-next {
+  right: 0px;
+    left: auto;
+}
+
+
 .b-text-buil1{
   color: #CCDAD0;
   font-size: 16px;
