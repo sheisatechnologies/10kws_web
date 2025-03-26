@@ -3138,13 +3138,13 @@ padding-bottom: 200px;
 
 
 .b-text-ameni {
-  color: #fff !important;
+  color: #771212 !important;
   font-size: 16px;
   padding: 0px 35px 24px 52px;
 }
 
 .tittle_slide_next_ameni h3{
-  color: #fff !important;
+  color: #771212 !important;
 }
 
 
@@ -3271,3 +3271,20 @@ font-weight: 400;
     width: 40px; /* Adjust size as needed */
     height: 40px;
 }
+
+
+.ameni-mySwiper3 .swiper-button-prev, 
+.ameni-mySwiper3 .swiper-button-next {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+}
+
+.ameni-mySwiper3 .swiper-button-prev{
+  background-image: url('../images/amenities/ameni-prev.svg') !important;
+ }
+
+ .ameni-mySwiper3 .swiper-button-next{
+  background-image: url('../images/amenities/ameni-next.svg') !important;
+ }
